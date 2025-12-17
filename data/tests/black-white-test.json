@@ -3,7 +3,7 @@
     "title": "내가 흑백요리사 심사위원이라면? (백형 vs 안형)",
     "description": "같은 요리를 보고도 평이 갈린다. 당신의 심사 기준은 직관의 백형인가, 디테일의 안형인가.",
     "thumbnailUrl": "/images/tests/black-white-test-thumb.png",
-    "coverImageUrl": "/images/tests/bblack-white-test-cover.png",
+    "coverImageUrl": "/images/tests/black-white-test-cover.png",
     "estimatedTime": 2,
     "playCount": 0,
     "likeCount": 0,
@@ -223,14 +223,14 @@
         "type": "baek",
         "title": "백형 심사위원",
         "description": "당신은 직관과 대중성을 믿는 백형입니다. 복잡한 설명보다 한 입에서 오는 설득력을 중시하고, '또 먹고 싶은가'를 기준으로 냉정하게 결론을 냅니다.",
-        "imageUrl": "/images/tests/baek-ahn-judge-test-result-baek.png"
+        "imageUrl": "/images/tests/black-white-test-result-baek.png"
       },
       {
         "id": "r2",
         "type": "ahn",
         "title": "안형 심사위원",
         "description": "당신은 디테일과 완성도를 끝까지 보는 안형입니다. 컨셉의 논리, 조리의 설계, 밸런스의 미세한 흔들림까지 놓치지 않으며, 기준이 명확한 분석형 평가자입니다.",
-        "imageUrl": "/images/tests/baek-ahn-judge-test-result-ahn.png"
+        "imageUrl": "/images/tests/black-white-test-result-ahn.png"
       }
     ],
     "createdAt": "2025-12-17"
