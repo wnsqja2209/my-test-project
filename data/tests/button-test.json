@@ -1,0 +1,136 @@
+{
+  "id": "button-test",
+  "title": "발작버튼 테스트",
+  "description": "당신의 선택을 통해 숨겨진 성격을 알아보세요! 직감적으로 버튼을 눌러보세요.",
+  "thumbnailUrl": "/images/tests/button-thumb.png",
+  "coverImageUrl": "/images/tests/button-cover.png",
+  "estimatedTime": 2,
+  "playCount": 15234,
+  "likeCount": 1230,
+  "bookmarkCount": 456,
+  "recommendCount": 890,
+  "category": "personality",
+  "tags": ["성격", "직감", "선택"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "빨간 버튼과 파란 버튼 중 하나를 눌러야 한다면?",
+      "options": [
+        { "id": "q1-a", "content": "빨간 버튼", "scores": { "active": 2, "passive": 0 } },
+        { "id": "q1-b", "content": "파란 버튼", "scores": { "active": 0, "passive": 2 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "버튼을 누르기 전에 어떻게 하시나요?",
+      "options": [
+        { "id": "q2-a", "content": "일단 누른다", "scores": { "active": 2, "careful": 0 } },
+        { "id": "q2-b", "content": "잠시 고민한다", "scores": { "active": 1, "careful": 1 } },
+        { "id": "q2-c", "content": "충분히 생각한 후 누른다", "scores": { "active": 0, "careful": 2 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "누른 버튼이 잘못된 결과를 가져왔다면?",
+      "options": [
+        { "id": "q3-a", "content": "다른 버튼을 눌러본다", "scores": { "active": 2, "passive": 0 } },
+        { "id": "q3-b", "content": "일단 상황을 지켜본다", "scores": { "active": 0, "passive": 2 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "비밀 버튼이 있다면 누르시겠어요?",
+      "options": [
+        { "id": "q4-a", "content": "당연히 눌러본다", "scores": { "active": 2, "careful": 0 } },
+        { "id": "q4-b", "content": "무슨 버튼인지 먼저 알아본다", "scores": { "active": 0, "careful": 2 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "엘리베이터에서 모든 층 버튼을 누르고 싶은 충동이 든 적 있나요?",
+      "options": [
+        { "id": "q5-a", "content": "자주 있다", "scores": { "active": 2, "passive": 0 } },
+        { "id": "q5-b", "content": "가끔 있다", "scores": { "active": 1, "passive": 1 } },
+        { "id": "q5-c", "content": "전혀 없다", "scores": { "active": 0, "passive": 2 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "게임에서 '누르지 마세요' 버튼이 있다면?",
+      "options": [
+        { "id": "q6-a", "content": "무조건 눌러본다", "scores": { "active": 2, "careful": 0 } },
+        { "id": "q6-b", "content": "누르지 않는다", "scores": { "active": 0, "careful": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "새로운 기능이 추가된 리모컨을 받았을 때?",
+      "options": [
+        { "id": "q7-a", "content": "모든 버튼을 눌러본다", "scores": { "active": 2, "careful": 0 } },
+        { "id": "q7-b", "content": "설명서를 먼저 읽는다", "scores": { "active": 0, "careful": 2 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "친구가 '이 버튼 누르지 마'라고 했을 때?",
+      "options": [
+        { "id": "q8-a", "content": "더 누르고 싶어진다", "scores": { "active": 2, "passive": 0 } },
+        { "id": "q8-b", "content": "왜 안 되는지 물어본다", "scores": { "active": 1, "passive": 1 } },
+        { "id": "q8-c", "content": "누르지 않는다", "scores": { "active": 0, "passive": 2 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "버튼을 누를 때 어떤 손가락을 사용하나요?",
+      "options": [
+        { "id": "q9-a", "content": "검지로 빠르게", "scores": { "active": 2, "careful": 0 } },
+        { "id": "q9-b", "content": "엄지로 천천히", "scores": { "active": 0, "careful": 2 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "마지막 질문! 지금 당장 누르고 싶은 버튼은?",
+      "options": [
+        { "id": "q10-a", "content": "결과 보기 버튼!", "scores": { "active": 2, "passive": 0 } },
+        { "id": "q10-b", "content": "처음으로 돌아가기", "scores": { "active": 0, "passive": 2 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "active-adventurer",
+      "type": "active",
+      "title": "적극적 모험가",
+      "description": "당신은 호기심이 넘치고 새로운 것에 도전하는 것을 두려워하지 않는 타입입니다. 버튼이 있으면 일단 눌러보는 당신! 때로는 신중함이 필요할 수 있지만, 그 적극성이 당신의 매력입니다.",
+      "imageUrl": "/images/results/active-adventurer.png",
+      "minScore": 15
+    },
+    {
+      "id": "careful-thinker",
+      "type": "careful",
+      "title": "신중한 사색가",
+      "description": "당신은 행동하기 전에 충분히 생각하는 타입입니다. 버튼을 누르기 전 결과를 예측하고 분석하는 신중함을 가지고 있어요. 안전하고 확실한 선택을 선호합니다.",
+      "imageUrl": "/images/results/careful-thinker.png",
+      "minScore": 10,
+      "maxScore": 14
+    },
+    {
+      "id": "balanced-observer",
+      "type": "balanced",
+      "title": "균형잡힌 관찰자",
+      "description": "당신은 상황에 따라 유연하게 대처하는 타입입니다. 때로는 과감하게, 때로는 신중하게 행동할 줄 압니다. 균형 잡힌 판단력이 당신의 강점입니다.",
+      "imageUrl": "/images/results/balanced-observer.png",
+      "minScore": 5,
+      "maxScore": 9
+    },
+    {
+      "id": "passive-watcher",
+      "type": "passive",
+      "title": "조용한 관망자",
+      "description": "당신은 급하게 행동하기보다 상황을 지켜보는 것을 선호합니다. 신중하고 차분한 성격으로, 확실한 정보가 있을 때 움직이는 타입입니다.",
+      "imageUrl": "/images/results/passive-watcher.png",
+      "maxScore": 4
+    }
+  ],
+  "createdAt": "2024-01-15"
+}

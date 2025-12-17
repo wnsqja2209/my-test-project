@@ -1,0 +1,196 @@
+{
+  "id": "mbti-simple-test",
+  "title": "간단 MBTI 성격 유형 테스트",
+  "description": "16가지 성격 유형 중 당신은? 빠르게 알아보는 나의 MBTI!",
+  "thumbnailUrl": "/images/tests/mbti-thumb.png",
+  "coverImageUrl": "/images/tests/mbti-cover.png",
+  "estimatedTime": 5,
+  "playCount": 52341,
+  "likeCount": 4521,
+  "bookmarkCount": 1234,
+  "recommendCount": 3210,
+  "category": "mbti",
+  "tags": ["MBTI", "성격", "유형"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "파티에서 당신은?",
+      "options": [
+        { "id": "q1-a", "content": "여러 사람과 대화하며 에너지를 얻는다", "scores": { "E": 1, "I": 0 } },
+        { "id": "q1-b", "content": "소수의 친한 친구와 대화를 선호한다", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "새로운 프로젝트를 시작할 때?",
+      "options": [
+        { "id": "q2-a", "content": "구체적인 계획과 단계를 세운다", "scores": { "S": 1, "N": 0 } },
+        { "id": "q2-b", "content": "큰 그림과 가능성에 집중한다", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "결정을 내릴 때 주로?",
+      "options": [
+        { "id": "q3-a", "content": "논리와 객관적 사실에 근거한다", "scores": { "T": 1, "F": 0 } },
+        { "id": "q3-b", "content": "사람들의 감정과 상황을 고려한다", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "일정 관리 스타일은?",
+      "options": [
+        { "id": "q4-a", "content": "계획적으로 미리 정해둔다", "scores": { "J": 1, "P": 0 } },
+        { "id": "q4-b", "content": "유연하게 상황에 맞춘다", "scores": { "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "주말에 선호하는 활동은?",
+      "options": [
+        { "id": "q5-a", "content": "친구들과 외출", "scores": { "E": 1, "I": 0 } },
+        { "id": "q5-b", "content": "집에서 휴식", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "문제를 해결할 때?",
+      "options": [
+        { "id": "q6-a", "content": "검증된 방법을 따른다", "scores": { "S": 1, "N": 0 } },
+        { "id": "q6-b", "content": "새로운 방법을 시도한다", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "친구가 고민을 얘기할 때?",
+      "options": [
+        { "id": "q7-a", "content": "해결책을 제시한다", "scores": { "T": 1, "F": 0 } },
+        { "id": "q7-b", "content": "공감하고 들어준다", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "여행 계획을 세울 때?",
+      "options": [
+        { "id": "q8-a", "content": "세부 일정을 미리 정한다", "scores": { "J": 1, "P": 0 } },
+        { "id": "q8-b", "content": "즉흥적으로 움직인다", "scores": { "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "대화할 때 선호하는 방식은?",
+      "options": [
+        { "id": "q9-a", "content": "직접 만나서 대화", "scores": { "E": 1, "I": 0 } },
+        { "id": "q9-b", "content": "메시지나 글로 소통", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "새로운 것을 배울 때?",
+      "options": [
+        { "id": "q10-a", "content": "실용적인 적용에 관심", "scores": { "S": 1, "N": 0 } },
+        { "id": "q10-b", "content": "이론과 개념에 관심", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "비판을 받았을 때?",
+      "options": [
+        { "id": "q11-a", "content": "객관적으로 분석한다", "scores": { "T": 1, "F": 0 } },
+        { "id": "q11-b", "content": "감정적으로 받아들인다", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "데드라인이 있을 때?",
+      "options": [
+        { "id": "q12-a", "content": "미리 끝내놓는다", "scores": { "J": 1, "P": 0 } },
+        { "id": "q12-b", "content": "마감 직전에 완성한다", "scores": { "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q13",
+      "content": "에너지 충전 방식은?",
+      "options": [
+        { "id": "q13-a", "content": "사람들과 어울리기", "scores": { "E": 1, "I": 0 } },
+        { "id": "q13-b", "content": "혼자만의 시간", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q14",
+      "content": "정보를 수집할 때?",
+      "options": [
+        { "id": "q14-a", "content": "구체적인 사실과 데이터", "scores": { "S": 1, "N": 0 } },
+        { "id": "q14-b", "content": "패턴과 의미 해석", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q15",
+      "content": "갈등 상황에서?",
+      "options": [
+        { "id": "q15-a", "content": "공정함을 중시한다", "scores": { "T": 1, "F": 0 } },
+        { "id": "q15-b", "content": "조화를 중시한다", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q16",
+      "content": "작업 환경 선호도는?",
+      "options": [
+        { "id": "q16-a", "content": "정돈되고 체계적인", "scores": { "J": 1, "P": 0 } },
+        { "id": "q16-b", "content": "유연하고 자유로운", "scores": { "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q17",
+      "content": "모임에서 당신은?",
+      "options": [
+        { "id": "q17-a", "content": "대화를 주도하는 편", "scores": { "E": 1, "I": 0 } },
+        { "id": "q17-b", "content": "듣는 것을 선호", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q18",
+      "content": "미래에 대해?",
+      "options": [
+        { "id": "q18-a", "content": "현실적으로 계획한다", "scores": { "S": 1, "N": 0 } },
+        { "id": "q18-b", "content": "가능성을 상상한다", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q19",
+      "content": "중요한 결정을 내릴 때?",
+      "options": [
+        { "id": "q19-a", "content": "장단점을 분석한다", "scores": { "T": 1, "F": 0 } },
+        { "id": "q19-b", "content": "직감을 따른다", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q20",
+      "content": "삶의 방식은?",
+      "options": [
+        { "id": "q20-a", "content": "계획대로 사는 것", "scores": { "J": 1, "P": 0 } },
+        { "id": "q20-b", "content": "흐름에 맡기는 것", "scores": { "J": 0, "P": 1 } }
+      ]
+    }
+  ],
+  "results": [
+    { "id": "INTJ", "type": "INTJ", "title": "INTJ - 전략가", "description": "독립적이고 전략적인 사고력을 가진 당신은 INTJ입니다! 높은 기준을 가지고 있으며, 목표 달성을 위해 효율적으로 움직입니다. 지식을 쌓는 것을 좋아하고, 복잡한 문제를 해결하는 데 능숙합니다.", "imageUrl": "/images/results/mbti-intj.png" },
+    { "id": "INTP", "type": "INTP", "title": "INTP - 논리술사", "description": "논리적이고 창의적인 당신은 INTP입니다! 아이디어와 이론에 관심이 많으며, 지적 호기심이 넘칩니다. 독창적인 해결책을 찾는 것을 좋아합니다.", "imageUrl": "/images/results/mbti-intp.png" },
+    { "id": "ENTJ", "type": "ENTJ", "title": "ENTJ - 통솔자", "description": "카리스마 있는 리더인 당신은 ENTJ입니다! 목표 지향적이고 결단력이 있으며, 조직을 이끄는 능력이 뛰어납니다.", "imageUrl": "/images/results/mbti-entj.png" },
+    { "id": "ENTP", "type": "ENTP", "title": "ENTP - 변론가", "description": "지적이고 호기심 많은 당신은 ENTP입니다! 새로운 아이디어를 탐구하고 토론하는 것을 좋아합니다.", "imageUrl": "/images/results/mbti-entp.png" },
+    { "id": "INFJ", "type": "INFJ", "title": "INFJ - 옹호자", "description": "이상주의적이고 통찰력 있는 당신은 INFJ입니다! 다른 사람을 돕고 싶은 마음이 크며, 깊은 의미를 추구합니다.", "imageUrl": "/images/results/mbti-infj.png" },
+    { "id": "INFP", "type": "INFP", "title": "INFP - 중재자", "description": "이상주의적이고 창의적인 당신은 INFP입니다! 자신만의 가치관을 중요시하며, 진정성 있는 삶을 추구합니다.", "imageUrl": "/images/results/mbti-infp.png" },
+    { "id": "ENFJ", "type": "ENFJ", "title": "ENFJ - 선도자", "description": "카리스마 있고 영감을 주는 당신은 ENFJ입니다! 다른 사람의 성장을 돕는 것을 좋아하며, 뛰어난 소통 능력을 가지고 있습니다.", "imageUrl": "/images/results/mbti-enfj.png" },
+    { "id": "ENFP", "type": "ENFP", "title": "ENFP - 활동가", "description": "열정적이고 창의적인 당신은 ENFP입니다! 가능성을 보고 사람들에게 영감을 줍니다. 자유롭고 에너지가 넘칩니다.", "imageUrl": "/images/results/mbti-enfp.png" },
+    { "id": "ISTJ", "type": "ISTJ", "title": "ISTJ - 현실주의자", "description": "책임감 있고 신뢰할 수 있는 당신은 ISTJ입니다! 체계적이고 꼼꼼하며, 맡은 일을 끝까지 해냅니다.", "imageUrl": "/images/results/mbti-istj.png" },
+    { "id": "ISFJ", "type": "ISFJ", "title": "ISFJ - 수호자", "description": "헌신적이고 따뜻한 당신은 ISFJ입니다! 다른 사람을 돌보는 것을 좋아하며, 책임감이 강합니다.", "imageUrl": "/images/results/mbti-isfj.png" },
+    { "id": "ESTJ", "type": "ESTJ", "title": "ESTJ - 경영자", "description": "조직적이고 리더십 있는 당신은 ESTJ입니다! 효율성을 중시하며, 일을 체계적으로 처리합니다.", "imageUrl": "/images/results/mbti-estj.png" },
+    { "id": "ESFJ", "type": "ESFJ", "title": "ESFJ - 집정관", "description": "사교적이고 배려심 있는 당신은 ESFJ입니다! 조화를 중요시하며, 다른 사람을 돕는 것을 좋아합니다.", "imageUrl": "/images/results/mbti-esfj.png" },
+    { "id": "ISTP", "type": "ISTP", "title": "ISTP - 장인", "description": "실용적이고 분석적인 당신은 ISTP입니다! 문제 해결 능력이 뛰어나며, 손으로 하는 일을 좋아합니다.", "imageUrl": "/images/results/mbti-istp.png" },
+    { "id": "ISFP", "type": "ISFP", "title": "ISFP - 모험가", "description": "예술적이고 감각적인 당신은 ISFP입니다! 현재를 즐기며, 자신만의 방식으로 세상을 경험합니다.", "imageUrl": "/images/results/mbti-isfp.png" },
+    { "id": "ESTP", "type": "ESTP", "title": "ESTP - 사업가", "description": "활동적이고 현실적인 당신은 ESTP입니다! 모험을 즐기며, 빠른 판단력을 가지고 있습니다.", "imageUrl": "/images/results/mbti-estp.png" },
+    { "id": "ESFP", "type": "ESFP", "title": "ESFP - 연예인", "description": "즐거움을 추구하는 당신은 ESFP입니다! 사교적이고 활기차며, 주변을 즐겁게 만듭니다.", "imageUrl": "/images/results/mbti-esfp.png" }
+  ],
+  "createdAt": "2024-02-01"
+}
+

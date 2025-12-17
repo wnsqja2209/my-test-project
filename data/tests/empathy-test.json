@@ -1,0 +1,202 @@
+{
+  "id": "empathy-test",
+  "title": "나의 공감능력 테스트",
+  "description": "당신의 공감 지수는 몇 점일까요? 타인의 감정을 얼마나 잘 이해하는지 알아보세요!",
+  "thumbnailUrl": "/images/tests/empathy-thumb.png",
+  "coverImageUrl": "/images/tests/empathy-cover.png",
+  "estimatedTime": 3,
+  "playCount": 18923,
+  "likeCount": 1567,
+  "bookmarkCount": 423,
+  "recommendCount": 987,
+  "category": "personality",
+  "tags": ["공감", "감정", "EQ", "심리"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "친구가 슬픈 이야기를 할 때 당신은?",
+      "options": [
+        { "id": "q1-a", "content": "함께 눈물이 난다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q1-b", "content": "위로의 말을 건넨다", "scores": { "high": 2, "medium": 1, "low": 0 } },
+        { "id": "q1-c", "content": "해결책을 제시한다", "scores": { "high": 0, "medium": 2, "low": 1 } },
+        { "id": "q1-d", "content": "들어주기만 한다", "scores": { "high": 1, "medium": 2, "low": 0 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "영화에서 감동적인 장면을 볼 때?",
+      "options": [
+        { "id": "q2-a", "content": "눈물을 흘린다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q2-b", "content": "마음이 뭉클해진다", "scores": { "high": 2, "medium": 1, "low": 0 } },
+        { "id": "q2-c", "content": "그냥 지켜본다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q2-d", "content": "별 감흥이 없다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "누군가 화가 나 있을 때, 그 이유를?",
+      "options": [
+        { "id": "q3-a", "content": "바로 알아챈다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q3-b", "content": "대화하면 알게 된다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q3-c", "content": "잘 모르겠다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "동물이 아파하는 모습을 보면?",
+      "options": [
+        { "id": "q4-a", "content": "마음이 너무 아프다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q4-b", "content": "도와주고 싶다", "scores": { "high": 2, "medium": 1, "low": 0 } },
+        { "id": "q4-c", "content": "안타깝지만 지나친다", "scores": { "high": 0, "medium": 2, "low": 1 } },
+        { "id": "q4-d", "content": "크게 신경 쓰지 않는다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "다른 사람의 성공 소식을 들었을 때?",
+      "options": [
+        { "id": "q5-a", "content": "진심으로 기쁘다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q5-b", "content": "축하해준다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q5-c", "content": "나와 비교하게 된다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q5-d", "content": "별 감정이 없다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "낯선 사람이 우는 것을 봤을 때?",
+      "options": [
+        { "id": "q6-a", "content": "다가가서 물어본다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q6-b", "content": "걱정되지만 지나친다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q6-c", "content": "신경 쓰지 않는다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "상대방의 기분을 얼마나 잘 파악하나요?",
+      "options": [
+        { "id": "q7-a", "content": "표정만 봐도 안다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q7-b", "content": "대화하면 알게 된다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q7-c", "content": "직접 물어봐야 안다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q7-d", "content": "잘 모르겠다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "봉사활동에 대한 생각은?",
+      "options": [
+        { "id": "q8-a", "content": "정기적으로 하고 있다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q8-b", "content": "기회가 되면 한다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q8-c", "content": "해본 적 없다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q8-d", "content": "관심 없다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "타인의 고통이 나에게 미치는 영향은?",
+      "options": [
+        { "id": "q9-a", "content": "나도 함께 힘들어진다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q9-b", "content": "마음이 무거워진다", "scores": { "high": 2, "medium": 1, "low": 0 } },
+        { "id": "q9-c", "content": "안타깝지만 괜찮다", "scores": { "high": 0, "medium": 2, "low": 1 } },
+        { "id": "q9-d", "content": "별 영향 없다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "누군가에게 상처 주는 말을 했을 때?",
+      "options": [
+        { "id": "q10-a", "content": "바로 사과하고 후회한다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q10-b", "content": "나중에 미안해진다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q10-c", "content": "상황에 따라 다르다", "scores": { "high": 0, "medium": 2, "low": 1 } },
+        { "id": "q10-d", "content": "크게 신경 쓰지 않는다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "다른 사람의 입장에서 생각하는 것이?",
+      "options": [
+        { "id": "q11-a", "content": "자연스럽게 된다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q11-b", "content": "노력하면 된다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q11-c", "content": "어렵다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q11-d", "content": "잘 안 된다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "사회적 약자에 대한 뉴스를 보면?",
+      "options": [
+        { "id": "q12-a", "content": "마음이 아프고 돕고 싶다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q12-b", "content": "안타깝다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q12-c", "content": "그냥 넘긴다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q12-d", "content": "관심 없다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q13",
+      "content": "대화할 때 상대방의 눈을?",
+      "options": [
+        { "id": "q13-a", "content": "자주 마주친다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q13-b", "content": "가끔 마주친다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q13-c", "content": "잘 마주치지 않는다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q13-d", "content": "피하는 편이다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q14",
+      "content": "친구의 작은 변화를?",
+      "options": [
+        { "id": "q14-a", "content": "바로 알아챈다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q14-b", "content": "종종 알아챈다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q14-c", "content": "말해주면 안다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q14-d", "content": "잘 모르겠다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    },
+    {
+      "id": "q15",
+      "content": "감정을 표현하는 것이?",
+      "options": [
+        { "id": "q15-a", "content": "자연스럽다", "scores": { "high": 3, "medium": 0, "low": 0 } },
+        { "id": "q15-b", "content": "노력하면 된다", "scores": { "high": 1, "medium": 2, "low": 0 } },
+        { "id": "q15-c", "content": "어렵다", "scores": { "high": 0, "medium": 1, "low": 2 } },
+        { "id": "q15-d", "content": "잘 안 한다", "scores": { "high": 0, "medium": 0, "low": 3 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "empathy-king",
+      "type": "high",
+      "title": "공감왕",
+      "description": "당신은 타인의 감정을 깊이 이해하고 공감하는 능력이 뛰어납니다! 다른 사람의 기쁨과 슬픔을 자신의 것처럼 느끼며, 주변 사람들에게 따뜻한 위로가 됩니다. 높은 감수성과 공감 능력은 당신의 큰 장점이지만, 때로는 자신의 감정도 잘 돌봐주세요.",
+      "imageUrl": "/images/results/empathy-high.png",
+      "minScore": 35
+    },
+    {
+      "id": "empathy-lover",
+      "type": "medium-high",
+      "title": "공감러",
+      "description": "당신은 다른 사람의 감정을 잘 이해하고 배려하는 따뜻한 마음의 소유자입니다! 적절한 공감 능력으로 좋은 관계를 유지하며, 상대방을 편안하게 만드는 재능이 있습니다.",
+      "imageUrl": "/images/results/empathy-medium-high.png",
+      "minScore": 25,
+      "maxScore": 34
+    },
+    {
+      "id": "empathy-neutral",
+      "type": "medium",
+      "title": "공감 중립",
+      "description": "당신은 균형 잡힌 공감 능력을 가지고 있습니다. 상황에 따라 적절히 공감하면서도 객관적인 시각을 유지합니다. 때로는 더 깊은 공감을 표현해보는 것도 좋을 것 같아요.",
+      "imageUrl": "/images/results/empathy-medium.png",
+      "minScore": 15,
+      "maxScore": 24
+    },
+    {
+      "id": "empathy-cold",
+      "type": "low",
+      "title": "쿨한 관찰자",
+      "description": "당신은 감정보다 이성적인 판단을 중시하는 타입입니다. 객관적인 시각으로 상황을 바라보며, 감정에 휘둘리지 않습니다. 때로는 상대방의 감정에 조금 더 귀 기울여 보는 것도 좋을 것 같아요.",
+      "imageUrl": "/images/results/empathy-low.png",
+      "maxScore": 14
+    }
+  ],
+  "createdAt": "2024-02-10"
+}
+

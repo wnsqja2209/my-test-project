@@ -1,0 +1,172 @@
+{
+  "id": "blood-type-test",
+  "title": "혈액형으로 보는 나의 성격",
+  "description": "혈액형별 숨겨진 성격을 알아보세요! 당신의 진짜 혈액형 성격은?",
+  "thumbnailUrl": "/images/tests/blood-thumb.png",
+  "coverImageUrl": "/images/tests/blood-cover.png",
+  "estimatedTime": 3,
+  "playCount": 28456,
+  "likeCount": 2340,
+  "bookmarkCount": 789,
+  "recommendCount": 1560,
+  "category": "personality",
+  "tags": ["혈액형", "성격", "연애"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "약속 시간에 대한 당신의 태도는?",
+      "options": [
+        { "id": "q1-a", "content": "항상 10분 전에 도착한다", "scores": { "A": 2, "B": 0, "O": 1, "AB": 0 } },
+        { "id": "q1-b", "content": "딱 맞춰서 간다", "scores": { "A": 0, "B": 1, "O": 2, "AB": 1 } },
+        { "id": "q1-c", "content": "조금 늦는 편이다", "scores": { "A": 0, "B": 2, "O": 0, "AB": 1 } },
+        { "id": "q1-d", "content": "상황에 따라 다르다", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "친구들과 여행 계획을 세울 때?",
+      "options": [
+        { "id": "q2-a", "content": "세세한 일정까지 계획한다", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q2-b", "content": "대략적인 것만 정하고 즉흥적으로", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q2-c", "content": "리더십을 발휘해 주도한다", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q2-d", "content": "다른 사람 의견에 맞춘다", "scores": { "A": 1, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "스트레스를 받을 때 당신은?",
+      "options": [
+        { "id": "q3-a", "content": "혼자만의 시간을 갖는다", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q3-b", "content": "친구들과 놀러간다", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q3-c", "content": "운동이나 활동적인 것을 한다", "scores": { "A": 0, "B": 1, "O": 2, "AB": 0 } },
+        { "id": "q3-d", "content": "취미 생활에 몰두한다", "scores": { "A": 1, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "새로운 사람을 만났을 때?",
+      "options": [
+        { "id": "q4-a", "content": "먼저 다가가기 어렵다", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q4-b", "content": "적극적으로 말을 건다", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q4-c", "content": "자연스럽게 대화를 이끈다", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q4-d", "content": "상대방에 따라 다르다", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "연인과 싸웠을 때 당신은?",
+      "options": [
+        { "id": "q5-a", "content": "시간을 두고 차분히 얘기한다", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q5-b", "content": "바로 화해하려고 한다", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q5-c", "content": "직접적으로 문제를 해결한다", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q5-d", "content": "상황을 분석하며 생각한다", "scores": { "A": 1, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "팀 프로젝트에서 당신의 역할은?",
+      "options": [
+        { "id": "q6-a", "content": "꼼꼼하게 자료 정리", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q6-b", "content": "아이디어 뱅크", "scores": { "A": 0, "B": 2, "O": 0, "AB": 1 } },
+        { "id": "q6-c", "content": "전체 진행 총괄", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q6-d", "content": "필요한 곳에서 서포트", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "주말에 주로 무엇을 하나요?",
+      "options": [
+        { "id": "q7-a", "content": "집에서 휴식", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q7-b", "content": "친구들과 약속", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q7-c", "content": "활동적인 취미", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q7-d", "content": "그때그때 달라요", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "화가 났을 때 어떻게 표현하나요?",
+      "options": [
+        { "id": "q8-a", "content": "속으로 삭힌다", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q8-b", "content": "바로 표현한다", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q8-c", "content": "확실하게 말한다", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q8-d", "content": "냉정하게 대처한다", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "좋아하는 음식점을 고를 때?",
+      "options": [
+        { "id": "q9-a", "content": "항상 가던 곳으로", "scores": { "A": 2, "B": 0, "O": 1, "AB": 0 } },
+        { "id": "q9-b", "content": "새로운 곳 도전!", "scores": { "A": 0, "B": 2, "O": 0, "AB": 1 } },
+        { "id": "q9-c", "content": "맛집 리스트 확인", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q9-d", "content": "같이 가는 사람 취향에 맞춰", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "선물을 고를 때?",
+      "options": [
+        { "id": "q10-a", "content": "오래 고민해서 완벽한 선물", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q10-b", "content": "센스있는 깜짝 선물", "scores": { "A": 0, "B": 2, "O": 0, "AB": 1 } },
+        { "id": "q10-c", "content": "실용적인 선물", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q10-d", "content": "상대방이 원하는 것", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "영화를 볼 때 선호하는 방식은?",
+      "options": [
+        { "id": "q11-a", "content": "혼자 조용히", "scores": { "A": 2, "B": 0, "O": 0, "AB": 1 } },
+        { "id": "q11-b", "content": "친구들과 왁자지껄", "scores": { "A": 0, "B": 2, "O": 1, "AB": 0 } },
+        { "id": "q11-c", "content": "연인과 데이트", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q11-d", "content": "상황에 따라", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "자신을 한 단어로 표현한다면?",
+      "options": [
+        { "id": "q12-a", "content": "꼼꼼함", "scores": { "A": 2, "B": 0, "O": 0, "AB": 0 } },
+        { "id": "q12-b", "content": "자유로움", "scores": { "A": 0, "B": 2, "O": 0, "AB": 0 } },
+        { "id": "q12-c", "content": "열정", "scores": { "A": 0, "B": 0, "O": 2, "AB": 0 } },
+        { "id": "q12-d", "content": "독특함", "scores": { "A": 0, "B": 0, "O": 0, "AB": 2 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "type-A",
+      "type": "A",
+      "title": "A형 - 꼼꼼한 완벽주의자",
+      "description": "당신은 A형 성격입니다! 섬세하고 꼼꼼한 성격으로 모든 일을 완벽하게 처리하려 합니다. 책임감이 강하고 신중하며, 다른 사람을 배려하는 마음이 큽니다. 때로는 너무 걱정이 많을 수 있지만, 그만큼 믿음직스러운 사람입니다.",
+      "imageUrl": "/images/results/blood-a.png",
+      "minScore": 18
+    },
+    {
+      "id": "type-B",
+      "type": "B",
+      "title": "B형 - 자유로운 영혼",
+      "description": "당신은 B형 성격입니다! 자유분방하고 창의적인 성격으로 틀에 박힌 것을 싫어합니다. 호기심이 많고 새로운 것에 도전하는 것을 좋아하며, 솔직하고 직설적입니다. 자기만의 세계가 확실한 매력적인 사람입니다.",
+      "imageUrl": "/images/results/blood-b.png",
+      "minScore": 18
+    },
+    {
+      "id": "type-O",
+      "type": "O",
+      "title": "O형 - 열정적인 리더",
+      "description": "당신은 O형 성격입니다! 목표 지향적이고 리더십이 있는 성격입니다. 사교적이고 활동적이며, 자신감이 넘칩니다. 대범하고 결단력이 있어 주변 사람들에게 신뢰를 받습니다. 때로는 고집이 세지만, 그만큼 추진력이 있습니다.",
+      "imageUrl": "/images/results/blood-o.png",
+      "minScore": 18
+    },
+    {
+      "id": "type-AB",
+      "type": "AB",
+      "title": "AB형 - 독특한 천재",
+      "description": "당신은 AB형 성격입니다! 이성적이면서도 감성적인 독특한 매력의 소유자입니다. 상황에 따라 유연하게 대처하며, 분석적인 사고력을 가지고 있습니다. 예술적 감각이 뛰어나고 창의적이며, 신비로운 매력이 있습니다.",
+      "imageUrl": "/images/results/blood-ab.png",
+      "minScore": 18
+    }
+  ],
+  "createdAt": "2024-01-20"
+}
+

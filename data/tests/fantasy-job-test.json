@@ -1,0 +1,359 @@
+{
+  "id": "fantasy-job-test",
+  "title": "판타지 세계에 소환된다면, 당신의 직업은?",
+  "description": "검을 들 것인가, 마법서를 펼칠 것인가, 아니면 뒤에서 판을 짤 것인가. 당신의 선택으로 판타지 세계 속 직업을 알아보세요.",
+  "thumbnailUrl": "/images/tests/fantasy-job-test-thumb.png",
+  "coverImageUrl": "/images/tests/fantasy-job-test-cover.png",
+  "estimatedTime": 3,
+  "playCount": 0,
+  "likeCount": 0,
+  "bookmarkCount": 0,
+  "recommendCount": 0,
+  "category": "fun",
+  "tags": ["판타지", "직업", "소환", "게임"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "눈을 떠보니 낯선 세계다. 가장 먼저 드는 생각은?",
+      "options": [
+        {
+          "id": "q1-a",
+          "content": "도움이 필요한 사람이 있는지 본다",
+          "scores": { "warrior": 0, "mage": 1, "rogue": 0, "supporter": 2 }
+        },
+        {
+          "id": "q1-b",
+          "content": "주변 상황부터 빠르게 파악한다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 1 }
+        },
+        {
+          "id": "q1-c",
+          "content": "일단 무기부터 찾아야 한다",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 1, "supporter": 0 }
+        },
+        {
+          "id": "q1-d",
+          "content": "일단 심호흡을 한다",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "전투 중 위기가 왔을 때 당신의 행동은?",
+      "options": [
+        {
+          "id": "q2-a",
+          "content": "동료부터 안전하게 만든다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        },
+        {
+          "id": "q2-b",
+          "content": "빈틈을 노려 흐름을 끊는다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q2-c",
+          "content": "멀리서 타개할 방법을 생각한다",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q2-d",
+          "content": "내가 버텨서 시간을 번다",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "파티에서 가장 중요하다고 생각하는 것은?",
+      "options": [
+        {
+          "id": "q3-a",
+          "content": "전투력과 체력",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q3-b",
+          "content": "전략과 지식",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q3-c",
+          "content": "유연한 대처",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q3-d",
+          "content": "팀워크와 안정감",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "보스 솔플을 한다면?",
+      "options": [
+        {
+          "id": "q4-a",
+          "content": "다른 사람이 하는 걸 몰래 지켜보기",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q4-b",
+          "content": "혼자 어떻게 해. 파티를 모은다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        },
+        {
+          "id": "q4-c",
+          "content": "충분한 준비 후 실행",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q4-d",
+          "content": "일단 잡으러 가보기",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 1, "supporter": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "마을에서 당신이 맡게 될 역할은?",
+      "options": [
+        {
+          "id": "q5-a",
+          "content": "수호자",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 1 }
+        },
+        {
+          "id": "q5-b",
+          "content": "조언자",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 1 }
+        },
+        {
+          "id": "q5-c",
+          "content": "정보 수집가",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q5-d",
+          "content": "치유 담당",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "가장 싫은 상황은?",
+      "options": [
+        {
+          "id": "q6-a",
+          "content": "도망치는 것",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q6-b",
+          "content": "계획 없는 싸움",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q6-c",
+          "content": "예측 불가한 변수",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 1, "supporter": 0 }
+        },
+        {
+          "id": "q6-d",
+          "content": "누군가 다치는 것",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "전투 스타일을 고른다면?",
+      "options": [
+        {
+          "id": "q7-a",
+          "content": "맞아가며 싸운다",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q7-b",
+          "content": "거리 유지",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q7-c",
+          "content": "히트 앤 런",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q7-d",
+          "content": "보조 위주",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "이 세계에서 당신이 듣고 싶은 평가는?",
+      "options": [
+        {
+          "id": "q8-a",
+          "content": "믿고 맡길 수 있는 사람",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 1 }
+        },
+        {
+          "id": "q8-b",
+          "content": "천재적인 전략가",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q8-c",
+          "content": "보이지 않는 핵심",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q8-d",
+          "content": "모두를 살린 영웅",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "파티원이 실수로 전멸 위기를 만들었다면?",
+      "options": [
+        {
+          "id": "q9-a",
+          "content": "틈을 노려 혼자라도 살아남을 길을 찾는다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q9-b",
+          "content": "일단 모두 살릴 방법부터 고민한다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        },
+        {
+          "id": "q9-c",
+          "content": "상황을 정리하고 다음 수를 생각한다",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q9-d",
+          "content": "바로 내가 나서서 수습한다",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "파티에 리더가 없다면 당신은?",
+      "options": [
+        {
+          "id": "q10-a",
+          "content": "자연스럽게 앞에 선다",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 1 }
+        },
+        {
+          "id": "q10-b",
+          "content": "전략만 제시하고 판단은 맡긴다",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q10-c",
+          "content": "리더는 싫으니 뒤로 빠진다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q10-d",
+          "content": "맘에 드는 사람을 리더로 추천한다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "퀘스트 보상으로 하나만 고를 수 있다면?",
+      "options": [
+        {
+          "id": "q11-a",
+          "content": "공격력이 크게 오르는 아이템",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q11-b",
+          "content": "범용적으로 쓸 수 있는 능력",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q11-c",
+          "content": "상황을 뒤집을 수 있는 특수 아이템",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q11-d",
+          "content": "파티 전체에 도움이 되는 보상",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "당신이 없으면 파티는?",
+      "options": [
+        {
+          "id": "q12-a",
+          "content": "전면에서 무너진다",
+          "scores": { "warrior": 2, "mage": 0, "rogue": 0, "supporter": 1 }
+        },
+        {
+          "id": "q12-b",
+          "content": "전략이 흔들린다",
+          "scores": { "warrior": 0, "mage": 2, "rogue": 0, "supporter": 0 }
+        },
+        {
+          "id": "q12-c",
+          "content": "흐름이 답답해진다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 2, "supporter": 0 }
+        },
+        {
+          "id": "q12-d",
+          "content": "유지가 안 된다",
+          "scores": { "warrior": 0, "mage": 0, "rogue": 0, "supporter": 2 }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "r1",
+      "type": "warrior",
+      "title": "전사",
+      "description": "정면에서 싸우며 팀을 지키는 타입. 책임감과 추진력이 강한 전장의 중심입니다.",
+      "imageUrl": "/images/tests/fantasy-job-test-result-warrior.png"
+    },
+    {
+      "id": "r2",
+      "type": "mage",
+      "title": "마법사",
+      "description": "지식과 전략으로 전황을 지배하는 두뇌형 플레이어입니다.",
+      "imageUrl": "/images/tests/fantasy-job-test-result-mage.png"
+    },
+    {
+      "id": "r3",
+      "type": "rogue",
+      "title": "도적",
+      "description": "기습과 판단력으로 흐름을 바꾸는 그림자 같은 존재입니다.",
+      "imageUrl": "/images/tests/fantasy-job-test-result-rogue.png"
+    },
+    {
+      "id": "r4",
+      "type": "supporter",
+      "title": "서포터",
+      "description": "눈에 띄지 않지만 가장 중요한 역할. 팀을 완성시키는 핵심 인물입니다.",
+      "imageUrl": "/images/tests/fantasy-job-test-result-supporter.png"
+    }
+  ],
+  "createdAt": "2024-12-16"
+}

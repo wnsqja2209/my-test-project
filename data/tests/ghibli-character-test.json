@@ -1,0 +1,113 @@
+{
+  "id": "ghibli-character-test",
+  "title": "나는 에겐일까 테토일까?",
+  "description": "지브리 캐릭터로 알아보는 나의 성격! 천공의 성 라퓨타의 두 주인공 중 당신은?",
+  "thumbnailUrl": "/images/tests/ghibli-thumb.png",
+  "coverImageUrl": "/images/tests/ghibli-cover.png",
+  "estimatedTime": 2,
+  "playCount": 12567,
+  "likeCount": 1890,
+  "bookmarkCount": 567,
+  "recommendCount": 1234,
+  "category": "fun",
+  "tags": ["지브리", "캐릭터", "애니메이션", "에겐", "테토"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "하늘에서 소녀가 떨어진다면?",
+      "options": [
+        { "id": "q1-a", "content": "일단 받는다!", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q1-b", "content": "놀라서 지켜본다", "scores": { "pazu": 0, "sheeta": 2 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "위험한 상황에서 당신은?",
+      "options": [
+        { "id": "q2-a", "content": "용감하게 맞선다", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q2-b", "content": "현명하게 대처한다", "scores": { "pazu": 0, "sheeta": 2 } },
+        { "id": "q2-c", "content": "상황에 따라 다르다", "scores": { "pazu": 1, "sheeta": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "친구가 위험에 빠졌다면?",
+      "options": [
+        { "id": "q3-a", "content": "뛰어들어 구한다", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q3-b", "content": "도움을 요청한다", "scores": { "pazu": 0, "sheeta": 2 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "비밀을 알게 되었을 때?",
+      "options": [
+        { "id": "q4-a", "content": "진실을 밝히려 한다", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q4-b", "content": "조용히 간직한다", "scores": { "pazu": 0, "sheeta": 2 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "꿈에 대한 당신의 태도는?",
+      "options": [
+        { "id": "q5-a", "content": "반드시 이루겠다!", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q5-b", "content": "조용히 품고 있다", "scores": { "pazu": 0, "sheeta": 2 } },
+        { "id": "q5-c", "content": "상황 봐서 도전한다", "scores": { "pazu": 1, "sheeta": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "새로운 곳에 가면?",
+      "options": [
+        { "id": "q6-a", "content": "탐험을 시작한다", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q6-b", "content": "조용히 관찰한다", "scores": { "pazu": 0, "sheeta": 2 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "아침형 인간 vs 저녁형 인간?",
+      "options": [
+        { "id": "q7-a", "content": "일찍 일어나는 아침형", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q7-b", "content": "밤을 좋아하는 저녁형", "scores": { "pazu": 0, "sheeta": 2 } },
+        { "id": "q7-c", "content": "그때그때 다르다", "scores": { "pazu": 1, "sheeta": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "힘든 일이 있을 때?",
+      "options": [
+        { "id": "q8-a", "content": "긍정적으로 극복한다", "scores": { "pazu": 2, "sheeta": 0 } },
+        { "id": "q8-b", "content": "조용히 견딘다", "scores": { "pazu": 0, "sheeta": 2 } },
+        { "id": "q8-c", "content": "누군가와 나눈다", "scores": { "pazu": 1, "sheeta": 1 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "pazu-type",
+      "type": "pazu",
+      "title": "파즈형 (에겐)",
+      "description": "당신은 파즈처럼 열정적이고 용감한 타입입니다! 꿈을 향해 달려가는 추진력과 다른 사람을 지키려는 따뜻한 마음을 가지고 있어요. 어떤 어려움이 있어도 포기하지 않는 강인함이 당신의 매력입니다.",
+      "imageUrl": "/images/results/ghibli-pazu.png",
+      "minScore": 12
+    },
+    {
+      "id": "sheeta-type",
+      "type": "sheeta",
+      "title": "시타형 (테토)",
+      "description": "당신은 시타처럼 신비롭고 현명한 타입입니다! 조용하지만 내면에 강한 의지를 품고 있으며, 자연과 조화를 이루는 평화로운 성격입니다. 다른 사람을 배려하는 따뜻한 마음이 당신의 매력이에요.",
+      "imageUrl": "/images/results/ghibli-sheeta.png",
+      "minScore": 0,
+      "maxScore": 7
+    },
+    {
+      "id": "mixed-type",
+      "type": "mixed",
+      "title": "파즈+시타 혼합형",
+      "description": "당신은 파즈의 용기와 시타의 지혜를 모두 가진 균형 잡힌 타입입니다! 상황에 따라 과감하게 행동하기도 하고, 신중하게 판단하기도 해요. 어떤 모험도 함께라면 해낼 수 있는 완벽한 파트너 타입이에요.",
+      "imageUrl": "/images/results/ghibli-mixed.png",
+      "minScore": 8,
+      "maxScore": 11
+    }
+  ],
+  "createdAt": "2024-02-15"
+}
