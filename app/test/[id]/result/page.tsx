@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useRouter, useParams, useSearchParams } from "next/navigation";
 import { Home, RotateCcw, Share2 } from "lucide-react";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
@@ -13,11 +13,13 @@ import {
   getResultById,
   getRelatedTests,
 } from "@/lib/test-utils";
+import { downloadResultImage } from "@/lib/image-utils";
 import type { Test, Result, TestResultState, TestSummary } from "@/types/test";
 
 export default function TestResultPage() {
   const router = useRouter();
   const params = useParams();
+  const searchParams = useSearchParams();
   const testId = params.id as string;
 
   const [test, setTest] = useState<Test | null>(null);
@@ -34,16 +36,29 @@ export default function TestResultPage() {
     }
     setTest(testData);
 
+    // URL searchParams에서 resultId 확인 (공유 링크용)
+    const urlResultId = searchParams.get("r");
+
     // sessionStorage에서 결과 가져오기
     const resultStateJson = sessionStorage.getItem(`test-result-${testId}`);
-    if (!resultStateJson) {
+
+    let resultId: string | null = null;
+
+    // URL에 resultId가 있으면 우선 사용
+    if (urlResultId) {
+      resultId = urlResultId;
+    } else if (resultStateJson) {
+      const resultState: TestResultState = JSON.parse(resultStateJson);
+      resultId = resultState.resultId;
+    }
+
+    if (!resultId) {
       // 결과가 없으면 테스트 페이지로 이동
       router.replace(`/test/${testId}`);
       return;
     }
 
-    const resultState: TestResultState = JSON.parse(resultStateJson);
-    const resultData = getResultById(testId, resultState.resultId);
+    const resultData = getResultById(testId, resultId);
 
     if (!resultData) {
       router.replace(`/test/${testId}`);
@@ -62,7 +77,7 @@ export default function TestResultPage() {
       category: t.category,
     }));
     setRelatedTests(related);
-  }, [testId, router]);
+  }, [testId, router, searchParams]);
 
   // 공유하기
   const handleShare = () => {
@@ -73,6 +88,17 @@ export default function TestResultPage() {
   const handleRetry = () => {
     sessionStorage.removeItem(`test-result-${testId}`);
     router.push(`/test/${testId}/play`);
+  };
+
+  // 이미지 다운로드 (서버에서 생성)
+  const handleDownloadImage = async () => {
+    if (!test || !result) return;
+
+    await downloadResultImage(
+      testId,
+      result.id,
+      `${test.title}-${result.title}-result.png`
+    );
   };
 
   if (!test || !result) {
@@ -142,6 +168,10 @@ export default function TestResultPage() {
         onClose={() => setIsShareModalOpen(false)}
         title={`${test.title} 결과: ${result.title}`}
         description={`나의 ${test.title} 결과는 "${result.title}"입니다!`}
+        url={`${typeof window !== "undefined" ? window.location.origin : ""}/test/${testId}/result?r=${result.id}`}
+        testId={testId}
+        resultId={result.id}
+        onDownloadImage={handleDownloadImage}
       />
     </div>
   );

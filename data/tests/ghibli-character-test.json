@@ -2,8 +2,8 @@
   "id": "ghibli-character-test",
   "title": "나는 에겐일까 테토일까?",
   "description": "지브리 캐릭터로 알아보는 나의 성격! 천공의 성 라퓨타의 두 주인공 중 당신은?",
-  "thumbnailUrl": "/images/tests/ghibli-thumb.png",
-  "coverImageUrl": "/images/tests/ghibli-cover.png",
+  "thumbnailUrl": "/images/tests/ghibli-character-test/thumb.png",
+  "coverImageUrl": "/images/tests/ghibli-character-test/cover.png",
   "estimatedTime": 2,
   "playCount": 12567,
   "likeCount": 1890,
@@ -85,28 +85,16 @@
     {
       "id": "pazu-type",
       "type": "pazu",
-      "title": "파즈형 (에겐)",
+      "title": "파즈형 (테토)",
       "description": "당신은 파즈처럼 열정적이고 용감한 타입입니다! 꿈을 향해 달려가는 추진력과 다른 사람을 지키려는 따뜻한 마음을 가지고 있어요. 어떤 어려움이 있어도 포기하지 않는 강인함이 당신의 매력입니다.",
-      "imageUrl": "/images/results/ghibli-pazu.png",
-      "minScore": 12
+      "imageUrl": "/images/tests/ghibli-character-test/ghibli-pazu.png"
     },
     {
       "id": "sheeta-type",
       "type": "sheeta",
-      "title": "시타형 (테토)",
+      "title": "시타형 (에겐)",
       "description": "당신은 시타처럼 신비롭고 현명한 타입입니다! 조용하지만 내면에 강한 의지를 품고 있으며, 자연과 조화를 이루는 평화로운 성격입니다. 다른 사람을 배려하는 따뜻한 마음이 당신의 매력이에요.",
-      "imageUrl": "/images/results/ghibli-sheeta.png",
-      "minScore": 0,
-      "maxScore": 7
-    },
-    {
-      "id": "mixed-type",
-      "type": "mixed",
-      "title": "파즈+시타 혼합형",
-      "description": "당신은 파즈의 용기와 시타의 지혜를 모두 가진 균형 잡힌 타입입니다! 상황에 따라 과감하게 행동하기도 하고, 신중하게 판단하기도 해요. 어떤 모험도 함께라면 해낼 수 있는 완벽한 파트너 타입이에요.",
-      "imageUrl": "/images/results/ghibli-mixed.png",
-      "minScore": 8,
-      "maxScore": 11
+      "imageUrl": "/images/tests/ghibli-character-test/ghibli-sheeta.png"
     }
   ],
   "createdAt": "2024-02-15"

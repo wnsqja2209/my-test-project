@@ -1,4 +1,5 @@
 import TestSection from "@/components/home/TestSection";
+import BannerSlider from "@/components/home/BannerSlider";
 import {
   getPopularTests,
   getLatestTests,
@@ -29,6 +30,9 @@ export default function Home() {
 
   return (
     <div className="pb-8">
+      {/* 배너 슬라이더 */}
+      <BannerSlider />
+
       {/* 인기 테스트 */}
       <TestSection title="인기 테스트" emoji="🔥" tests={popularTests} />
 

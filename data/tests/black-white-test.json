@@ -1,238 +1,220 @@
 {
-    "id": "black-white-test",
-    "title": "내가 흑백요리사 심사위원이라면? (백형 vs 안형)",
-    "description": "같은 요리를 보고도 평이 갈린다. 당신의 심사 기준은 직관의 백형인가, 디테일의 안형인가.",
-    "thumbnailUrl": "/images/tests/black-white-test-thumb.png",
-    "coverImageUrl": "/images/tests/black-white-test-cover.png",
-    "estimatedTime": 2,
-    "playCount": 0,
-    "likeCount": 0,
-    "bookmarkCount": 0,
-    "recommendCount": 0,
-    "category": "fun",
-    "tags": ["흑백요리사", "심사위원", "백형", "안형", "요리취향"],
-    "questions": [
-      {
-        "id": "q1",
-        "content": "분자요리로 만든 사과 디저트",
-        "imageUrl": "/images/tests/apple.png",
-        "options": [
-          {
-            "id": "q1-a",
-            "content": "좋다",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q1-b",
-            "content": "분자요리가 특별하진 않다",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q2",
-        "content": "생햄 부대찌개",
-        "imageUrl": "/images/tests/budaejjigae.png",
-        "options": [
-          {
-            "id": "q2-a",
-            "content": "좋다",
-            "scores": { "baek": 0, "ahn": 2 }
-          },
-          {
-            "id": "q2-b",
-            "content": "햄만 맛있다",
-            "scores": { "baek": 2, "ahn": 0 }
-          }
-        ]
-      },
-      {
-        "id": "q3",
-        "content": "직접 증류한 소주와 수육",
-        "imageUrl": "/images/tests/soju.png",
-        "options": [
-          {
-            "id": "q3-a",
-            "content": "좋다",
-            "scores": { "baek": 0, "ahn": 2 }
-          },
-          {
-            "id": "q3-b",
-            "content": "그냥 파는 소주와 수육이다",
-            "scores": { "baek": 2, "ahn": 0 }
-          }
-        ]
-      },
-      {
-        "id": "q4",
-        "content": "우리밀로 만든 들기름 국수",
-        "imageUrl": "/images/tests/deulgireum.png",
-        "options": [
-          {
-            "id": "q4-a",
-            "content": "좋다",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q4-b",
-            "content": "텁텁함이 남아있어 별로다",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q5",
-        "content": "뉴욕 진출 돼지곰탕",
-        "imageUrl": "/images/tests/gomtang.png",
-        "options": [
-          {
-            "id": "q5-a",
-            "content": "좋다",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q5-b",
-            "content": "그냥 돼지곰탕이다",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q6",
-        "content": "튀일이 올라간 오징어 먹물 리조또",
-        "imageUrl": "/images/tests/mukmul.png",
-        "options": [
-          {
-            "id": "q6-a",
-            "content": "좋다",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q6-b",
-            "content": "바삭한 리조또는 욕심이다",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q7",
-        "content": "뜨뜻한 프랑스식 해물스튜",
-        "imageUrl": "/images/tests/bouillabaisse.png",
-        "options": [
-          {
-            "id": "q7-a",
-            "content": "프랑스 국밥인데?",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q7-b",
-            "content": "특별함이 없는데?",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q8",
-        "content": "봄나물 트러플 죽",
-        "imageUrl": "/images/tests/juk.png",
-        "options": [
-          {
-            "id": "q8-a",
-            "content": "이 죽은 신세계인데?",
-            "scores": { "baek": 0, "ahn": 2 }
-          },
-          {
-            "id": "q8-b",
-            "content": "별로다",
-            "scores": { "baek": 2, "ahn": 0 }
-          }
-        ]
-      },
-      {
-        "id": "q9",
-        "content": "피라미드 모양 삼겹찜",
-        "imageUrl": "/images/tests/samgyeop.png",
-        "options": [
-          {
-            "id": "q9-a",
-            "content": "이쁜만큼 맛있다",
-            "scores": { "baek": 0, "ahn": 2 }
-          },
-          {
-            "id": "q9-b",
-            "content": "동파육이랑 다른게 뭐지",
-            "scores": { "baek": 2, "ahn": 0 }
-          }
-        ]
-      },
-      {
-        "id": "q10",
-        "content": "한국식 양념 바베큐",
-        "imageUrl": "/images/tests/barbecue.png",
-        "options": [
-          {
-            "id": "q10-a",
-            "content": "너네 줄서서 먹을만 하다",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q10-b",
-            "content": "별로다",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q11",
-        "content": "토끼 간소스 토끼스테이크",  
-        "imageUrl": "/images/tests/rabbit.png",
-        "options": [
-          {
-            "id": "q11-a",
-            "content": "야 이거 어렸을 때 먹던 토끼고기네? 맛있다.",
-            "scores": { "baek": 2, "ahn": 0 }
-          },
-          {
-            "id": "q11-b",
-            "content": "맛있는데 합격까지는..",
-            "scores": { "baek": 0, "ahn": 2 }
-          }
-        ]
-      },
-      {
-        "id": "q12",
-        "content": "나야, 조림왕",
-        "imageUrl": "/images/tests/jorim.png",
-        "options": [
-          {
-            "id": "q12-a",
-            "content": "이야 완벽한 조림이였다",
-            "scores": { "baek": 2, "ahn": 2 }
-          },
-          {
-            "id": "q12-b",
-            "content": "또 조려?",
-            "scores": { "baek": 0, "ahn": 0 }
-          }
-        ]
-      }
-    ],
-    "results": [
-      {
-        "id": "r1",
-        "type": "baek",
-        "title": "백형 심사위원",
-        "description": "당신은 직관과 대중성을 믿는 백형입니다. 복잡한 설명보다 한 입에서 오는 설득력을 중시하고, '또 먹고 싶은가'를 기준으로 냉정하게 결론을 냅니다.",
-        "imageUrl": "/images/tests/black-white-test-result-baek.png"
-      },
-      {
-        "id": "r2",
-        "type": "ahn",
-        "title": "안형 심사위원",
-        "description": "당신은 디테일과 완성도를 끝까지 보는 안형입니다. 컨셉의 논리, 조리의 설계, 밸런스의 미세한 흔들림까지 놓치지 않으며, 기준이 명확한 분석형 평가자입니다.",
-        "imageUrl": "/images/tests/black-white-test-result-ahn.png"
-      }
-    ],
-    "createdAt": "2025-12-17"
-  }
-  
+  "id": "black-white-test",
+  "title": "내가 흑백요리사 심사위원이라면? (백형 vs 안형)",
+  "description": "같은 요리를 보고도 평이 갈린다. 당신의 심사 기준은 직관의 백형인가, 디테일의 안형인가.",
+  "thumbnailUrl": "/images/tests/black-white-test/thumb.png",
+  "coverImageUrl": "/images/tests/black-white-test/cover.png",
+  "estimatedTime": 2,
+  "playCount": 0,
+  "likeCount": 0,
+  "bookmarkCount": 0,
+  "recommendCount": 0,
+  "category": "fun",
+  "tags": ["흑백요리사", "심사위원", "백형", "안형", "요리취향"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "분자요리로 만든 사과 디저트",
+      "imageUrl": "/images/tests/black-white-test/apple.png",
+      "options": [
+        {
+          "id": "q1-a",
+          "content": "이쁘고 좋은데?",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q1-b",
+          "content": "굳이.. 생사과가 더 좋다",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "직접 증류한 소주와 수육",
+      "imageUrl": "/images/tests/black-white-test/soju.png",
+      "options": [
+        {
+          "id": "q3-a",
+          "content": "직접 증류한 소주? 유니크하다",
+          "scores": { "baek": 0, "ahn": 2 }
+        },
+        {
+          "id": "q3-b",
+          "content": "그냥 파는 소주와 수육 먹겠다",
+          "scores": { "baek": 2, "ahn": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "우리밀로 만든 들기름 국수",
+      "imageUrl": "/images/tests/black-white-test/deulgireum.png",
+      "options": [
+        {
+          "id": "q4-a",
+          "content": "우리밀로 만들었다니 이건 특별해",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q4-b",
+          "content": "국수가 거기서 거기 족발집 막국수가 제일 맛있어",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "뉴욕 진출 돼지곰탕",
+      "imageUrl": "/images/tests/black-white-test/gomtang.png",
+      "options": [
+        {
+          "id": "q5-a",
+          "content": "뉴욕 진출 돼지곰탕 먹어보고 싶다",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q5-b",
+          "content": "그냥 돼지곰탕이다",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "튀일이 올라간 오징어 먹물 리조또",
+      "imageUrl": "/images/tests/black-white-test/mukmul.png",
+      "options": [
+        {
+          "id": "q6-a",
+          "content": "바삭한 리조또는 식감이 포인트다",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q6-b",
+          "content": "바삭한 리조또는 안어울린다",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "뜨뜻한 프랑스식 해물스튜",
+      "imageUrl": "/images/tests/black-white-test/bouillabaisse.png",
+      "options": [
+        {
+          "id": "q7-a",
+          "content": "프랑스 국밥은 먹어봐야지",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q7-b",
+          "content": "그냥 국밥 먹을래",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "봄나물 트러플 죽",
+      "imageUrl": "/images/tests/black-white-test/juk.png",
+      "options": [
+        {
+          "id": "q8-a",
+          "content": "이 죽은 신세계인데?",
+          "scores": { "baek": 0, "ahn": 2 }
+        },
+        {
+          "id": "q8-b",
+          "content": "죽을 이렇게까지 먹어야해?",
+          "scores": { "baek": 2, "ahn": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "피라미드 모양 삼겹찜",
+      "imageUrl": "/images/tests/black-white-test/samgyeop.png",
+      "options": [
+        {
+          "id": "q9-a",
+          "content": "이쁜만큼 맛있을것 같다",
+          "scores": { "baek": 0, "ahn": 2 }
+        },
+        {
+          "id": "q9-b",
+          "content": "동파육이랑 다른게 뭐지",
+          "scores": { "baek": 2, "ahn": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "한국식 양념 바베큐",
+      "imageUrl": "/images/tests/black-white-test/barbecue.png",
+      "options": [
+        {
+          "id": "q10-a",
+          "content": "줄서서 먹을만 하다",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q10-b",
+          "content": "그냥 삼겹살이 최고다",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "토끼 간소스 토끼스테이크",
+      "imageUrl": "/images/tests/black-white-test/rabbit.png",
+      "options": [
+        {
+          "id": "q11-a",
+          "content": "그냥 봤을 땐 닭고기같아 먹어볼만 하다",
+          "scores": { "baek": 2, "ahn": 0 }
+        },
+        {
+          "id": "q11-b",
+          "content": "토끼고기를 왜 먹냐",
+          "scores": { "baek": 0, "ahn": 2 }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "나야, 조림왕",
+      "imageUrl": "/images/tests/black-white-test/jorim.png",
+      "options": [
+        {
+          "id": "q12-a",
+          "content": "이야 완벽한 조림이였다",
+          "scores": { "baek": 2, "ahn": 2 }
+        },
+        {
+          "id": "q12-b",
+          "content": "또 조려?",
+          "scores": { "baek": 0, "ahn": 0 }
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "r1",
+      "type": "baek",
+      "title": "백형 심사위원",
+      "description": "당신은 직관과 대중성을 믿는 백형입니다. 복잡한 설명보다 한 입에서 오는 설득력을 중시하고, '또 먹고 싶은가'를 기준으로 냉정하게 결론을 냅니다.",
+      "imageUrl": "/images/tests/black-white-test/result-baek.png"
+    },
+    {
+      "id": "r2",
+      "type": "ahn",
+      "title": "안형 심사위원",
+      "description": "당신은 디테일과 완성도를 끝까지 보는 안형입니다. 컨셉의 논리, 조리의 설계, 밸런스의 미세한 흔들림까지 놓치지 않으며, 기준이 명확한 분석형 평가자입니다.",
+      "imageUrl": "/images/tests/black-white-test/result-ahn.png"
+    }
+  ],
+  "createdAt": "2025-12-17"
+}

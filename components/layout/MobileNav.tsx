@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 import Link from "next/link";
-import { X, Home, Sparkles, Heart, BookMarked, Info } from "lucide-react";
+import { X, Home, Sparkles, Heart, Info } from "lucide-react";
 
 interface MobileNavProps {
   isOpen: boolean;
@@ -13,7 +13,6 @@ const navItems = [
   { href: "/", label: "홈", icon: Home },
   { href: "/?category=popular", label: "인기 테스트", icon: Sparkles },
   { href: "/?category=love", label: "연애 테스트", icon: Heart },
-  { href: "/bookmarks", label: "북마크", icon: BookMarked },
   { href: "/about", label: "서비스 소개", icon: Info },
 ];
 

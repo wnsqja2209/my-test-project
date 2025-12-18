@@ -2,8 +2,8 @@
   "id": "fantasy-job-test",
   "title": "판타지 세계에 소환된다면, 당신의 직업은?",
   "description": "검을 들 것인가, 마법서를 펼칠 것인가, 아니면 뒤에서 판을 짤 것인가. 당신의 선택으로 판타지 세계 속 직업을 알아보세요.",
-  "thumbnailUrl": "/images/tests/fantasy-job-test-thumb.png",
-  "coverImageUrl": "/images/tests/fantasy-job-test-cover.png",
+  "thumbnailUrl": "/images/tests/fantasy-job-test/thumb.png",
+  "coverImageUrl": "/images/tests/fantasy-job-test/cover.png",
   "estimatedTime": 3,
   "playCount": 0,
   "likeCount": 0,
@@ -331,28 +331,28 @@
       "type": "warrior",
       "title": "전사",
       "description": "정면에서 싸우며 팀을 지키는 타입. 책임감과 추진력이 강한 전장의 중심입니다.",
-      "imageUrl": "/images/tests/fantasy-job-test-result-warrior.png"
+      "imageUrl": "/images/tests/fantasy-job-test/result-warrior.png"
     },
     {
       "id": "r2",
       "type": "mage",
       "title": "마법사",
       "description": "지식과 전략으로 전황을 지배하는 두뇌형 플레이어입니다.",
-      "imageUrl": "/images/tests/fantasy-job-test-result-mage.png"
+      "imageUrl": "/images/tests/fantasy-job-test/result-mage.png"
     },
     {
       "id": "r3",
       "type": "rogue",
       "title": "도적",
       "description": "기습과 판단력으로 흐름을 바꾸는 그림자 같은 존재입니다.",
-      "imageUrl": "/images/tests/fantasy-job-test-result-rogue.png"
+      "imageUrl": "/images/tests/fantasy-job-test/result-rogue.png"
     },
     {
       "id": "r4",
       "type": "supporter",
       "title": "서포터",
       "description": "눈에 띄지 않지만 가장 중요한 역할. 팀을 완성시키는 핵심 인물입니다.",
-      "imageUrl": "/images/tests/fantasy-job-test-result-supporter.png"
+      "imageUrl": "/images/tests/fantasy-job-test/result-supporter.png"
     }
   ],
   "createdAt": "2024-12-16"

@@ -87,6 +87,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
+      <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-gray-50`}
       >

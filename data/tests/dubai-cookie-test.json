@@ -1,0 +1,227 @@
+{
+  "id": "dubai-cookie-test",
+  "title": "내가 만약 두바이 쫀득 쿠키라면?",
+  "description": "겉바속촉? 아니면 겉바속바? 쿠키 상태로 알아보는 내 멘탈 굽기 테스트!",
+  "thumbnailUrl": "/images/tests/dubai-cookie-test/thumb.png",
+  "coverImageUrl": "/images/tests/dubai-cookie-test/cover.png",
+  "estimatedTime": 3,
+  "playCount": 0,
+  "likeCount": 0,
+  "bookmarkCount": 0,
+  "recommendCount": 0,
+  "category": "mbti",
+  "tags": ["MBTI", "두바이초콜릿", "심리테스트", "성격"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "쿠키 반죽을 시작할 때 나는?",
+      "options": [
+        { "id": "q1-a", "content": "친구들이랑 떠들면서 왁자지껄 만든다", "scores": { "E": 1, "I": 0 } },
+        { "id": "q1-b", "content": "혼자서 조용히 집중해서 만든다", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "레시피를 볼 때 내 스타일은?",
+      "options": [
+        { "id": "q2-a", "content": "계량컵으로 1g 오차도 없이 정확하게", "scores": { "S": 1, "N": 0 } },
+        { "id": "q2-b", "content": "대충 이 정도면 되겠지? 감으로 투하", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "맛없는 쿠키를 먹은 친구가 '이거 좀 별로다'라고 한다면?",
+      "options": [
+        { "id": "q3-a", "content": "어디가? 식감이? (원인 분석)", "scores": { "T": 1, "F": 0 } },
+        { "id": "q3-b", "content": "헉... 진짜? 상처받음 (마음 아픔)", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "쿠키 굽는 날, 내 계획은?",
+      "options": [
+        { "id": "q4-a", "content": "재료 구매부터 포장까지 시간대별 계획 완료", "scores": { "J": 1, "P": 0 } },
+        { "id": "q4-b", "content": "일단 마트 가서 땡기는 재료부터 산다", "scores": { "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "주말에 핫한 두바이 초콜릿 가게를 간다면?",
+      "options": [
+        { "id": "q5-a", "content": "사람 많은 핫플에서 줄 서서 먹는 게 제맛", "scores": { "E": 1, "I": 0 } },
+        { "id": "q5-b", "content": "포장해서 집에서 넷플릭스 보면서 먹음", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "새로운 쿠키 메뉴를 개발한다면?",
+      "options": [
+        { "id": "q6-a", "content": "가장 잘 팔리는 베스트셀러 참고", "scores": { "S": 1, "N": 0 } },
+        { "id": "q6-b", "content": "꿈에서 본 독특한 우주 맛 쿠키 도전", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "쿠키를 태웠을 때 나의 반응은?",
+      "options": [
+        { "id": "q7-a", "content": "오븐 온도가 너무 높았나? (실패 요인 분석)", "scores": { "T": 1, "F": 0 } },
+        { "id": "q7-b", "content": "아 내 쿠키... 불쌍해... (우울)", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "주문이 폭주해서 마감이 임박했다!",
+      "options": [
+        { "id": "q8-a", "content": "이미 어제 다 만들어둠. 여유.", "scores": { "J": 1, "P": 0 } },
+        { "id": "q8-b", "content": "초인적인 힘으로 마감 1분 전 완성", "scores": { "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "내가 되고 싶은 쿠키 가게 사장님은?",
+      "options": [
+        { "id": "q9-a", "content": "손님들과 수다 떠는 인싸 사장님", "scores": { "E": 1, "I": 0 } },
+        { "id": "q9-b", "content": "주방에서 묵묵히 굽기만 하는 장인", "scores": { "E": 0, "I": 1 } }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "쿠키 상자 디자인을 고른다면?",
+      "options": [
+        { "id": "q10-a", "content": "실용적이고 튼튼한 박스", "scores": { "S": 1, "N": 0 } },
+        { "id": "q10-b", "content": "의미가 담긴 감성적인 패키지", "scores": { "S": 0, "N": 1 } }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "친구가 '나 요즘 쿠키 굽느라 힘들어'라고 하면?",
+      "options": [
+        { "id": "q11-a", "content": "반죽 기계를 하나 사는 건 어때? (해결)", "scores": { "T": 1, "F": 0 } },
+        { "id": "q11-b", "content": "많이 힘들지? 어깨 좀 주물러줄까? (공감)", "scores": { "T": 0, "F": 1 } }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "여행 갈 때 맛집 리스트는?",
+      "options": [
+        { "id": "q12-a", "content": "엑셀 파일로 정리해서 동선까지 짬", "scores": { "J": 1, "P": 0 } },
+        { "id": "q12-b", "content": "가서 냄새 맡고 맛있어 보이는 곳 들어감", "scores": { "J": 0, "P": 1 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "INTJ",
+      "type": "INTJ",
+      "title": "전략적인 냉동 쿠키",
+      "description": "[특징] 꽁꽁 얼어있어서 둔기로 사용 가능. 해동까지 시간 오래 걸림.\n\n[해석] 효율 없는 레시피는 취급 안 함. 남들 놀 때 혼자 큰 그림 그리며 재료 분석 중.\n\n[당근마켓 거래가] 가격 제안 불가 (희귀 매물)\n\n#차가움 #효율봇 #속은꾸덕",
+      "imageUrl": "/images/tests/dubai-cookie-test/intj.png"
+    },
+    {
+      "id": "INTP",
+      "type": "INTP",
+      "title": "연구실 출신 냉동 쿠키",
+      "description": "[특징] 겉은 차갑지만 머릿속은 레시피 연구로 과부하 상태.\n\n[해석] 남들이 뭐라 하든 내가 궁금한 재료 넣음. 왜 넣었냐고 물어보면 논문 한 편 나옴.\n\n[당근마켓 거래가] 나눔 (설명하기 귀찮음)\n\n#마이웨이 #게으른천재 #호기심천국",
+      "imageUrl": "/images/tests/dubai-cookie-test/intp.png"
+    },
+    {
+      "id": "ENTJ",
+      "type": "ENTJ",
+      "title": "프랜차이즈 본점 황금 쿠키",
+      "description": "[특징] 완벽한 비율, 완벽한 맛. 실패를 모르는 리더형.\n\n[해석] 답답한 쿠키들 보면 직접 구워줘야 직성이 풀림. 내 사전에 '대충'은 없음.\n\n[당근마켓 거래가] 프리미엄 붙음 (고가)\n\n#팩폭러 #야망쿠키 #다비켜",
+      "imageUrl": "/images/tests/dubai-cookie-test/entj.png"
+    },
+    {
+      "id": "ENTP",
+      "type": "ENTP",
+      "title": "와사비맛 터진 쿠키",
+      "description": "[특징] 멀쩡하게 생겨서 한 입 먹으면 톡 쏘는 반전 매력.\n\n[해석] 평범한 레시피 거부. 논쟁 즐김. '이거 맛이 왜 이래?'라고 하면 오히려 좋아함.\n\n[당근마켓 거래가] 교환 희망 (재밌는 거랑)\n\n#도파민중독 #말싸움1등 #창의력대장",
+      "imageUrl": "/images/tests/dubai-cookie-test/entp.png"
+    },
+    {
+      "id": "INFJ",
+      "type": "INFJ",
+      "title": "속 깊은 멜팅 쿠키",
+      "description": "[특징] 겉은 단단해 보이지만 속은 한없이 부드럽게 녹아있음.\n\n[해석] 남들 챙기느라 정작 내 모양 망가지는 줄 모름. 생각이 너무 많아서 오븐 속에서 고뇌함.\n\n[당근마켓 거래가] 예약중 (매니아층 확실)\n\n#겉바속촉 #생각많음 #손절빠름",
+      "imageUrl": "/images/tests/dubai-cookie-test/infj.png"
+    },
+    {
+      "id": "INFP",
+      "type": "INFP",
+      "title": "침대 밖은 위험해 멜팅 쿠키",
+      "description": "[특징] 굽다가 그냥 녹아버림. 모양 잡기 힘듦.\n\n[해석] 망상하느라 시간 다 감. 누가 큰 소리 내면 바사삭 부서짐. 근데 예술적 감각은 1등.\n\n[당근마켓 거래가] 무료 나눔 (가져가세요...)\n\n#유리멘탈 #방구석요정 #감성충만",
+      "imageUrl": "/images/tests/dubai-cookie-test/infp.png"
+    },
+    {
+      "id": "ENFJ",
+      "type": "ENFJ",
+      "title": "모두의 최애 황금 쿠키",
+      "description": "[특징] 호불호 없이 누구나 좋아하는 달콤한 맛.\n\n[해석] 주변 쿠키들 멘탈 케어 전문. 내가 희생해서라도 모두가 맛있어지면 행복함.\n\n[당근마켓 거래가] 인기 폭발 (채팅 99+)\n\n#평화주의자 #오지랖 #열정맨",
+      "imageUrl": "/images/tests/dubai-cookie-test/enfj.png"
+    },
+    {
+      "id": "ENFP",
+      "type": "ENFP",
+      "title": "파티광 옆구리 터진 쿠키",
+      "description": "[특징] 재료를 너무 많이 넣어서 펑 터짐. 텐션 감당 불가.\n\n[해석] 계획? 그게 뭐죠? 기분파 끝판왕. 하나에 꽂히면 불타오르다가 3초 만에 식음.\n\n[당근마켓 거래가] 쿨거래 환영 (네고 가능)\n\n#인싸 #변덕쟁이 #해피바이러스",
+      "imageUrl": "/images/tests/dubai-cookie-test/enfp.png"
+    },
+    {
+      "id": "ISTJ",
+      "type": "ISTJ",
+      "title": "정량 준수 냉동 쿠키",
+      "description": "[특징] 자로 잰 듯 반듯함. 오차 범위 0%.\n\n[해석] 약속 시간 1분 늦으면 차갑게 식음. 시키는 일은 완벽하게 해내는 K-장녀/장남 스타일.\n\n[당근마켓 거래가] 정가 양도 (에눌 불가)\n\n#원칙주의 #노잼인데진국 #책임감",
+      "imageUrl": "/images/tests/dubai-cookie-test/istj.png"
+    },
+    {
+      "id": "ISFJ",
+      "type": "ISFJ",
+      "title": "가정적인 멜팅 쿠키",
+      "description": "[특징] 엄마가 구워준 듯한 포근하고 따뜻한 맛.\n\n[해석] 싫은 소리 절대 못 함. 뒤에서 묵묵히 다 치워줌. 참고 참다가 한 번에 터지면 무서움.\n\n[당근마켓 거래가] 덤 많이 줌 (서비스 최고)\n\n#배려왕 #기억력천재 #소심보스",
+      "imageUrl": "/images/tests/dubai-cookie-test/isfj.png"
+    },
+    {
+      "id": "ESTJ",
+      "type": "ESTJ",
+      "title": "품질관리팀 황금 쿠키",
+      "description": "[특징] 각 잡힌 모양. 눅눅한 건 절대 용납 못 함.\n\n[해석] 일 못하는 사람 보면 화가 남. 팩트로 뼈 때리는 게 취미. 리더십 하나는 우주 최강.\n\n[당근마켓 거래가] 판매 완료 (이미 팔림)\n\n#꼰대? #일잘러 #잔소리폭격기",
+      "imageUrl": "/images/tests/dubai-cookie-test/estj.png"
+    },
+    {
+      "id": "ESFJ",
+      "type": "ESFJ",
+      "title": "핵인싸 황금 쿠키",
+      "description": "[특징] 어딜 가나 환영받는 비주얼과 맛.\n\n[해석] 친구 없으면 시들시들해짐. 리액션 부자. 남 챙겨주는 거 좋아해서 가방에 간식 가득함.\n\n[당근마켓 거래가] 나눔 완료 (친구 줌)\n\n#사교성갑 #분위기메이커 #칭찬좋아",
+      "imageUrl": "/images/tests/dubai-cookie-test/esfj.png"
+    },
+    {
+      "id": "ISTP",
+      "type": "ISTP",
+      "title": "귀차니즘 냉동 쿠키",
+      "description": "[특징] 최소한의 재료로 최대 효율을 냄.\n\n[해석] 만사가 귀찮음. 근데 꽂히는 건 기가 막히게 잘함. 남한테 관심 없고 나한테도 관심 끄라고 함.\n\n[당근마켓 거래가] 읽씹 (안 팜)\n\n#마이웨이 #효율충 #영혼없음",
+      "imageUrl": "/images/tests/dubai-cookie-test/istp.png"
+    },
+    {
+      "id": "ISFP",
+      "type": "ISFP",
+      "title": "예술적인 멜팅 쿠키",
+      "description": "[특징] 모양은 제각각인데 묘하게 힙함.\n\n[해석] 규칙 싫어함. 누워있는 거 제일 좋아함. 착한데 고집 있음(선택적 공감).\n\n[당근마켓 거래가] 끌올 (안 팔려서)\n\n#집순이 #예술가 #귀차니즘",
+      "imageUrl": "/images/tests/dubai-cookie-test/isfp.png"
+    },
+    {
+      "id": "ESTP",
+      "type": "ESTP",
+      "title": "직진하는 터진 쿠키",
+      "description": "[특징] 굽다가 오븐 뚫고 나올 기세.\n\n[해석] 오늘만 산다. 스릴 즐김. 고민할 시간에 일단 저지르고 봄. 말보다는 행동이 먼저 나감.\n\n[당근마켓 거래가] 직거래만 (택배 귀찮)\n\n#상남자 #해결사 #노빠꾸",
+      "imageUrl": "/images/tests/dubai-cookie-test/estp.png"
+    },
+    {
+      "id": "ESFP",
+      "type": "ESFP",
+      "title": "무대 위 터진 쿠키",
+      "description": "[특징] 화려한 토핑으로 시선 강탈.\n\n[해석] 관종끼 다분함. 내가 주인공이어야 함. 심각한 분위기 못 참음. 인생은 즐거운 파티!\n\n[당근마켓 거래가] 채팅 환영 (수다 떨음)\n\n#연예인병 #핵인싸 #유행선두주자",
+      "imageUrl": "/images/tests/dubai-cookie-test/esfp.png"
+    }
+  ],
+  "createdAt": "2025-12-17"
+}

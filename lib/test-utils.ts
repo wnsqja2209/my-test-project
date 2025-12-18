@@ -32,7 +32,7 @@ export function getAllTests(): Test[] {
       if (typeof arrayLike.length === "number" && arrayLike.length > 0) {
         try {
           return Array.from(arrayLike) as Test[];
-        } catch (e) {
+        } catch {
           // Array.from 실패 시 계속 진행
         }
       }
