@@ -36,6 +36,12 @@ const banners: BannerItem[] = [
     link: "/test/empathy-test",
     alt: "나의 공감능력 테스트",
   },
+  {
+    id: "5",
+    imageUrl: "/banner/dubai_banner.png",
+    link: "/test/dubai-cookie-test",
+    alt: "내가 만약 두바이 쫀득 쿠키라면?",
+  },
 ];
 
 export default function BannerSlider() {
@@ -127,7 +133,6 @@ export default function BannerSlider() {
             />
           </Link>
         ))}
-
       </div>
 
       {/* 인디케이터 */}
