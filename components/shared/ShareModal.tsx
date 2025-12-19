@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { Check, Copy, Link2, MessageCircle, Download, Loader2 } from "lucide-react";
+import { Check, Copy, Link2, MessageCircle } from "lucide-react";
 import { generateOgImageUrl } from "@/lib/image-utils";
 
 declare global {
@@ -43,16 +43,29 @@ const loadKakaoSDK = (): Promise<void> => {
       return;
     }
 
-    // 이미 스크립트가 있는지 확인
+    // 이미 스크립트가 있는지 확인 - 셀렉터 수정
     const existingScript = document.querySelector(
-      'script[src*="kakao_js_sdk"]'
+      'script[src*="kakao.com/sdk/js/kakao"]',
     );
     if (existingScript) {
       // 스크립트가 이미 로드되었는지 확인
       if (window.Kakao) {
         resolve();
       } else {
-        existingScript.addEventListener("load", () => resolve());
+        // 스크립트가 로드 중이면 이벤트 리스너 추가
+        existingScript.addEventListener("load", () => {
+          // 약간의 지연을 두고 확인 (SDK 초기화 시간 확보)
+          setTimeout(() => {
+            if (window.Kakao) {
+              resolve();
+            } else {
+              reject(new Error("Kakao SDK loaded but not available"));
+            }
+          }, 100);
+        });
+        existingScript.addEventListener("error", () => {
+          reject(new Error("Failed to load existing Kakao SDK script"));
+        });
       }
       return;
     }
@@ -61,7 +74,16 @@ const loadKakaoSDK = (): Promise<void> => {
     const script = document.createElement("script");
     script.src = "https://developers.kakao.com/sdk/js/kakao.min.js";
     script.async = true;
-    script.onload = () => resolve();
+    script.onload = () => {
+      // SDK가 완전히 준비될 때까지 약간의 지연
+      setTimeout(() => {
+        if (window.Kakao) {
+          resolve();
+        } else {
+          reject(new Error("Kakao SDK loaded but not available"));
+        }
+      }, 100);
+    };
     script.onerror = () => reject(new Error("Failed to load Kakao SDK"));
     document.head.appendChild(script);
   });
@@ -82,7 +104,6 @@ interface ShareModalProps {
   url?: string;
   testId?: string;
   resultId?: string;
-  onDownloadImage?: () => Promise<void>;
 }
 
 // 스레드(Threads) 공식 아이콘 - @ 모양
@@ -145,11 +166,9 @@ const ShareModal = ({
   url,
   testId,
   resultId,
-  onDownloadImage,
 }: ShareModalProps) => {
   const [copied, setCopied] = useState(false);
   const [kakaoReady, setKakaoReady] = useState(false);
-  const [isDownloading, setIsDownloading] = useState(false);
   const shareUrl =
     url || (typeof window !== "undefined" ? window.location.href : "");
   const shareText = description || title;
@@ -199,7 +218,7 @@ const ShareModal = ({
     if (typeof window === "undefined") return;
 
     // SDK가 준비되지 않았으면 로드 시도
-    if (!kakaoReady || !window.Kakao) {
+    if (!kakaoReady || !window.Kakao || !window.Kakao.isInitialized()) {
       try {
         const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
         if (!kakaoKey) {
@@ -210,45 +229,66 @@ const ShareModal = ({
         if (!window.Kakao.isInitialized()) {
           window.Kakao.init(kakaoKey);
         }
-      } catch {
+        // 상태 업데이트 추가
+        setKakaoReady(true);
+      } catch (error) {
+        console.error("Kakao SDK initialization error:", error);
         alert("카카오 SDK 로드에 실패했습니다. 페이지를 새로고침 해주세요.");
         return;
       }
     }
 
-    // 카카오톡으로 공유 (동적 OG 이미지 사용)
-    window.Kakao.Share.sendDefault({
-      objectType: "feed",
-      content: {
-        title: title,
-        description: shareText,
-        imageUrl: ogImageUrl,
-        link: {
-          mobileWebUrl: shareUrl,
-          webUrl: shareUrl,
-        },
-      },
-      buttons: [
-        {
-          title: "테스트 하러가기",
+    // 최종 확인
+    if (!window.Kakao || !window.Kakao.isInitialized()) {
+      alert("카카오 SDK가 초기화되지 않았습니다. 페이지를 새로고침 해주세요.");
+      return;
+    }
+
+    try {
+      // 이미지 URL 디버깅
+      console.log("카카오톡 공유 이미지 URL:", ogImageUrl);
+
+      // 이미지 접근 가능 여부 확인
+      try {
+        const imgCheck = await fetch(ogImageUrl, { method: "HEAD" });
+        if (!imgCheck.ok) {
+          console.warn(
+            "이미지 URL 접근 실패:",
+            imgCheck.status,
+            imgCheck.statusText,
+          );
+        } else {
+          console.log("이미지 URL 접근 성공:", imgCheck.status);
+        }
+      } catch (imgError) {
+        console.error("이미지 URL 확인 중 오류:", imgError);
+      }
+
+      // 카카오톡으로 공유 (동적 OG 이미지 사용)
+      window.Kakao.Share.sendDefault({
+        objectType: "feed",
+        content: {
+          title: title,
+          description: shareText,
+          imageUrl: ogImageUrl,
           link: {
             mobileWebUrl: shareUrl,
             webUrl: shareUrl,
           },
         },
-      ],
-    });
-  };
-
-  // 이미지 다운로드 핸들러
-  const handleDownloadImage = async () => {
-    if (!onDownloadImage) return;
-
-    setIsDownloading(true);
-    try {
-      await onDownloadImage();
-    } finally {
-      setIsDownloading(false);
+        buttons: [
+          {
+            title: "테스트 하러가기",
+            link: {
+              mobileWebUrl: shareUrl,
+              webUrl: shareUrl,
+            },
+          },
+        ],
+      });
+    } catch (error) {
+      console.error("Kakao share error:", error);
+      alert("공유하기에 실패했습니다. 다시 시도해주세요.");
     }
   };
 
@@ -385,30 +425,6 @@ const ShareModal = ({
               )}
             </Button>
           </div>
-
-          {/* 이미지 다운로드 버튼 */}
-          {onDownloadImage && (
-            <div className="border-t pt-4">
-              <Button
-                variant="outline"
-                className="w-full"
-                onClick={handleDownloadImage}
-                disabled={isDownloading}
-              >
-                {isDownloading ? (
-                  <>
-                    <Loader2 className="w-4 h-4 mr-2 animate-spin" />
-                    이미지 생성 중...
-                  </>
-                ) : (
-                  <>
-                    <Download className="w-4 h-4 mr-2" />
-                    결과 이미지 저장
-                  </>
-                )}
-              </Button>
-            </div>
-          )}
         </div>
       </DialogContent>
     </Dialog>

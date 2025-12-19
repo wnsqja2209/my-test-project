@@ -53,7 +53,7 @@ export async function GET(request: Request) {
 
     // 이미지 URL 절대 경로로 변환
     const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "https://our-play.vercel.app";
+      process.env.NEXT_PUBLIC_BASE_URL || "https://our-play-main.vercel.app/";
     const imageUrl = result.imageUrl.startsWith("http")
       ? result.imageUrl
       : `${baseUrl}${result.imageUrl}`;
