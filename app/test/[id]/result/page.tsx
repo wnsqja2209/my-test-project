@@ -8,12 +8,7 @@ import { Button } from "@/components/ui/button";
 import ResultCard from "@/components/test/ResultCard";
 import RelatedTests from "@/components/test/RelatedTests";
 import ShareModal from "@/components/shared/ShareModal";
-import {
-  getTestById,
-  getResultById,
-  getRelatedTests,
-} from "@/lib/test-utils";
-import { downloadResultImage } from "@/lib/image-utils";
+import { getTestById, getResultById, getRelatedTests } from "@/lib/test-utils";
 import type { Test, Result, TestResultState, TestSummary } from "@/types/test";
 
 export default function TestResultPage() {
@@ -90,17 +85,6 @@ export default function TestResultPage() {
     router.push(`/test/${testId}/play`);
   };
 
-  // 이미지 다운로드 (서버에서 생성)
-  const handleDownloadImage = async () => {
-    if (!test || !result) return;
-
-    await downloadResultImage(
-      testId,
-      result.id,
-      `${test.title}-${result.title}-result.png`
-    );
-  };
-
   if (!test || !result) {
     return (
       <div className="min-h-screen flex items-center justify-center">
@@ -171,7 +155,6 @@ export default function TestResultPage() {
         url={`${typeof window !== "undefined" ? window.location.origin : ""}/test/${testId}/result?r=${result.id}`}
         testId={testId}
         resultId={result.id}
-        onDownloadImage={handleDownloadImage}
       />
     </div>
   );

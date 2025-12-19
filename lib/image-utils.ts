@@ -5,12 +5,12 @@
 export async function downloadResultImage(
   testId: string,
   resultId: string,
-  filename?: string
+  filename?: string,
 ): Promise<void> {
   try {
     // 서버 API에서 이미지 가져오기
     const response = await fetch(
-      `/api/og/download?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`
+      `/api/og/download?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`,
     );
 
     if (!response.ok) {
@@ -41,7 +41,13 @@ export async function downloadResultImage(
  * OG 이미지 URL 생성
  */
 export function generateOgImageUrl(testId: string, resultId: string): string {
+  // 클라이언트에서는 window.location.origin 사용 (현재 도메인)
+  if (typeof window !== "undefined") {
+    return `${window.location.origin}/api/og/result?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`;
+  }
+
+  // 서버 사이드에서는 환경 변수 또는 기본값 사용
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://our-play.vercel.app";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://our-play-main.vercel.app/";
   return `${baseUrl}/api/og/result?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`;
 }

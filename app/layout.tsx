@@ -38,11 +38,11 @@ export const metadata: Metadata = {
   authors: [{ name: "MOAB" }],
   creator: "MOAB",
   publisher: "MOAB",
-  metadataBase: new URL("https://our-play.vercel.app"),
+  metadataBase: new URL("https://our-play-main.vercel.app"),
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://our-play.vercel.app/",
+    url: "hhttps://our-play-main.vercel.app/",
     siteName: "MOAB",
     title: "MOAB - 재미있는 심리테스트 모음",
     description:

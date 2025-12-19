@@ -129,14 +129,15 @@ export default function TestPlayPage() {
         </div>
       </header>
 
-      {/* 질문 영역 */}
-      <div className="flex-1 flex flex-col px-4 py-2 min-h-0">
-        <div className="flex-1 flex items-center justify-center max-h-[490px]">
+      {/* 질문 및 선택지 영역 */}
+      <div className="flex-1 flex flex-col px-4 py-3 min-h-0">
+        {/* 질문 영역 - 내용에 맞게 자동 조정 */}
+        <div className="flex-shrink-0 py-3 flex items-center justify-center">
           <Question question={currentQuestion} />
         </div>
 
-        {/* 선택지 영역 */}
-        <div className="space-y-3 pb-4 mt-auto flex-shrink-0">
+        {/* 선택지 영역 - 남은 공간 활용 */}
+        <div className="flex-1 flex flex-col justify-center space-y-3 pb-4 min-h-0">
           {currentQuestion.options.map((option) => (
             <OptionButton
               key={option.id}
@@ -146,7 +147,6 @@ export default function TestPlayPage() {
             />
           ))}
         </div>
-
       </div>
     </div>
     </>

@@ -13,10 +13,10 @@ const Question = ({ question }: QuestionProps) => {
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-2 sm:space-y-4">
       {/* 질문 이미지 (있는 경우) */}
       {question.imageUrl && (
-        <div className="relative aspect-video bg-gradient-to-br from-primary/10 to-primary/30 rounded-xl overflow-hidden">
+        <div className="relative aspect-video bg-gradient-to-br from-primary/10 to-primary/30 rounded-xl overflow-hidden max-h-[120px] sm:max-h-none">
           {!imageError ? (
             <Image
               src={question.imageUrl}
@@ -34,7 +34,7 @@ const Question = ({ question }: QuestionProps) => {
       )}
 
       {/* 질문 텍스트 */}
-      <h2 className="text-xl font-bold text-gray-900 text-center leading-relaxed">
+      <h2 className="text-lg sm:text-xl font-bold text-gray-900 text-center leading-relaxed px-2">
         {question.content}
       </h2>
     </div>
