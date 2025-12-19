@@ -124,6 +124,27 @@ export function createTestProgress(testId: string): TestProgress {
     throw new Error(`Test not found: ${testId}`);
   }
 
+  // MBTI 테스트인 경우 E, I, S, N, T, F, J, P로 초기 점수 설정
+  if (test.id === "mbti-simple-test" || test.id === "dubai-cookie-test") {
+    const initialScores: Record<string, number> = {
+      E: 0,
+      I: 0,
+      S: 0,
+      N: 0,
+      T: 0,
+      F: 0,
+      J: 0,
+      P: 0,
+    };
+
+    return {
+      testId,
+      currentQuestionIndex: 0,
+      answers: {},
+      scores: initialScores,
+    };
+  }
+
   // 결과 유형별 초기 점수 0으로 설정
   const initialScores: Record<string, number> = {};
   test.results.forEach((result) => {
@@ -191,7 +212,7 @@ export function calculateResult(progress: TestProgress): TestResultState {
   }
 
   // MBTI 테스트인 경우 특별 처리
-  if (test.id === "mbti-simple-test") {
+  if (test.id === "mbti-simple-test" || test.id === "dubai-cookie-test") {
     const mbtiResult = calculateMBTIResult(progress.scores);
     return {
       testId: progress.testId,
