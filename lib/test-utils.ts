@@ -124,11 +124,29 @@ export function createTestProgress(testId: string): TestProgress {
     throw new Error(`Test not found: ${testId}`);
   }
 
-  // 결과 유형별 초기 점수 0으로 설정
+  // MBTI 테스트인지 확인
+  const isMBTI = isMBTITestType(test);
+
+  // MBTI 테스트인 경우 E/I, S/N, T/F, J/P 키로 초기화
+  // 그 외의 경우 결과 ID로 초기화
   const initialScores: Record<string, number> = {};
-  test.results.forEach((result) => {
-    initialScores[result.id] = 0;
-  });
+
+  if (isMBTI) {
+    // MBTI 차원별 점수 초기화
+    initialScores["E"] = 0;
+    initialScores["I"] = 0;
+    initialScores["S"] = 0;
+    initialScores["N"] = 0;
+    initialScores["T"] = 0;
+    initialScores["F"] = 0;
+    initialScores["J"] = 0;
+    initialScores["P"] = 0;
+  } else {
+    // 일반 테스트: 결과 ID로 초기화
+    test.results.forEach((result) => {
+      initialScores[result.id] = 0;
+    });
+  }
 
   return {
     testId,
@@ -191,11 +209,20 @@ export function calculateResult(progress: TestProgress): TestResultState {
   }
 
   // MBTI 테스트인 경우 특별 처리
-  if (test.id === "mbti-simple-test") {
-    const mbtiResult = calculateMBTIResult(progress.scores);
+  if (isMBTITestType(test)) {
+    const mbtiType = calculateMBTIResult(progress.scores);
+
+    // 계산된 MBTI 타입과 일치하는 결과 찾기
+    // result.id 또는 result.type이 MBTI 타입과 일치하는지 확인
+    const matchingResult = test.results.find(
+      (r) => r.id === mbtiType || r.type === mbtiType,
+    );
+
+    const resultId = matchingResult?.id || mbtiType;
+
     return {
       testId: progress.testId,
-      resultId: mbtiResult,
+      resultId,
       scores: progress.scores,
     };
   }
@@ -257,6 +284,30 @@ export function calculateResult(progress: TestProgress): TestResultState {
     resultId,
     scores: progress.scores,
   };
+}
+
+/** MBTI 테스트인지 확인 */
+function isMBTITestType(test: Test): boolean {
+  // category가 "mbti"인 경우
+  if (test.category === "mbti") {
+    return true;
+  }
+
+  // 점수 키에 MBTI 차원이 포함되어 있는지 확인
+  // 첫 번째 질문의 첫 번째 선택지의 점수 키를 확인
+  const firstQuestion = test.questions[0];
+  if (firstQuestion && firstQuestion.options.length > 0) {
+    const firstOption = firstQuestion.options[0];
+    const scoreKeys = Object.keys(firstOption.scores || {});
+    const mbtiDimensions = ["E", "I", "S", "N", "T", "F", "J", "P"];
+
+    // MBTI 차원이 포함되어 있으면 MBTI 테스트로 판단
+    if (scoreKeys.some((key) => mbtiDimensions.includes(key))) {
+      return true;
+    }
+  }
+
+  return false;
 }
 
 /** MBTI 결과 계산 */

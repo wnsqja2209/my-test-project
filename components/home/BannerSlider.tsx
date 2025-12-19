@@ -14,27 +14,39 @@ interface BannerItem {
 const banners: BannerItem[] = [
   {
     id: "1",
-    imageUrl: "/banner/banner-1.png",
-    link: "/test/fantasy-job-test",
-    alt: "판타지 세계에 소환된다면, 당신의 직업은?",
+    imageUrl: "/banner/year-review-test.png",
+    link: "/test/year-review-test",
+    alt: "연말에 체크해 보는, 나는 MBTI가 변했을까?",
   },
   {
     id: "2",
-    imageUrl: "/banner/banner-2.png",
+    imageUrl: "/banner/dubai-cookie-test.png",
+    link: "/test/dubai-cookie-test",
+    alt: "내가 만약 두바이 쫀득 쿠키라면?",
+  },
+  {
+    id: "3",
+    imageUrl: "/banner/ghibli-character-test.png",
     link: "/test/ghibli-character-test",
     alt: "나는 에겐일까 테토일까?",
   },
   {
-    id: "3",
-    imageUrl: "/banner/banner-3.png",
+    id: "4",
+    imageUrl: "/banner/mbti-simple-test.png",
     link: "/test/mbti-simple-test",
     alt: "간단 MBTI 성격 유형 테스트",
   },
   {
-    id: "4",
-    imageUrl: "/banner/banner-4.png",
+    id: "5",
+    imageUrl: "/banner/empathy-test.png",
     link: "/test/empathy-test",
     alt: "나의 공감능력 테스트",
+  },
+  {
+    id: "6",
+    imageUrl: "/banner/fantasy-job-test.png",
+    link: "/test/fantasy-job-test",
+    alt: "판타지 세계에 소환된다면, 당신의 직업은?",
   },
 ];
 
@@ -127,7 +139,6 @@ export default function BannerSlider() {
             />
           </Link>
         ))}
-
       </div>
 
       {/* 인디케이터 */}

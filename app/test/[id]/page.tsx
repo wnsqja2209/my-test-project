@@ -3,6 +3,7 @@ import { Metadata } from "next";
 import TestInfo from "@/components/test/TestInfo";
 import ActionButtons from "@/components/test/ActionButtons";
 import RelatedTests from "@/components/test/RelatedTests";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 import { getTestById, getRelatedTests } from "@/lib/test-utils";
 import type { TestSummary } from "@/types/test";
 
@@ -54,26 +55,29 @@ export default async function TestDetailPage({ params }: TestDetailPageProps) {
   }));
 
   return (
-    <div className="pb-8">
-      {/* 테스트 정보 */}
-      <TestInfo test={test} />
+    <>
+      <ScrollToTop />
+      <div className="pb-8">
+        {/* 테스트 정보 */}
+        <TestInfo test={test} />
 
-      {/* 액션 버튼 */}
-      <ActionButtons
-        testId={test.id}
-        testTitle={test.title}
-        initialLikeCount={test.likeCount}
-      />
-
-      {/* 비슷한 테스트 추천 */}
-      <div className="mt-6">
-        <RelatedTests
-          tests={relatedTestSummaries}
-          title="비슷한 테스트"
-          emoji="✨"
-          showMoreLink={false}
+        {/* 액션 버튼 */}
+        <ActionButtons
+          testId={test.id}
+          testTitle={test.title}
+          initialLikeCount={test.likeCount}
         />
+
+        {/* 비슷한 테스트 추천 */}
+        <div className="mt-6">
+          <RelatedTests
+            tests={relatedTestSummaries}
+            title="비슷한 테스트"
+            emoji="✨"
+            showMoreLink={false}
+          />
+        </div>
       </div>
-    </div>
+    </>
   );
 }

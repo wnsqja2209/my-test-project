@@ -6,6 +6,7 @@ import { ChevronLeft } from "lucide-react";
 import ProgressBar from "@/components/test/ProgressBar";
 import Question from "@/components/test/Question";
 import OptionButton from "@/components/test/OptionButton";
+import ScrollToTop from "@/components/shared/ScrollToTop";
 import {
   getTestById,
   createTestProgress,
@@ -105,9 +106,11 @@ export default function TestPlayPage() {
   };
 
   return (
-    <div className="h-[100dvh] bg-white flex flex-col overflow-hidden">
-      {/* 헤더 - 진행률 바 */}
-      <header className="flex-shrink-0 bg-white border-b border-gray-100">
+    <>
+      <ScrollToTop />
+      <div className="h-[100dvh] bg-white flex flex-col overflow-hidden">
+        {/* 헤더 - 진행률 바 */}
+        <header className="flex-shrink-0 bg-white border-b border-gray-100">
         <div className="flex items-center h-14 px-4">
           <button
             type="button"
@@ -146,5 +149,6 @@ export default function TestPlayPage() {
 
       </div>
     </div>
+    </>
   );
 }

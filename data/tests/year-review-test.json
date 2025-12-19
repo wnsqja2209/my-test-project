@@ -1,0 +1,371 @@
+{
+  "id": "year-review-test",
+  "title": "연말에 체크해 보는, 나는 MBTI가 변했을까?",
+  "description": "지난 1년 동안의 선택과 태도를 돌아보며 나의 성향을 정리해보세요. 당신의 연말 회고가 MBTI로 정리됩니다.",
+  "thumbnailUrl": "/images/tests/year-review-test/thumb.png",
+  "coverImageUrl": "/images/tests/year-review-test/cover.png",
+  "estimatedTime": 3,
+  "playCount": 0,
+  "likeCount": 0,
+  "bookmarkCount": 0,
+  "recommendCount": 0,
+  "category": "mbti",
+  "tags": ["연말회고", "MBTI", "성격테스트", "자기이해"],
+  "questions": [
+    {
+      "id": "q1",
+      "content": "올해 가장 힘들었던 순간을 떠올리면 나는",
+      "options": [
+        {
+          "id": "q1-a",
+          "content": "혼자 정리할 시간이 꼭 필요했다",
+          "scores": { "E": 0, "I": 1, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q1-b",
+          "content": "누군가에게 이야기하며 풀어내려 했다",
+          "scores": { "E": 1, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q2",
+      "content": "주말마다 약속이 있을 때 나는",
+      "options": [
+        {
+          "id": "q2-a",
+          "content": "약속을 취소하고 싶었다",
+          "scores": { "E": 0, "I": 1, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q2-b",
+          "content": "매 주말이 기다려졌다",
+          "scores": { "E": 1, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q3",
+      "content": "올해 내 생일엔",
+      "options": [
+        {
+          "id": "q3-a",
+          "content": "생일 주간을 가지며 친구들을 만났다",
+          "scores": { "E": 1, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q3-b",
+          "content": "집에서 초를 불었다",
+          "scores": { "E": 0, "I": 1, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q4",
+      "content": "올해를 돌아보면 내가 더 자주 했던 생각은",
+      "options": [
+        {
+          "id": "q4-a",
+          "content": "지금 상황에서 현실적으로 뭘 할 수 있을까",
+          "scores": { "E": 0, "I": 0, "S": 1, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q4-b",
+          "content": "앞으로 어떻게 달라질 수 있을까",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 1, "T": 0, "F": 0, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q5",
+      "content": "새로운 일을 시작할 때 나는",
+      "options": [
+        {
+          "id": "q5-a",
+          "content": "이미 검증된 방식부터 살펴본다",
+          "scores": { "E": 0, "I": 0, "S": 1, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q5-b",
+          "content": "가능성과 아이디어가 먼저 떠오른다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 1, "T": 0, "F": 0, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q6",
+      "content": "올해 가장 기억에 남는 순간을 생각하면",
+      "options": [
+        {
+          "id": "q6-a",
+          "content": "구체적인 사건이나 장면이 떠오른다",
+          "scores": { "E": 0, "I": 0, "S": 1, "N": 0, "T": 0, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q6-b",
+          "content": "그때 느꼈던 감정이나 의미가 먼저 떠오른다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 1, "T": 0, "F": 0, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q7",
+      "content": "올해 중요한 결정을 내릴 때 나는",
+      "options": [
+        {
+          "id": "q7-a",
+          "content": "최대한 객관적으로 따져보려고 했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 1, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q7-b",
+          "content": "내 마음이 어떤지를 더 신경 썼다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 1, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q8",
+      "content": "누군가와 갈등이 생겼을 때 나의 반응은",
+      "options": [
+        {
+          "id": "q8-a",
+          "content": "문제의 원인을 정리하고 해결하려 했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 1, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q8-b",
+          "content": "상대의 감정이 상하지 않았는지가 더 걸렸다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 1, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q9",
+      "content": "무언가 고민하다가 샀을 때",
+      "options": [
+        {
+          "id": "q9-a",
+          "content": "오랫동안 고민하다 샀다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 1, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q9-b",
+          "content": "나를 위한 선물이라 생각했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 1, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q10",
+      "content": "연초에 세운 계획을 나는",
+      "options": [
+        {
+          "id": "q10-a",
+          "content": "최대한 지키려고 노력했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 1, "P": 0 }
+        },
+        {
+          "id": "q10-b",
+          "content": "상황에 따라 많이 바뀌었다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q11",
+      "content": "일정이 틀어졌을 때 나는",
+      "options": [
+        {
+          "id": "q11-a",
+          "content": "다시 정리해서 하나씩 해내려고 했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 1, "P": 0 }
+        },
+        {
+          "id": "q11-b",
+          "content": "일단 흘러가는 대로 해결했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q12",
+      "content": "마감이나 약속을 대하는 나의 태도는",
+      "options": [
+        {
+          "id": "q12-a",
+          "content": "미리 끝내두는 게 마음이 편하다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 1, "P": 0 }
+        },
+        {
+          "id": "q12-b",
+          "content": "압박이 있어야 집중이 잘 된다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 1 }
+        }
+      ]
+    },
+    {
+      "id": "q13",
+      "content": "올해 가장 잘했다고 느끼는 나의 선택은",
+      "options": [
+        {
+          "id": "q13-a",
+          "content": "현실적인 판단을 했던 순간",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 1, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q13-b",
+          "content": "나의 마음을 우선했던 순간",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 1, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q14",
+      "content": "올해 인간관계에서 나는",
+      "options": [
+        {
+          "id": "q14-a",
+          "content": "필요한 관계를 중심으로 유지했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 1, "F": 0, "J": 0, "P": 0 }
+        },
+        {
+          "id": "q14-b",
+          "content": "감정적으로 가까운 관계를 중시했다",
+          "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 1, "J": 0, "P": 0 }
+        }
+      ]
+    },
+    {
+      "id": "q15",
+      "content": "올해 나는 지각을",
+      "options": [
+        { "id": "q15-a", "content": "거의 안 했다", "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 1, "P": 0 } },
+        { "id": "q15-b", "content": "많이 했다", "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 1 } }
+      ]
+    },
+    {
+      "id": "q16",
+      "content": "다가오는 내년을 생각하면 나는",
+      "options": [
+        { "id": "q16-a", "content": "어느 정도의 계획과 방향이 필요하다", "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 1, "P": 0 } },
+        { "id": "q16-b", "content": "어떤 일이 생길지 열어두고 싶다", "scores": { "E": 0, "I": 0, "S": 0, "N": 0, "T": 0, "F": 0, "J": 0, "P": 1 } }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "id": "r1",
+      "type": "ISTJ",
+      "title": "ISTJ",
+      "description": "올 한 해를 묵묵히 책임감으로 버텨낸 타입입니다. 감정보다는 현실을 기준으로 선택했고, 흔들리지 않는 태도로 자신의 자리를 지켜왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/istj.png"
+    },
+    {
+      "id": "r2",
+      "type": "ISFJ",
+      "title": "ISFJ",
+      "description": "주변을 세심하게 살피며 관계를 지켜온 한 해였습니다. 말없이 많은 역할을 해냈고, 조용한 헌신이 쌓인 시간이었습니다.",
+      "imageUrl": "/images/tests/year-review-test/isfj.png"
+    },
+    {
+      "id": "r3",
+      "type": "INFJ",
+      "title": "INFJ",
+      "description": "겉으로는 조용했지만 내면에서는 많은 고민과 성찰이 있었던 해였습니다. 의미와 방향을 찾기 위해 스스로를 자주 돌아봤습니다.",
+      "imageUrl": "/images/tests/year-review-test/infj.png"
+    },
+    {
+      "id": "r4",
+      "type": "INTJ",
+      "title": "INTJ",
+      "description": "장기적인 시선으로 삶을 정리하고 설계했던 한 해였습니다. 감정보다는 구조와 방향을 중시하며 스스로의 기준을 다져왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/intj.png"
+    },
+    {
+      "id": "r5",
+      "type": "ISTP",
+      "title": "ISTP",
+      "description": "필요한 순간에만 집중하며 효율적으로 움직였던 해였습니다. 불필요한 감정 소모를 줄이고, 실질적인 선택을 해왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/istp.png"
+    },
+    {
+      "id": "r6",
+      "type": "ISFP",
+      "title": "ISFP",
+      "description": "조용히 나만의 감정과 리듬을 지켜온 한 해였습니다. 큰 드러냄 없이도 나에게 중요한 가치를 놓치지 않았습니다.",
+      "imageUrl": "/images/tests/year-review-test/isfp.png"
+    },
+    {
+      "id": "r7",
+      "type": "INFP",
+      "title": "INFP",
+      "description": "스스로의 마음을 가장 중요하게 다뤘던 해였습니다. 때로는 흔들렸지만, 그만큼 진심에 가까운 선택을 해왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/infp.png"
+    },
+    {
+      "id": "r8",
+      "type": "INTP",
+      "title": "INTP",
+      "description": "많은 것을 관찰하고 생각하며 정리한 한 해였습니다. 겉보기엔 조용했지만, 머릿속은 늘 바쁘게 움직이고 있었습니다.",
+      "imageUrl": "/images/tests/year-review-test/intp.png"
+    },
+    {
+      "id": "r9",
+      "type": "ESTP",
+      "title": "ESTP",
+      "description": "지금 이 순간의 선택과 경험을 중요하게 여긴 해였습니다. 생각보다는 행동으로, 고민보다는 실행으로 답해왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/estp.png"
+    },
+    {
+      "id": "r10",
+      "type": "ESFP",
+      "title": "ESFP",
+      "description": "사람들과의 시간과 감정을 풍부하게 누린 한 해였습니다. 순간의 즐거움 속에서 삶의 에너지를 회복해왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/esfp.png"
+    },
+    {
+      "id": "r11",
+      "type": "ENFP",
+      "title": "ENFP",
+      "description": "새로운 가능성과 감정의 흐름을 따라 움직인 한 해였습니다. 계획보다는 직감으로, 틀보다는 자유를 선택했습니다.",
+      "imageUrl": "/images/tests/year-review-test/enfp.png"
+    },
+    {
+      "id": "r12",
+      "type": "ENTP",
+      "title": "ENTP",
+      "description": "끊임없이 생각을 확장하고 새로운 관점을 시도한 해였습니다. 하나에 머무르기보다 여러 가능성을 동시에 탐색했습니다.",
+      "imageUrl": "/images/tests/year-review-test/entp.png"
+    },
+    {
+      "id": "r13",
+      "type": "ESTJ",
+      "title": "ESTJ",
+      "description": "현실적인 판단과 실행으로 한 해를 이끌어온 타입입니다. 해야 할 일을 미루지 않고 책임감 있게 처리해왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/estj.png"
+    },
+    {
+      "id": "r14",
+      "type": "ESFJ",
+      "title": "ESFJ",
+      "description": "사람과 관계를 중심에 두고 움직인 한 해였습니다. 주변의 균형을 맞추며 분위기를 지켜내는 역할을 해왔습니다.",
+      "imageUrl": "/images/tests/year-review-test/esfj.png"
+    },
+    {
+      "id": "r15",
+      "type": "ENFJ",
+      "title": "ENFJ",
+      "description": "사람들의 흐름을 읽고 방향을 잡아주려 했던 한 해였습니다. 나보다 주변을 먼저 생각하는 선택이 많았습니다.",
+      "imageUrl": "/images/tests/year-review-test/enfj.png"
+    },
+    {
+      "id": "r16",
+      "type": "ENTJ",
+      "title": "ENTJ",
+      "description": "목표와 방향을 분명히 세우고 밀고 나간 해였습니다. 감정보다는 결과를 중시하며 주도적으로 움직였습니다.",
+      "imageUrl": "/images/tests/year-review-test/entj.png"
+    }
+  ],
+  "createdAt": "2025-12-18"
+}

@@ -5,6 +5,7 @@ import ghibliCharacterTest from "./ghibli-character-test.json";
 import fantasyJobTest from "./fantasy-job-test.json";
 import blackWhiteTest from "./black-white-test.json";
 import dubaiCookieTest from "./dubai-cookie-test.json";
+import yearReviewTest from "./year-review-test.json";
 import type { Test } from "@/types/test";
 
 const tests: Test[] = [
@@ -15,6 +16,7 @@ const tests: Test[] = [
   fantasyJobTest as Test,
   blackWhiteTest as Test,
   dubaiCookieTest as Test,
+  yearReviewTest as Test,
 ];
 
 // 명시적으로 배열을 export (배열 복사본 반환)
