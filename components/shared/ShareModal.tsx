@@ -335,54 +335,62 @@ const ShareModal = ({
         </DialogHeader>
 
         <div className="space-y-4 py-4 overflow-hidden w-full">
-          {/* SNS 공유 버튼들 */}
-          <div className="flex justify-center gap-4">
+          {/* SNS 공유 버튼들 - 가로 스크롤 가능하도록 변경 */}
+          <div className="flex gap-4 overflow-x-auto pb-2 scrollbar-hide -mx-4 px-4">
             {/* 카카오톡 */}
             <button
               type="button"
               onClick={handleKakaoShare}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors"
+              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors flex-shrink-0"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#FEE500]">
                 <KakaoIcon className="w-6 h-6 text-[#191919]" />
               </div>
-              <span className="text-xs text-gray-600">카카오톡</span>
+              <span className="text-xs text-gray-600 whitespace-nowrap">
+                카카오톡
+              </span>
             </button>
 
             {/* 스레드(Threads) */}
             <button
               type="button"
               onClick={handleThreadsShare}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors"
+              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors flex-shrink-0"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-black">
                 <ThreadsIcon className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xs text-gray-600">스레드</span>
+              <span className="text-xs text-gray-600 whitespace-nowrap">
+                스레드
+              </span>
             </button>
 
             {/* 페이스북 */}
             <button
               type="button"
               onClick={handleFacebookShare}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors"
+              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors flex-shrink-0"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-[#1877F2]">
                 <FacebookIcon className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xs text-gray-600">페이스북</span>
+              <span className="text-xs text-gray-600 whitespace-nowrap">
+                페이스북
+              </span>
             </button>
 
             {/* 인스타그램 */}
             <button
               type="button"
               onClick={handleInstagramShare}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors"
+              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors flex-shrink-0"
             >
               <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#F56040] to-[#C13584]">
                 <InstagramIcon className="w-6 h-6 text-white" />
               </div>
-              <span className="text-xs text-gray-600">인스타그램</span>
+              <span className="text-xs text-gray-600 whitespace-nowrap">
+                인스타그램
+              </span>
             </button>
 
             {/* 기타 (Web Share API) */}
@@ -390,12 +398,14 @@ const ShareModal = ({
               <button
                 type="button"
                 onClick={handleNativeShare}
-                className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors"
+                className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors flex-shrink-0"
               >
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gray-200">
                   <MessageCircle className="w-6 h-6 text-gray-600" />
                 </div>
-                <span className="text-xs text-gray-600">더보기</span>
+                <span className="text-xs text-gray-600 whitespace-nowrap">
+                  더보기
+                </span>
               </button>
             )}
           </div>
