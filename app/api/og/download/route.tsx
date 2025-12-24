@@ -37,7 +37,7 @@ export async function GET(request: Request) {
     let fontData: ArrayBuffer | null = null;
     try {
       const fontResponse = await fetch(
-        "https://cdn.jsdelivr.net/gh/niceplugin/NanumSquareRound@main/NanumSquareRoundB.ttf"
+        "https://cdn.jsdelivr.net/gh/niceplugin/NanumSquareRound@main/NanumSquareRoundB.ttf",
       );
       if (fontResponse.ok) {
         fontData = await fontResponse.arrayBuffer();
@@ -53,8 +53,7 @@ export async function GET(request: Request) {
         : result.description;
 
     // 이미지 URL 절대 경로로 변환 - 존재 여부 확인
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
     const imageUrl = result.imageUrl.startsWith("http")
       ? result.imageUrl
       : `${baseUrl}${result.imageUrl}`;
@@ -63,7 +62,9 @@ export async function GET(request: Request) {
     let hasImage = false;
     try {
       const imgResponse = await fetch(imageUrl, { method: "HEAD" });
-      hasImage = imgResponse.ok && imgResponse.headers.get("content-type")?.startsWith("image/");
+      hasImage =
+        imgResponse.ok &&
+        imgResponse.headers.get("content-type")?.startsWith("image/");
     } catch {
       hasImage = false;
     }
@@ -228,7 +229,7 @@ export async function GET(request: Request) {
                 fontSize: "20px",
               }}
             >
-              MOAB - our-play.vercel.app
+              MOAB - our-play-main.vercel.app
             </span>
           </div>
         </div>
@@ -246,14 +247,14 @@ export async function GET(request: Request) {
             },
           ],
         }),
-      }
+      },
     );
 
     // 다운로드를 위한 헤더 설정
     const headers = new Headers(imageResponse.headers);
     headers.set(
       "Content-Disposition",
-      `attachment; filename="${test.id}-${result.id}-result.png"`
+      `attachment; filename="${test.id}-${result.id}-result.png"`,
     );
 
     return new Response(imageResponse.body, {
@@ -264,7 +265,7 @@ export async function GET(request: Request) {
     console.error("Image download error:", error);
     return new Response(
       `Failed to generate image: ${error instanceof Error ? error.message : "Unknown error"}`,
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

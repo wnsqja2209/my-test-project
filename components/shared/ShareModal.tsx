@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Check, Copy, Link2, MessageCircle } from "lucide-react";
+import { toast } from "sonner";
 import { generateOgImageUrl } from "@/lib/image-utils";
 
 declare global {
@@ -177,7 +178,7 @@ const ShareModal = ({
   const ogImageUrl =
     testId && resultId
       ? generateOgImageUrl(testId, resultId)
-      : "https://our-play.vercel.app/logo-1.png";
+      : "https://our-play-main.vercel.app/logo-1.png";
 
   // 카카오 SDK 로드 및 초기화
   useEffect(() => {
@@ -295,19 +296,58 @@ const ShareModal = ({
   // 스레드(Threads) 공유
   const handleThreadsShare = () => {
     const threadsUrl = `https://www.threads.net/intent/post?text=${encodeURIComponent(shareText + "\n" + shareUrl)}`;
-    window.open(threadsUrl, "_blank", "width=600,height=600");
+    window.open(threadsUrl, "_blank");
   };
 
   // 페이스북 공유
   const handleFacebookShare = () => {
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-    window.open(facebookUrl, "_blank", "width=600,height=400");
+    window.open(facebookUrl, "_blank");
   };
 
-  // 인스타그램 공유 - 인스타그램 웹사이트로 연결
-  const handleInstagramShare = () => {
-    // 인스타그램은 직접 공유 API가 없어서 인스타그램 웹사이트로 이동
-    window.open("https://www.instagram.com/", "_blank", "width=600,height=600");
+  // 인스타그램 공유 - 클립보드 복사 후 인스타그램으로 이동
+  const handleInstagramShare = async () => {
+    try {
+      // URL을 클립보드에 복사
+      await navigator.clipboard.writeText(shareUrl);
+
+      // 모바일/데스크톱 환경 감지
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+      if (isMobile) {
+        // 모바일: 인스타그램 앱 열기 시도
+        window.location.href = "instagram://camera";
+
+        // 앱이 없으면 일정 시간 후 웹으로 폴백
+        setTimeout(() => {
+          window.open("https://www.instagram.com/", "_blank");
+        }, 500);
+      } else {
+        // 데스크톱: 인스타그램 웹사이트 새 창 열기
+        window.open("https://www.instagram.com/", "_blank");
+      }
+
+      // 성공 메시지 표시
+      toast.success(
+        "링크가 복사되었습니다. 인스타그램에서 붙여넣기 후 공유 해주세요.",
+      );
+    } catch (error) {
+      console.error("Failed to copy link:", error);
+
+      // 실패 시에도 인스타그램으로 이동
+      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+      if (isMobile) {
+        window.location.href = "instagram://camera";
+        setTimeout(() => {
+          window.open("https://www.instagram.com/", "_blank");
+        }, 500);
+      } else {
+        window.open("https://www.instagram.com/", "_blank");
+      }
+
+      // 실패 메시지 표시
+      toast.error("링크 복사에 실패했습니다. 인스타그램으로 이동합니다.");
+    }
   };
 
   // 기본 공유 (Web Share API)

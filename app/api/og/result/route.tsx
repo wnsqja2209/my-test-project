@@ -36,7 +36,7 @@ export async function GET(request: Request) {
     let fontData: ArrayBuffer | null = null;
     try {
       const fontResponse = await fetch(
-        "https://cdn.jsdelivr.net/gh/niceplugin/NanumSquareRound@main/NanumSquareRoundB.ttf"
+        "https://cdn.jsdelivr.net/gh/niceplugin/NanumSquareRound@main/NanumSquareRoundB.ttf",
       );
       if (fontResponse.ok) {
         fontData = await fontResponse.arrayBuffer();
@@ -62,7 +62,9 @@ export async function GET(request: Request) {
     let hasImage = false;
     try {
       const imgResponse = await fetch(imageUrl, { method: "HEAD" });
-      hasImage = imgResponse.ok && imgResponse.headers.get("content-type")?.startsWith("image/");
+      hasImage =
+        imgResponse.ok &&
+        imgResponse.headers.get("content-type")?.startsWith("image/");
     } catch {
       hasImage = false;
     }
@@ -226,7 +228,7 @@ export async function GET(request: Request) {
                 fontSize: "20px",
               }}
             >
-              MOAB - our-play.vercel.app
+              MOAB - our-play-main.vercel.app
             </span>
           </div>
         </div>
@@ -244,13 +246,13 @@ export async function GET(request: Request) {
             },
           ],
         }),
-      }
+      },
     );
   } catch (error) {
     console.error("OG Image generation error:", error);
     return new Response(
       `Failed to generate image: ${error instanceof Error ? error.message : "Unknown error"}`,
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
