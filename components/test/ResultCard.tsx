@@ -43,6 +43,7 @@ const ResultCard = ({ result, testTitle }: ResultCardProps) => {
             alt={result.title}
             fill
             className="object-cover"
+            priority
             onError={() => setImageError(true)}
           />
         ) : (

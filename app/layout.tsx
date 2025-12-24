@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
 
 import Header from "@/components/layout/Header";
-import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -94,7 +93,6 @@ export default function RootLayout({
       >
         <Header />
         <main className="max-w-lg mx-auto min-h-screen">{children}</main>
-        <Toaster />
       </body>
     </html>
   );

@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import { Check, Copy, Link2, MessageCircle } from "lucide-react";
-import { toast } from "sonner";
 import { generateOgImageUrl } from "@/lib/image-utils";
 
 declare global {
@@ -15,7 +14,6 @@ declare global {
           objectType: string;
           content: {
             title: string;
-            description: string;
             imageUrl: string;
             link: {
               mobileWebUrl: string;
@@ -94,6 +92,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 
@@ -246,20 +245,17 @@ const ShareModal = ({
     }
 
     try {
-      // 이미지 URL 디버깅
-      console.log("카카오톡 공유 이미지 URL:", ogImageUrl);
-
       // 이미지 접근 가능 여부 확인
       try {
         const imgCheck = await fetch(ogImageUrl, { method: "HEAD" });
         if (!imgCheck.ok) {
-          console.warn(
-            "이미지 URL 접근 실패:",
-            imgCheck.status,
-            imgCheck.statusText,
-          );
-        } else {
-          console.log("이미지 URL 접근 성공:", imgCheck.status);
+          if (process.env.NODE_ENV === "development") {
+            console.warn(
+              "이미지 URL 접근 실패:",
+              imgCheck.status,
+              imgCheck.statusText,
+            );
+          }
         }
       } catch (imgError) {
         console.error("이미지 URL 확인 중 오류:", imgError);
@@ -270,7 +266,6 @@ const ShareModal = ({
         objectType: "feed",
         content: {
           title: title,
-          description: shareText,
           imageUrl: ogImageUrl,
           link: {
             mobileWebUrl: shareUrl,
@@ -305,49 +300,10 @@ const ShareModal = ({
     window.open(facebookUrl, "_blank");
   };
 
-  // 인스타그램 공유 - 클립보드 복사 후 인스타그램으로 이동
-  const handleInstagramShare = async () => {
-    try {
-      // URL을 클립보드에 복사
-      await navigator.clipboard.writeText(shareUrl);
-
-      // 모바일/데스크톱 환경 감지
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-      if (isMobile) {
-        // 모바일: 인스타그램 앱 열기 시도
-        window.location.href = "instagram://camera";
-
-        // 앱이 없으면 일정 시간 후 웹으로 폴백
-        setTimeout(() => {
-          window.open("https://www.instagram.com/", "_blank");
-        }, 500);
-      } else {
-        // 데스크톱: 인스타그램 웹사이트 새 창 열기
-        window.open("https://www.instagram.com/", "_blank");
-      }
-
-      // 성공 메시지 표시
-      toast.success(
-        "링크가 복사되었습니다. 인스타그램에서 붙여넣기 후 공유 해주세요.",
-      );
-    } catch (error) {
-      console.error("Failed to copy link:", error);
-
-      // 실패 시에도 인스타그램으로 이동
-      const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-      if (isMobile) {
-        window.location.href = "instagram://camera";
-        setTimeout(() => {
-          window.open("https://www.instagram.com/", "_blank");
-        }, 500);
-      } else {
-        window.open("https://www.instagram.com/", "_blank");
-      }
-
-      // 실패 메시지 표시
-      toast.error("링크 복사에 실패했습니다. 인스타그램으로 이동합니다.");
-    }
+  // 인스타그램 공유 - 인스타그램 웹사이트로 연결
+  const handleInstagramShare = () => {
+    // 인스타그램은 직접 공유 API가 없어서 인스타그램 웹사이트로 이동
+    window.open("https://www.instagram.com/", "_blank");
   };
 
   // 기본 공유 (Web Share API)
@@ -372,6 +328,9 @@ const ShareModal = ({
       <DialogContent className="max-w-lg w-[calc(100%-2rem)] overflow-hidden">
         <DialogHeader>
           <DialogTitle className="text-center">공유하기</DialogTitle>
+          <DialogDescription className="sr-only">
+            테스트 결과를 다양한 소셜 미디어로 공유할 수 있습니다.
+          </DialogDescription>
         </DialogHeader>
 
         <div className="space-y-4 py-4 overflow-hidden w-full">
