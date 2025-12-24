@@ -1,7 +1,8 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { Check, Copy, Link2, MessageCircle } from "lucide-react";
+import { toast } from "sonner";
 import { generateOgImageUrl } from "@/lib/image-utils";
 
 declare global {
@@ -169,6 +170,8 @@ const ShareModal = ({
 }: ShareModalProps) => {
   const [copied, setCopied] = useState(false);
   const [kakaoReady, setKakaoReady] = useState(false);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isMountedRef = useRef(true);
   const shareUrl =
     url || (typeof window !== "undefined" ? window.location.href : "");
   const shareText = description || title;
@@ -178,6 +181,18 @@ const ShareModal = ({
     testId && resultId
       ? generateOgImageUrl(testId, resultId)
       : "https://our-play-main.vercel.app/logo-1.png";
+
+  // 컴포넌트 마운트 상태 관리 및 cleanup
+  useEffect(() => {
+    isMountedRef.current = true;
+
+    return () => {
+      isMountedRef.current = false;
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+    };
+  }, []);
 
   // 카카오 SDK 로드 및 초기화
   useEffect(() => {
@@ -301,9 +316,33 @@ const ShareModal = ({
   };
 
   // 인스타그램 공유 - 인스타그램 웹사이트로 연결
-  const handleInstagramShare = () => {
-    // 인스타그램은 직접 공유 API가 없어서 인스타그램 웹사이트로 이동
-    window.open("https://www.instagram.com/", "_blank");
+  const handleInstagramShare = async () => {
+    try {
+      // 기존 timeout이 있으면 정리
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+        timeoutRef.current = null;
+      }
+
+      // URL을 클립보드에 복사
+      await navigator.clipboard.writeText(shareUrl);
+
+      // 안내 팝업 표시
+      toast.success("링크가 복사되었습니다. 붙여넣기를 해 공유해 주세요.");
+
+      // 딜레이 후 인스타그램 실행
+      timeoutRef.current = setTimeout(() => {
+        // 컴포넌트가 마운트되어 있는지 확인
+        if (isMountedRef.current) {
+          window.open("https://www.instagram.com/", "_blank");
+          onClose();
+        }
+        timeoutRef.current = null; // 실행 후 ref 초기화
+      }, 2000);
+    } catch (error) {
+      console.error("Failed to copy link:", error);
+      toast.error("주소 복사에 실패했습니다.");
+    }
   };
 
   // 기본 공유 (Web Share API)
