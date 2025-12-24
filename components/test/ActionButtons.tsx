@@ -50,11 +50,11 @@ const ActionButtons = ({
             onClick={handleLike}
             className="flex-1 gap-1.5"
           >
-            <Heart
-              className={`w-4 h-4 ${liked ? "fill-current" : ""}`}
-            />
+            <Heart className={`w-4 h-4 ${liked ? "fill-current" : ""}`} />
             <span>좋아요</span>
-            <span className="text-xs opacity-70">{formatNumber(likeCount)}</span>
+            <span className="text-xs opacity-70">
+              {formatNumber(likeCount)}
+            </span>
           </Button>
 
           <Button
@@ -75,6 +75,7 @@ const ActionButtons = ({
         onClose={() => setIsShareModalOpen(false)}
         title={testTitle}
         description={`${testTitle} 테스트를 해보세요!`}
+        testId={testId}
       />
     </div>
   );

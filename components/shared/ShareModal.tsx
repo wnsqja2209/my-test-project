@@ -4,6 +4,7 @@ import { useState, useEffect, useRef } from "react";
 import { Check, Copy, Link2, MessageCircle } from "lucide-react";
 import { toast } from "sonner";
 import { generateOgImageUrl } from "@/lib/image-utils";
+import { getTestById } from "@/lib/test-utils";
 
 declare global {
   interface Window {
@@ -147,18 +148,6 @@ const FacebookIcon = ({ className }: { className?: string }) => (
   </svg>
 );
 
-// 인스타그램 아이콘
-const InstagramIcon = ({ className }: { className?: string }) => (
-  <svg
-    className={className}
-    viewBox="0 0 24 24"
-    fill="currentColor"
-    aria-hidden="true"
-  >
-    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-  </svg>
-);
-
 const ShareModal = ({
   isOpen,
   onClose,
@@ -176,11 +165,60 @@ const ShareModal = ({
     url || (typeof window !== "undefined" ? window.location.href : "");
   const shareText = description || title;
 
+  // 카카오톡 공유 버튼용 URL (결과 페이지인 경우 테스트 페이지로)
+  const buttonUrl = (() => {
+    // 결과 페이지에서 카카오톡 공유 시 버튼은 테스트 페이지로
+    if (testId && resultId) {
+      const baseUrl =
+        typeof window !== "undefined"
+          ? window.location.origin
+          : "https://our-play-main.vercel.app";
+      return `${baseUrl}/test/${testId}`;
+    }
+    // 그 외의 경우는 shareUrl 사용
+    return shareUrl;
+  })();
+
   // 동적 OG 이미지 URL 생성
-  const ogImageUrl =
-    testId && resultId
-      ? generateOgImageUrl(testId, resultId)
-      : "https://our-play-main.vercel.app/logo-1.png";
+  const ogImageUrl = (() => {
+    // 결과 페이지: resultId가 있으면 동적 OG 이미지 사용
+    if (testId && resultId) {
+      const url = generateOgImageUrl(testId, resultId);
+      console.log("[ShareModal] 결과 페이지 OG 이미지 URL:", url);
+      return url;
+    }
+
+    // 테스트 페이지: testId만 있으면 cover 이미지 사용
+    if (testId) {
+      const test = getTestById(testId);
+      console.log(
+        "[ShareModal] 테스트 정보:",
+        test
+          ? {
+              id: test.id,
+              title: test.title,
+              coverImageUrl: test.coverImageUrl,
+            }
+          : "null",
+      );
+      if (test?.coverImageUrl) {
+        // 상대 경로를 절대 경로로 변환
+        const baseUrl =
+          typeof window !== "undefined"
+            ? window.location.origin
+            : "https://our-play-main.vercel.app";
+        const finalUrl = test.coverImageUrl.startsWith("http")
+          ? test.coverImageUrl
+          : `${baseUrl}${test.coverImageUrl}`;
+        console.log("[ShareModal] 테스트 페이지 OG 이미지 URL:", finalUrl);
+        return finalUrl;
+      }
+    }
+
+    // 기본 로고 이미지
+    console.log("[ShareModal] 기본 로고 이미지 사용");
+    return "https://our-play-main.vercel.app/logo-1.png";
+  })();
 
   // 컴포넌트 마운트 상태 관리 및 cleanup
   useEffect(() => {
@@ -260,23 +298,38 @@ const ShareModal = ({
     }
 
     try {
+      console.log("[ShareModal] 카카오톡 공유 시작");
+      console.log("[ShareModal] testId:", testId, "resultId:", resultId);
+      console.log("[ShareModal] OG 이미지 URL:", ogImageUrl);
+      console.log("[ShareModal] 공유 URL:", shareUrl);
+
       // 이미지 접근 가능 여부 확인
       try {
         const imgCheck = await fetch(ogImageUrl, { method: "HEAD" });
+        console.log(
+          "[ShareModal] 이미지 접근 확인:",
+          imgCheck.status,
+          imgCheck.ok,
+        );
         if (!imgCheck.ok) {
-          if (process.env.NODE_ENV === "development") {
-            console.warn(
-              "이미지 URL 접근 실패:",
-              imgCheck.status,
-              imgCheck.statusText,
-            );
-          }
+          console.warn(
+            "[ShareModal] 이미지 URL 접근 실패:",
+            imgCheck.status,
+            imgCheck.statusText,
+          );
+        } else {
+          console.log("[ShareModal] 이미지 URL 접근 성공");
         }
       } catch (imgError) {
-        console.error("이미지 URL 확인 중 오류:", imgError);
+        console.error("[ShareModal] 이미지 URL 확인 중 오류:", imgError);
       }
 
       // 카카오톡으로 공유 (동적 OG 이미지 사용)
+      console.log("[ShareModal] 카카오톡 공유 API 호출:", {
+        title,
+        imageUrl: ogImageUrl,
+        shareUrl,
+      });
       window.Kakao.Share.sendDefault({
         objectType: "feed",
         content: {
@@ -291,12 +344,13 @@ const ShareModal = ({
           {
             title: "테스트 하러가기",
             link: {
-              mobileWebUrl: shareUrl,
-              webUrl: shareUrl,
+              mobileWebUrl: buttonUrl,
+              webUrl: buttonUrl,
             },
           },
         ],
       });
+      console.log("[ShareModal] 카카오톡 공유 API 호출 완료");
     } catch (error) {
       console.error("Kakao share error:", error);
       alert("공유하기에 실패했습니다. 다시 시도해주세요.");
@@ -313,36 +367,6 @@ const ShareModal = ({
   const handleFacebookShare = () => {
     const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
     window.open(facebookUrl, "_blank");
-  };
-
-  // 인스타그램 공유 - 인스타그램 웹사이트로 연결
-  const handleInstagramShare = async () => {
-    try {
-      // 기존 timeout이 있으면 정리
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-        timeoutRef.current = null;
-      }
-
-      // URL을 클립보드에 복사
-      await navigator.clipboard.writeText(shareUrl);
-
-      // 안내 팝업 표시
-      toast.success("링크가 복사되었습니다. 붙여넣기를 해 공유해 주세요.");
-
-      // 딜레이 후 인스타그램 실행
-      timeoutRef.current = setTimeout(() => {
-        // 컴포넌트가 마운트되어 있는지 확인
-        if (isMountedRef.current) {
-          window.open("https://www.instagram.com/", "_blank");
-          onClose();
-        }
-        timeoutRef.current = null; // 실행 후 ref 초기화
-      }, 2000);
-    } catch (error) {
-      console.error("Failed to copy link:", error);
-      toast.error("주소 복사에 실패했습니다.");
-    }
   };
 
   // 기본 공유 (Web Share API)
@@ -414,20 +438,6 @@ const ShareModal = ({
               </div>
               <span className="text-xs text-gray-600 whitespace-nowrap">
                 페이스북
-              </span>
-            </button>
-
-            {/* 인스타그램 */}
-            <button
-              type="button"
-              onClick={handleInstagramShare}
-              className="flex flex-col items-center gap-2 p-3 rounded-xl hover:bg-gray-100 transition-colors flex-shrink-0"
-            >
-              <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-tr from-[#FFDC80] via-[#F56040] to-[#C13584]">
-                <InstagramIcon className="w-6 h-6 text-white" />
-              </div>
-              <span className="text-xs text-gray-600 whitespace-nowrap">
-                인스타그램
               </span>
             </button>
 
