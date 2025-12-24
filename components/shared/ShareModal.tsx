@@ -62,7 +62,7 @@ const loadKakaoSDK = (): Promise<void> => {
             } else {
               reject(new Error("Kakao SDK loaded but not available"));
             }
-          }, 100);
+          }, 50);
         });
         existingScript.addEventListener("error", () => {
           reject(new Error("Failed to load existing Kakao SDK script"));
@@ -83,7 +83,7 @@ const loadKakaoSDK = (): Promise<void> => {
         } else {
           reject(new Error("Kakao SDK loaded but not available"));
         }
-      }, 100);
+      }, 50);
     };
     script.onerror = () => reject(new Error("Failed to load Kakao SDK"));
     document.head.appendChild(script);
@@ -184,23 +184,27 @@ const ShareModal = ({
     // 결과 페이지: resultId가 있으면 동적 OG 이미지 사용
     if (testId && resultId) {
       const url = generateOgImageUrl(testId, resultId);
-      console.log("[ShareModal] 결과 페이지 OG 이미지 URL:", url);
+      if (process.env.NODE_ENV === "development") {
+        console.log("[ShareModal] 결과 페이지 OG 이미지 URL:", url);
+      }
       return url;
     }
 
     // 테스트 페이지: testId만 있으면 cover 이미지 사용
     if (testId) {
       const test = getTestById(testId);
-      console.log(
-        "[ShareModal] 테스트 정보:",
-        test
-          ? {
-              id: test.id,
-              title: test.title,
-              coverImageUrl: test.coverImageUrl,
-            }
-          : "null",
-      );
+      if (process.env.NODE_ENV === "development") {
+        console.log(
+          "[ShareModal] 테스트 정보:",
+          test
+            ? {
+                id: test.id,
+                title: test.title,
+                coverImageUrl: test.coverImageUrl,
+              }
+            : "null",
+        );
+      }
       if (test?.coverImageUrl) {
         // 상대 경로를 절대 경로로 변환
         const baseUrl =
@@ -210,13 +214,17 @@ const ShareModal = ({
         const finalUrl = test.coverImageUrl.startsWith("http")
           ? test.coverImageUrl
           : `${baseUrl}${test.coverImageUrl}`;
-        console.log("[ShareModal] 테스트 페이지 OG 이미지 URL:", finalUrl);
+        if (process.env.NODE_ENV === "development") {
+          console.log("[ShareModal] 테스트 페이지 OG 이미지 URL:", finalUrl);
+        }
         return finalUrl;
       }
     }
 
     // 기본 로고 이미지
-    console.log("[ShareModal] 기본 로고 이미지 사용");
+    if (process.env.NODE_ENV === "development") {
+      console.log("[ShareModal] 기본 로고 이미지 사용");
+    }
     return "https://our-play-main.vercel.app/logo-1.png";
   })();
 
@@ -275,7 +283,7 @@ const ShareModal = ({
       try {
         const kakaoKey = process.env.NEXT_PUBLIC_KAKAO_JS_KEY;
         if (!kakaoKey) {
-          alert("카카오 키가 설정되지 않았습니다.");
+          toast.error("카카오 키가 설정되지 않았습니다.");
           return;
         }
         await loadKakaoSDK();
@@ -286,50 +294,35 @@ const ShareModal = ({
         setKakaoReady(true);
       } catch (error) {
         console.error("Kakao SDK initialization error:", error);
-        alert("카카오 SDK 로드에 실패했습니다. 페이지를 새로고침 해주세요.");
+        toast.error(
+          "카카오 SDK 로드에 실패했습니다. 페이지를 새로고침 해주세요.",
+        );
         return;
       }
     }
 
     // 최종 확인
     if (!window.Kakao || !window.Kakao.isInitialized()) {
-      alert("카카오 SDK가 초기화되지 않았습니다. 페이지를 새로고침 해주세요.");
+      toast.error(
+        "카카오 SDK가 초기화되지 않았습니다. 페이지를 새로고침 해주세요.",
+      );
       return;
     }
 
     try {
-      console.log("[ShareModal] 카카오톡 공유 시작");
-      console.log("[ShareModal] testId:", testId, "resultId:", resultId);
-      console.log("[ShareModal] OG 이미지 URL:", ogImageUrl);
-      console.log("[ShareModal] 공유 URL:", shareUrl);
-
-      // 이미지 접근 가능 여부 확인
-      try {
-        const imgCheck = await fetch(ogImageUrl, { method: "HEAD" });
-        console.log(
-          "[ShareModal] 이미지 접근 확인:",
-          imgCheck.status,
-          imgCheck.ok,
-        );
-        if (!imgCheck.ok) {
-          console.warn(
-            "[ShareModal] 이미지 URL 접근 실패:",
-            imgCheck.status,
-            imgCheck.statusText,
-          );
-        } else {
-          console.log("[ShareModal] 이미지 URL 접근 성공");
-        }
-      } catch (imgError) {
-        console.error("[ShareModal] 이미지 URL 확인 중 오류:", imgError);
+      if (process.env.NODE_ENV === "development") {
+        console.log("[ShareModal] 카카오톡 공유 시작");
+        console.log("[ShareModal] testId:", testId, "resultId:", resultId);
+        console.log("[ShareModal] OG 이미지 URL:", ogImageUrl);
+        console.log("[ShareModal] 공유 URL:", shareUrl);
+        console.log("[ShareModal] 카카오톡 공유 API 호출:", {
+          title,
+          imageUrl: ogImageUrl,
+          shareUrl,
+        });
       }
 
       // 카카오톡으로 공유 (동적 OG 이미지 사용)
-      console.log("[ShareModal] 카카오톡 공유 API 호출:", {
-        title,
-        imageUrl: ogImageUrl,
-        shareUrl,
-      });
       window.Kakao.Share.sendDefault({
         objectType: "feed",
         content: {
@@ -350,10 +343,13 @@ const ShareModal = ({
           },
         ],
       });
-      console.log("[ShareModal] 카카오톡 공유 API 호출 완료");
+
+      if (process.env.NODE_ENV === "development") {
+        console.log("[ShareModal] 카카오톡 공유 API 호출 완료");
+      }
     } catch (error) {
       console.error("Kakao share error:", error);
-      alert("공유하기에 실패했습니다. 다시 시도해주세요.");
+      toast.error("공유하기에 실패했습니다. 다시 시도해주세요.");
     }
   };
 

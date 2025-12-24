@@ -8,4 +8,4 @@ const nextConfig: NextConfig = {
   outputFileTracingRoot: require("path").join(__dirname),
 };
 
-export default nextConfig;
+export default nextConfig;ㅆ
