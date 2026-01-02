@@ -4,6 +4,7 @@ import TestInfo from "@/components/test/TestInfo";
 import ActionButtons from "@/components/test/ActionButtons";
 import RelatedTests from "@/components/test/RelatedTests";
 import ScrollToTop from "@/components/shared/ScrollToTop";
+import AdSenseModal from "@/components/shared/AdSenseModal";
 import { getTestById, getRelatedTests } from "@/lib/test-utils";
 import type { TestSummary } from "@/types/test";
 
@@ -57,6 +58,7 @@ export default async function TestDetailPage({ params }: TestDetailPageProps) {
   return (
     <>
       <ScrollToTop />
+      <AdSenseModal />
       <div className="pb-8">
         {/* 테스트 정보 */}
         <TestInfo test={test} />

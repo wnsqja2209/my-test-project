@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Press_Start_2P } from "next/font/google";
+import Script from "next/script";
 
 import Header from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/providers/theme-provider";
@@ -87,12 +88,23 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const adClient = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID;
+
   return (
     <html lang="ko" suppressHydrationWarning>
       <head />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-gray-50`}
       >
+        {/* AdSense 스크립트 - 한 번만 로드 */}
+        {adClient && (
+          <Script
+            async
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`}
+            crossOrigin="anonymous"
+            strategy="afterInteractive"
+          />
+        )}
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import ResultCard from "@/components/test/ResultCard";
 import RelatedTests from "@/components/test/RelatedTests";
 import ShareModal from "@/components/shared/ShareModal";
+import AdSenseModal from "@/components/shared/AdSenseModal";
 import { getTestById, getResultById, getRelatedTests } from "@/lib/test-utils";
 import type { Test, Result, TestResultState, TestSummary } from "@/types/test";
 
@@ -95,6 +96,7 @@ export default function TestResultPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
+      <AdSenseModal />
       {/* 결과 카드 */}
       <div className="p-4">
         <ResultCard result={result} testTitle={test.title} />

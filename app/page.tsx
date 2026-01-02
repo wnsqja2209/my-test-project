@@ -1,5 +1,6 @@
 import TestSection from "@/components/home/TestSection";
 import BannerSlider from "@/components/home/BannerSlider";
+import AdSense from "@/components/shared/AdSense";
 import {
   getPopularTests,
   getLatestTests,
@@ -36,6 +37,15 @@ export default function Home() {
       {/* 인기 테스트 */}
       <TestSection title="인기 테스트" emoji="🔥" tests={popularTests} />
 
+      {/* 중간 광고 1 */}
+      <div className="my-4 flex justify-center">
+        <AdSense
+          adFormat="auto"
+          className="w-full"
+          style={{ minHeight: "100px", display: "block" }}
+        />
+      </div>
+
       {/* 최신 테스트 */}
       <TestSection title="최신 테스트" emoji="🆕" tests={latestTests} />
 
@@ -47,6 +57,15 @@ export default function Home() {
 
       {/* 재미 테스트 */}
       <TestSection title="재미 테스트" emoji="🎮" tests={funTests} />
+
+      {/* 하단 광고 */}
+      <div className="my-4 flex justify-center">
+        <AdSense
+          adFormat="auto"
+          className="w-full"
+          style={{ minHeight: "100px", display: "block" }}
+        />
+      </div>
     </div>
   );
 }

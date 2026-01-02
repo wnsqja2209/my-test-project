@@ -194,7 +194,8 @@
 }
 
 @keyframes pulse-soft {
-  0%, 100% {
+  0%,
+  100% {
     opacity: 1;
   }
   50% {
@@ -253,7 +254,9 @@
 
 /* 카드 호버 효과 */
 .card-hover {
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .card-hover:hover {
@@ -285,11 +288,21 @@
 }
 
 /* 스태거 애니메이션 딜레이 */
-.stagger-1 { animation-delay: 0.1s; }
-.stagger-2 { animation-delay: 0.2s; }
-.stagger-3 { animation-delay: 0.3s; }
-.stagger-4 { animation-delay: 0.4s; }
-.stagger-5 { animation-delay: 0.5s; }
+.stagger-1 {
+  animation-delay: 0.1s;
+}
+.stagger-2 {
+  animation-delay: 0.2s;
+}
+.stagger-3 {
+  animation-delay: 0.3s;
+}
+.stagger-4 {
+  animation-delay: 0.4s;
+}
+.stagger-5 {
+  animation-delay: 0.5s;
+}
 
 /* 안전 영역 패딩 */
 .pb-safe {
@@ -298,7 +311,8 @@
 
 /* 로고 그라데이션 애니메이션 */
 @keyframes logo-sway {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateX(-50%) rotate(-2deg);
   }
   50% {
@@ -331,7 +345,9 @@
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-shift 4s ease-in-out infinite, logo-sway 3s ease-in-out infinite;
+  animation:
+    gradient-shift 4s ease-in-out infinite,
+    logo-sway 3s ease-in-out infinite;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -344,4 +360,13 @@
 
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* AdSense 광고 스타일 오버라이드 */
+.adsbygoogle {
+  display: block !important;
+}
+
+.adsbygoogle iframe {
+  margin: 0 !important;
 }

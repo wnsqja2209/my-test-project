@@ -6,6 +6,7 @@ import { Search, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import SearchBar from "@/components/home/SearchBar";
 import TestCard from "@/components/home/TestCard";
+import AdSense from "@/components/shared/AdSense";
 import { searchTests } from "@/lib/test-utils";
 import type { TestSummary } from "@/types/test";
 
@@ -72,12 +73,32 @@ function SearchContent() {
               </p>
             </div>
 
+            {/* 상단 광고 */}
+            <div className="my-4 flex justify-center">
+              <AdSense
+                adFormat="auto"
+                className="w-full"
+                style={{ minHeight: "100px", display: "block" }}
+              />
+            </div>
+
             {results.length > 0 ? (
-              <div className="grid grid-cols-2 gap-3">
-                {results.map((test) => (
-                  <TestCard key={test.id} test={test} />
-                ))}
-              </div>
+              <>
+                <div className="grid grid-cols-2 gap-3">
+                  {results.map((test) => (
+                    <TestCard key={test.id} test={test} />
+                  ))}
+                </div>
+
+                {/* 하단 광고 */}
+                <div className="my-4 flex justify-center">
+                  <AdSense
+                    adFormat="auto"
+                    className="w-full"
+                    style={{ minHeight: "100px", display: "block" }}
+                  />
+                </div>
+              </>
             ) : (
               <div className="flex flex-col items-center justify-center py-16 text-center">
                 <Search className="w-12 h-12 text-gray-300 mb-4" />

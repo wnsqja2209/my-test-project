@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Home, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import AdSense from "@/components/shared/AdSense";
 
 export default function NotFound() {
   return (
@@ -12,6 +13,15 @@ export default function NotFound() {
       <h1 className="text-2xl font-bold text-gray-900 mb-2">
         페이지를 찾을 수 없어요
       </h1>
+
+      {/* 중간 광고 */}
+      <div className="my-4 flex justify-center w-full max-w-xs">
+        <AdSense
+          adFormat="auto"
+          className="w-full"
+          style={{ minHeight: "100px", display: "block" }}
+        />
+      </div>
 
       {/* 설명 */}
       <p className="text-gray-500 mb-8 max-w-sm">
