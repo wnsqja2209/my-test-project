@@ -23,6 +23,8 @@ const pressStart2P = Press_Start_2P({
   subsets: ["latin"],
 });
 
+const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
+
 export const metadata: Metadata = {
   title: {
     default: "MOAB - 재미있는 심리테스트 모음",
@@ -41,11 +43,11 @@ export const metadata: Metadata = {
   authors: [{ name: "MOAB" }],
   creator: "MOAB",
   publisher: "MOAB",
-  metadataBase: new URL("https://mo-ab.vercel.app/"),
+  metadataBase: new URL(baseUrl),
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: "https://mo-ab.vercel.app/",
+    url: baseUrl,
     siteName: "MOAB",
     title: "MOAB - 재미있는 심리테스트 모음",
     description:
