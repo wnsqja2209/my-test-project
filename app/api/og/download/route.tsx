@@ -229,7 +229,7 @@ export async function GET(request: Request) {
                 fontSize: "20px",
               }}
             >
-              MOAB - our-play-main.vercel.app
+              MOAB - mo-ab.vercel.app
             </span>
           </div>
         </div>

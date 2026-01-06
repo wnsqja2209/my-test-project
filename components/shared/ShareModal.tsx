@@ -172,7 +172,7 @@ const ShareModal = ({
       const baseUrl =
         typeof window !== "undefined"
           ? window.location.origin
-          : "https://our-play-main.vercel.app";
+          : "https://mo-ab.vercel.app/";
       return `${baseUrl}/test/${testId}`;
     }
     // 그 외의 경우는 shareUrl 사용
@@ -210,7 +210,7 @@ const ShareModal = ({
         const baseUrl =
           typeof window !== "undefined"
             ? window.location.origin
-            : "https://our-play-main.vercel.app";
+            : "https://mo-ab.vercel.app/";
         const finalUrl = test.coverImageUrl.startsWith("http")
           ? test.coverImageUrl
           : `${baseUrl}${test.coverImageUrl}`;
@@ -225,7 +225,7 @@ const ShareModal = ({
     if (process.env.NODE_ENV === "development") {
       console.log("[ShareModal] 기본 로고 이미지 사용");
     }
-    return "https://our-play-main.vercel.app/logo-1.png";
+    return "https://mo-ab.vercel.app/logo-1.png";
   })();
 
   // 컴포넌트 마운트 상태 관리 및 cleanup

@@ -48,6 +48,6 @@ export function generateOgImageUrl(testId: string, resultId: string): string {
 
   // 서버 사이드에서는 환경 변수 또는 기본값 사용
   const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://our-play-main.vercel.app/";
+    process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
   return `${baseUrl}/api/og/result?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`;
 }
