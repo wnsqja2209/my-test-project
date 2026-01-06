@@ -92,19 +92,20 @@ export default function RootLayout({
 
   return (
     <html lang="ko" suppressHydrationWarning>
-      <head />
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-gray-50`}
-      >
-        {/* AdSense 스크립트 - 한 번만 로드 */}
+      <head>
+        {/* AdSense 스크립트 - head에 로드 */}
         {adClient && (
           <Script
             async
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adClient}`}
             crossOrigin="anonymous"
-            strategy="afterInteractive"
+            strategy="beforeInteractive"
           />
         )}
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} ${pressStart2P.variable} antialiased bg-gray-50`}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="light"
