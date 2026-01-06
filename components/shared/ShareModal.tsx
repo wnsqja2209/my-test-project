@@ -172,7 +172,7 @@ const ShareModal = ({
       const baseUrl =
         typeof window !== "undefined"
           ? window.location.origin
-          : "https://mo-ab.vercel.app/";
+          : process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
       return `${baseUrl}/test/${testId}`;
     }
     // 그 외의 경우는 shareUrl 사용
@@ -210,7 +210,7 @@ const ShareModal = ({
         const baseUrl =
           typeof window !== "undefined"
             ? window.location.origin
-            : "https://mo-ab.vercel.app/";
+            : process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
         const finalUrl = test.coverImageUrl.startsWith("http")
           ? test.coverImageUrl
           : `${baseUrl}${test.coverImageUrl}`;
@@ -225,7 +225,11 @@ const ShareModal = ({
     if (process.env.NODE_ENV === "development") {
       console.log("[ShareModal] 기본 로고 이미지 사용");
     }
-    return "https://mo-ab.vercel.app/logo-1.png";
+    const baseUrl =
+      typeof window !== "undefined"
+        ? window.location.origin
+        : process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
+    return `${baseUrl}/logo-1.png`;
   })();
 
   // 컴포넌트 마운트 상태 관리 및 cleanup
