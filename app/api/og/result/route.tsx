@@ -17,7 +17,8 @@ const COLORS = {
 
 export async function GET(request: Request) {
   try {
-    const { searchParams } = new URL(request.url);
+    const url = new URL(request.url);
+    const { searchParams } = url;
     const testId = searchParams.get("testId");
     const resultId = searchParams.get("resultId");
 
@@ -45,9 +46,8 @@ export async function GET(request: Request) {
       console.warn("Font loading failed, using system font");
     }
 
-    // 이미지 URL 절대 경로로 변환
-    const baseUrl =
-      process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
+    // 이미지 URL 절대 경로로 변환 - request의 origin 사용
+    const baseUrl = `${url.protocol}//${url.host}`;
     const imageUrl = result.imageUrl.startsWith("http")
       ? result.imageUrl
       : `${baseUrl}${result.imageUrl}`;

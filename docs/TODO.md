@@ -60,13 +60,17 @@
 - [x] `components/test/ResultCard.tsx` - 결과 카드 컴포넌트
 - [x] `app/test/[id]/result/page.tsx` - 테스트 결과 페이지
 
-### 1.7 예시 테스트 콘텐츠 (5개)
+### 1.7 예시 테스트 콘텐츠 (10개)
 
 - [x] 발작버튼 테스트 (10문항, 4가지 결과)
 - [x] 혈액형 테스트 (12문항, 4가지 결과)
 - [x] MBTI 테스트 (20문항, 16가지 결과)
 - [x] 공감능력 테스트 (15문항, 4가지 결과)
 - [x] 에겐&테토 테스트 (8문항, 3가지 결과)
+- [x] 흑백요리사 테스트 (10문항, 2가지 결과)
+- [x] 두바이 초콜릿 MBTI (12문항, 16가지 결과)
+- [x] 판타지 직업 테스트 (10문항, 4가지 결과)
+- [x] 2024 올해의 리뷰 (10문항, 4가지 결과)
 
 ---
 
@@ -116,6 +120,7 @@
 ### 3.3 PWA 지원
 
 - [x] `app/manifest.ts` - Web App Manifest
+- [x] PWA 아이콘 설정 (192, 256, 384, 512px)
 - [ ] 서비스 워커 설정 (next-pwa 추가 필요)
 - [ ] 오프라인 지원 (next-pwa 추가 필요)
 
@@ -156,16 +161,16 @@
 
 ### 4.3 협업 워크플로우 문서화
 
-- [ ] `docs/COLLABORATION.md` 작성
-  - [ ] 새 테스트 추가 가이드
-  - [ ] 기존 테스트 수정 가이드
-  - [ ] Git 워크플로우 (브랜치 전략, PR 규칙)
-  - [ ] 테스트 파일 네이밍 컨벤션
-  - [ ] 충돌 해결 가이드
-- [ ] 테스트 템플릿 파일 생성
-  - [ ] `data/tests/_template.json` - 새 테스트 작성 가이드
-  - [ ] 필수 필드 및 선택 필드 명시
-  - [ ] 예시 코드 포함
+- [x] `docs/COLLABORATION.md` 작성
+  - [x] 새 테스트 추가 가이드
+  - [x] 기존 테스트 수정 가이드
+  - [x] Git 워크플로우 (브랜치 전략, PR 규칙)
+  - [x] 테스트 파일 네이밍 컨벤션
+  - [x] 충돌 해결 가이드
+- [x] 테스트 템플릿 파일 생성
+  - [x] `data/tests/_template.json` - 새 테스트 작성 가이드
+  - [x] 필수 필드 및 선택 필드 명시
+  - [x] 예시 코드 포함
 
 ### 4.4 검증 및 테스트
 
@@ -201,11 +206,82 @@
 
 ---
 
+---
+
+## Phase 5: 추가 기능 (완료)
+
+### 5.1 Google AdSense 통합
+
+- [x] `components/shared/AdSense.tsx` - AdSense 컴포넌트
+- [x] `components/shared/AdSenseModal.tsx` - AdSense 모달
+- [x] `public/ads.txt` - AdSense 인증 파일
+- [x] 각 페이지에 광고 삽입
+
+### 5.2 OG 이미지 동적 생성
+
+- [x] `app/api/og/result/route.tsx` - 결과 OG 이미지 생성 API
+- [x] `app/api/og/download/route.tsx` - 이미지 다운로드 API
+- [x] `@vercel/og` 패키지 통합
+- [x] 동적 이미지 생성 로직
+
+### 5.3 배너 슬라이더
+
+- [x] `components/home/BannerSlider.tsx` - 배너 슬라이더 컴포넌트
+- [x] `public/banner/` - 배너 이미지 추가
+- [x] 자동 슬라이드 기능
+
+### 5.4 테마 전환
+
+- [x] `components/providers/theme-provider.tsx` - 테마 Provider
+- [x] `next-themes` 패키지 통합
+- [x] 다크/라이트 모드 지원
+
+### 5.5 토스트 알림
+
+- [x] `sonner` 패키지 통합
+- [x] `components/ui/sonner.tsx` - Sonner 컴포넌트
+- [x] 공유, 복사 등 사용자 피드백
+
+### 5.6 기타 UI 개선
+
+- [x] `components/shared/ScrollToTop.tsx` - 맨 위로 버튼
+- [x] 페이지별 로딩 UI 개선
+- [x] 애니메이션 효과 추가
+
+---
+
+## Phase 6: 문서화 (진행 중)
+
+### 6.1 주요 문서 업데이트
+
+- [x] `README.md` - 프로젝트 소개 및 시작 가이드 (2026-01-14 업데이트)
+- [x] `docs/DIR.md` - 디렉토리 구조 (2026-01-14 업데이트)
+- [x] `docs/TODO.md` - 이 파일 (2026-01-14 업데이트)
+- [x] `docs/PRD.md` - 제품 요구사항 문서 (기존 유지)
+- [x] `docs/COLLABORATION.md` - 협업 가이드 (기존 유지)
+- [ ] `docs/CONVERSATION_SUMMARY.md` - 최근 작업 내용 추가
+
+### 6.2 AGENTS.md 검토
+
+- [x] 기술 스택 정보 확인
+- [x] 개발 명령어 확인
+- [x] 프로젝트 구조 확인
+
+---
+
 ## 기타
 
+### 완료 항목
+
 - [x] `app/not-found.tsx` - 404 페이지
+- [x] 결과 이미지 추가
+  - [x] `public/images/tests/{test-id}/` 디렉토리별 구조
+  - [x] 모든 테스트의 결과 이미지 추가 완료
+  - [x] 썸네일, 커버, 결과 이미지 구조화
+
+### 예정 항목
+
 - [ ] `.husky/` 디렉토리 (git hooks 설정)
-- [ ] 결과 이미지 추가
-  - [ ] `public/images/results/` 디렉토리 생성
-  - [ ] 31개의 결과 이미지 파일 추가
-  - [ ] 각 이미지 파일명이 `tests.json`의 `imageUrl`과 일치하는지 확인
+- [ ] E2E 테스트 (Playwright)
+- [ ] 성능 모니터링 (Vercel Analytics)
+- [ ] 에러 트래킹 (Sentry)

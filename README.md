@@ -1,110 +1,112 @@
+# 🧠 심리테스트 웹서비스
+
 <div align="center">
-  <br />
 
-  <div>
-    <img src="https://img.shields.io/badge/-Next.JS_15-black?style=for-the-badge&logoColor=white&logo=nextdotjs&color=black" alt="next.js" />
-    <img src="https://img.shields.io/badge/-React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="react" />
-    <img src="https://img.shields.io/badge/-TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="typescript" />
-    <img src="https://img.shields.io/badge/-Tailwind_v4-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="tailwind" />
-    <img src="https://img.shields.io/badge/-Clerk-6C47FF?style=for-the-badge&logoColor=white&logo=clerk" alt="clerk" />
-    <img src="https://img.shields.io/badge/-Supabase-3FCF8E?style=for-the-badge&logo=supabase&logoColor=white" alt="supabase" />
-  </div>
+[![Next.js](https://img.shields.io/badge/Next.js-15.5.9-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-3178C6?style=for-the-badge&logo=typescript)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind-v4-06B6D4?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
 
-  <h1 align="center">SaaS 템플릿</h1>
-  <h3 align="center">Next.js 15 + Clerk + Supabase</h3>
+**모바일 최적화 심리테스트 플랫폼**
 
-  <p align="center">
-    프로덕션 레디 SaaS 애플리케이션을 위한 풀스택 보일러플레이트
-  </p>
+[🎯 데모 보기](#) • [📖 문서](#-문서) • [🚀 시작하기](#-시작하기)
+
 </div>
+
+---
 
 ## 📋 목차
 
-1. [소개](#소개)
-2. [기술 스택](#기술-스택)
-3. [주요 기능](#주요-기능)
-4. [시작하기](#시작하기)
-5. [추가 설정 및 팁](#추가-설정-및-팁)
-6. [프로젝트 구조](#프로젝트-구조)
+1. [소개](#-소개)
+2. [주요 기능](#-주요-기능)
+3. [기술 스택](#-기술-스택)
+4. [시작하기](#-시작하기)
+5. [프로젝트 구조](#-프로젝트-구조)
+6. [테스트 목록](#-테스트-목록)
+7. [개발 가이드](#-개발-가이드)
+8. [배포](#-배포)
+9. [문서](#-문서)
 
-## 소개
+---
 
-Next.js 15, Clerk, Supabase를 활용한 모던 SaaS 애플리케이션 템플릿입니다.
+## 🎯 소개
 
-**핵심 특징:**
-- ✨ Next.js 15 + React 19 최신 기능 활용
-- 🔐 Clerk와 Supabase 네이티브 통합 (2025년 권장 방식)
-- 🎨 Tailwind CSS v4 + shadcn/ui
-- 📱 완전한 반응형 디자인
-- 🌐 한국어 지원 (Clerk 한국어 로컬라이제이션)
+**poomang.com**을 벤치마킹한 **모바일 퍼스트** 심리테스트 웹서비스입니다.
 
-## 기술 스택
+### 핵심 특징
 
-### 프레임워크 & 라이브러리
+- 🔓 **비로그인 서비스** - 회원가입 없이 누구나 즉시 이용 가능
+- 📱 **모바일 최적화** - 모바일 화면에 최적화된 반응형 UI
+- 🎨 **모던 디자인** - shadcn/ui 기반의 세련된 UI/UX
+- 🚀 **빠른 로딩** - 정적 데이터 기반의 초고속 로딩
+- 📤 **SNS 공유** - 카카오톡, X(트위터), 페이스북, 링크 복사
+- 💾 **로컬 저장** - 좋아요, 북마크 기능 (localStorage)
+- 🖼️ **동적 OG 이미지** - 결과 공유 시 자동 생성되는 Open Graph 이미지
+- 📊 **광고 통합** - Google AdSense 통합
 
-- **[Next.js 15](https://nextjs.org/)** - React 프레임워크 (App Router, Server Components)
-- **[React 19](https://react.dev/)** - UI 라이브러리
-- **[TypeScript](https://www.typescriptlang.org/)** - 타입 안정성
+---
 
-### 인증 & 데이터베이스
+## ✨ 주요 기능
 
-- **[Clerk](https://clerk.com/)** - 사용자 인증 및 관리
-  - Google, 이메일 등 다양한 로그인 방식 지원
-  - 한국어 UI 지원
-  - Supabase와 네이티브 통합
-- **[Supabase](https://supabase.com/)** - PostgreSQL 데이터베이스
-  - 실시간 데이터 동기화
-  - Row Level Security (RLS)
-  - 파일 스토리지
+### 사용자 기능
 
-### UI & 스타일링
+| 기능 | 설명 |
+|------|------|
+| 🏠 **홈 화면** | 테마별 섹션으로 구성된 테스트 카드 목록 |
+| 🔍 **검색** | 제목, 설명, 태그 기반 실시간 검색 |
+| 📖 **테스트 상세** | 테스트 정보, 예상 소요시간, 통계 표시 |
+| 🎮 **테스트 진행** | 진행률 표시, 이전 질문 돌아가기 지원 |
+| 🎉 **결과 페이지** | 결과 이미지, 설명, 공유 버튼 |
+| ❤️ **좋아요/북마크** | 로컬 저장소 기반 사용자 반응 |
+| 📤 **공유하기** | 카카오톡, X, 페이스북, 링크 복사 |
+| 🎪 **배너 슬라이더** | 주요 테스트 홍보 배너 |
+| 🌓 **테마 전환** | 다크/라이트 모드 지원 |
+| 📜 **맨 위로** | 긴 페이지에서 스크롤 탑 버튼 |
 
-- **[Tailwind CSS v4](https://tailwindcss.com/)** - 유틸리티 우선 CSS 프레임워크
-- **[shadcn/ui](https://ui.shadcn.com/)** - 재사용 가능한 컴포넌트 라이브러리
-- **[Radix UI](https://www.radix-ui.com/)** - 접근성 높은 헤드리스 컴포넌트
-- **[lucide-react](https://lucide.dev/)** - 아이콘 라이브러리
+### 개발자 기능
 
-### 폼 & 검증
+- ✅ 테스트별 JSON 파일 분리 (협업 효율성)
+- ✅ 자동 테스트 병합 시스템 (`data/tests/index.ts`)
+- ✅ TypeScript 타입 안정성
+- ✅ 템플릿 파일 제공 (`_template.json`)
+- ✅ SEO 최적화 (sitemap, robots.txt)
+- ✅ PWA 지원 (Web App Manifest)
 
-- **[React Hook Form](https://react-hook-form.com/)** - 폼 상태 관리
-- **[Zod](https://zod.dev/)** - 스키마 검증
+---
 
-## 주요 기능
+## 🛠️ 기술 스택
 
-### 🔐 인증 시스템
-- Clerk를 통한 안전한 사용자 인증
-- 소셜 로그인 지원 (Google 등)
-- Clerk 사용자 자동으로 Supabase DB에 동기화
-- 한국어 UI 지원
+### 프론트엔드
 
-### 🗄️ 데이터베이스 통합
-- Clerk 토큰 기반 Supabase 인증 (JWT 템플릿 불필요)
-- 환경별 Supabase 클라이언트 분리:
-  - Client Component용 (`useClerkSupabaseClient`)
-  - Server Component용 (`createClerkSupabaseClient`)
-  - 관리자 권한용 (`createServiceRoleClient`)
-- SQL 마이그레이션 시스템
+| 영역 | 기술 | 버전 |
+|------|------|------|
+| **프레임워크** | Next.js | 15.5.9 |
+| **UI 라이브러리** | React | 19.0.0 |
+| **언어** | TypeScript | 5.x |
+| **스타일링** | Tailwind CSS | v4 |
+| **UI 컴포넌트** | shadcn/ui | - |
+| **아이콘** | lucide-react, react-icons | - |
+| **폼 관리** | react-hook-form | 7.56.4 |
+| **검증** | Zod | 3.25.32 |
+| **토스트 알림** | Sonner | 2.0.7 |
+| **테마** | next-themes | 0.4.6 |
 
-### 🎨 UI/UX
-- shadcn/ui 기반 모던 컴포넌트
-- 완전한 반응형 디자인
-- 다크/라이트 모드 지원 가능
-- 접근성 준수 (WCAG)
+### 인프라
 
-### 🏗️ 아키텍처
-- Server Actions 우선 사용
-- 타입 안전성 보장
-- 모듈화된 코드 구조
-- Next.js 15 최신 패턴 적용
+- **배포**: Vercel
+- **OG 이미지**: @vercel/og
+- **광고**: Google AdSense
+- **패키지 매니저**: pnpm
 
-## 시작하기
+---
+
+## 🚀 시작하기
 
 ### 필수 요구사항
 
 시스템에 다음이 설치되어 있어야 합니다:
 
-- [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/en) (v18 이상)
+- [Node.js](https://nodejs.org/) (v18 이상)
 - [pnpm](https://pnpm.io/) (권장 패키지 매니저)
 
 ```bash
@@ -112,184 +114,44 @@ Next.js 15, Clerk, Supabase를 활용한 모던 SaaS 애플리케이션 템플�
 npm install -g pnpm
 ```
 
-### 프로젝트 초기화
+### 설치 및 실행
 
-다음 단계를 순서대로 진행하세요:
+1. **저장소 클론**
 
-#### 1. Supabase 프로젝트 생성
-
-1. [Supabase Dashboard](https://supabase.com/dashboard)에 접속하여 로그인
-2. **"New Project"** 클릭
-3. Organization 선택 (없으면 새로 생성)
-4. 프로젝트 정보 입력:
-   - **Name**: 원하는 프로젝트 이름
-   - **Database Password**: 안전한 비밀번호 생성 (기억할 필요 없음, Supabase가 관리)
-   - **Region**: `Northeast Asia (Seoul)` 선택 (한국 서비스용)
-   - **Pricing Plan**: Free 또는 Pro 선택
-5. **"Create new project"** 클릭하고 프로젝트가 준비될 때까지 대기 (~2분)
-
-#### 2. Clerk 프로젝트 생성
-
-1. [Clerk Dashboard](https://dashboard.clerk.com/)에 접속하여 로그인
-2. **"Create application"** 클릭
-3. 애플리케이션 정보 입력:
-   - **Application name**: 원하는 이름 (예: `SaaS Template`)
-   - **Sign-in options**: Email, Google 등 원하는 인증 방식 선택
-4. **"Create application"** 클릭
-5. Quick Start 화면에서 **"Continue in Dashboard"** 클릭
-
-#### 3. Clerk + Supabase 통합
-
-> **중요**: 2025년 4월부터 Clerk의 네이티브 Supabase 통합을 사용합니다. JWT Template은 더 이상 필요하지 않습니다.
-
-**3-1. Clerk Frontend API URL 확인**
-
-1. Clerk Dashboard → **API Keys** 메뉴
-2. **"Frontend API"** URL 복사 (예: `https://your-app-12.clerk.accounts.dev`)
-   - 이 URL을 메모해두세요 (다음 단계에서 사용)
-
-**3-2. Supabase에서 Clerk 인증 제공자 설정**
-
-1. Supabase Dashboard로 돌아가기
-2. 프로젝트 선택 → **Settings** → **Authentication** → **Providers**
-3. 페이지 하단으로 스크롤하여 **"Third-Party Auth"** 섹션 찾기
-4. **"Enable Custom Access Token"** 또는 **"Add Provider"** 클릭
-5. 다음 정보 입력:
-
-   - **Provider Name**: `Clerk` (또는 원하는 이름)
-   - **JWT Issuer (Issuer URL)**:
-     ```
-     https://your-app-12.clerk.accounts.dev
-     ```
-     (`your-app-12` 부분을 실제 Clerk Frontend API URL로 교체)
-
-   - **JWKS Endpoint (JWKS URI)**:
-     ```
-     https://your-app-12.clerk.accounts.dev/.well-known/jwks.json
-     ```
-     (동일하게 실제 URL로 교체)
-
-6. **"Save"** 또는 **"Add Provider"** 클릭
-
-**3-3. 통합 확인**
-
-[Clerk 공식 통합 가이드](https://clerk.com/docs/guides/development/integrations/databases/supabase)에서 추가 정보를 확인할 수 있습니다.
-
-#### 4. Supabase Storage 생성 및 설정
-
-1. Supabase Dashboard → **Storage** 메뉴
-2. **"New bucket"** 클릭
-3. 버킷 정보 입력:
-   - **Name**: `uploads` (`.env.example`과 동일하게)
-   - **Public bucket**: 필요에 따라 선택
-     - Public: 누구나 URL로 파일 접근 가능
-     - Private: 인증된 사용자만 접근 (RLS 정책 필요)
-4. **"Create bucket"** 클릭
-
-#### 5. 데이터베이스 스키마 적용
-
-1. Supabase Dashboard → **SQL Editor** 메뉴
-2. **"New query"** 클릭
-3. `supabase/migrations/schema.sql` 파일 내용을 복사하여 붙여넣기
-4. **"Run"** 클릭하여 실행
-5. 성공 메시지 확인 (`Success. No rows returned`)
-
-**생성되는 테이블:**
-- `users`: Clerk 사용자와 동기화되는 사용자 정보 테이블
-
-#### 6. 환경 변수 설정
-
-**6-1. 저장소 클론 및 의존성 설치**
-
-```bash
-git clone <your-repository-url>
-cd saas-template
-pnpm install
-```
-
-**6-2. .env 파일 생성**
-
-```bash
-cp .env.example .env
-```
-
-**6-3. Supabase 환경 변수 설정**
-
-1. Supabase Dashboard → **Settings** → **API**
-2. 다음 값들을 복사하여 `.env` 파일에 입력:
-   ```env
-   NEXT_PUBLIC_SUPABASE_URL="<Project URL>"
-   NEXT_PUBLIC_SUPABASE_ANON_KEY="<anon public key>"
-   SUPABASE_SERVICE_ROLE_KEY="<service_role secret key>"
-   NEXT_PUBLIC_STORAGE_BUCKET="uploads"
+   ```bash
+   git clone https://github.com/your-username/our-play.git
+   cd our-play
    ```
 
-> **⚠️ 주의**: `service_role` 키는 모든 RLS를 우회하는 관리자 권한이므로 절대 공개하지 마세요!
+2. **의존성 설치**
 
-**6-4. Clerk 환경 변수 설정**
-
-1. Clerk Dashboard → **API Keys**
-2. 다음 값들을 복사하여 `.env` 파일에 입력:
-   ```env
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY="<Publishable Key>"
-   CLERK_SECRET_KEY="<Secret Key>"
-   NEXT_PUBLIC_CLERK_SIGN_IN_URL="/sign-in"
-   NEXT_PUBLIC_CLERK_SIGN_IN_FALLBACK_REDIRECT_URL="/"
-   NEXT_PUBLIC_CLERK_SIGN_UP_FALLBACK_REDIRECT_URL="/"
+   ```bash
+   pnpm install
    ```
 
-#### 7. Cursor MCP 설정 (선택사항)
+3. **환경 변수 설정** (선택사항)
 
-> Cursor AI를 사용하는 경우, Supabase MCP 서버를 설정하면 AI가 데이터베이스를 직접 조회하고 관리할 수 있습니다.
+   ```bash
+   cp .env.example .env
+   ```
 
-**7-1. Supabase Access Token 생성**
+   `.env` 파일에 필요한 환경 변수를 설정:
+   - `NEXT_PUBLIC_KAKAO_APP_KEY`: 카카오 공유 기능 (선택)
+   - `NEXT_PUBLIC_GA_ID`: Google Analytics (선택)
+   - `NEXT_PUBLIC_ADSENSE_ID`: Google AdSense (선택)
 
-1. Supabase Dashboard → 우측 상단 프로필 아이콘 클릭
-2. **Account Settings** → **Access Tokens**
-3. **"Generate new token"** 클릭
-4. Token name 입력 (예: `cursor-mcp`)
-5. 생성된 토큰 복사 (다시 볼 수 없으므로 안전한 곳에 보관)
+4. **개발 서버 실행**
 
-**7-2. .cursor/mcp.json 설정**
+   ```bash
+   pnpm dev
+   ```
 
-`.cursor/mcp.json` 파일을 열고 `your_supabase_access_token` 부분을 실제 토큰으로 교체:
-
-```json
-{
-  "mcpServers": {
-    "supabase": {
-      "command": "npx",
-      "args": [
-        "-y",
-        "@supabase/mcp-server-supabase@latest",
-        "--access-token",
-        "sbp_xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-      ]
-    }
-  }
-}
-```
-
-**7-3. Cursor 재시작**
-
-Cursor를 완전히 종료하고 다시 실행하여 MCP 서버 설정을 적용합니다.
-
-#### 8. 개발 서버 실행
-
-```bash
-pnpm dev
-```
-
-브라우저에서 [http://localhost:3000](http://localhost:3000)을 열어 확인합니다.
-
-**테스트 페이지:**
-- `/auth-test`: Clerk + Supabase 인증 통합 테스트
-- `/storage-test`: Supabase Storage 업로드 테스트
+   브라우저에서 [http://localhost:3000](http://localhost:3000) 접속
 
 ### 개발 명령어
 
 ```bash
-# 개발 서버 실행 (Turbopack)
+# 개발 서버 (Turbopack)
 pnpm dev
 
 # 프로덕션 빌드
@@ -302,111 +164,267 @@ pnpm start
 pnpm lint
 ```
 
-## 추가 설정 및 팁
+---
 
-### Clerk 한국어 설정
-
-프로젝트에 이미 Clerk 한국어 로컬라이제이션이 적용되어 있습니다. `app/layout.tsx`의 `ClerkProvider`에서 `koKR` locale이 설정되어 있습니다.
-
-### Supabase RLS (Row Level Security) 정책
-
-프로젝트의 `users` 테이블에는 기본 RLS 정책이 설정되어 있습니다:
-
-- **SELECT**: 사용자는 자신의 데이터만 조회 가능
-- **INSERT**: 새 사용자 생성 가능
-- **UPDATE**: 사용자는 자신의 데이터만 수정 가능
-
-추가 테이블 생성 시 RLS 정책을 반드시 설정하세요:
-
-```sql
--- 테이블 생성
-CREATE TABLE your_table (
-  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-  user_id TEXT NOT NULL REFERENCES users(clerk_id),
-  -- 기타 컬럼들
-);
-
--- RLS 활성화
-ALTER TABLE your_table ENABLE ROW LEVEL SECURITY;
-
--- SELECT 정책
-CREATE POLICY "Users can view their own data"
-  ON your_table FOR SELECT
-  USING (auth.jwt()->>'sub' = user_id);
-
--- INSERT 정책
-CREATE POLICY "Users can insert their own data"
-  ON your_table FOR INSERT
-  WITH CHECK (auth.jwt()->>'sub' = user_id);
-```
-
-### 추가 로그인 방식 설정
-
-Clerk에서 추가 로그인 방식을 활성화하려면:
-
-1. Clerk Dashboard → **User & Authentication** → **Social Connections**
-2. 원하는 제공자 선택 (Google, GitHub, Discord 등)
-3. OAuth 자격 증명 입력 (제공자 개발자 콘솔에서 생성)
-4. **Enable** 클릭
-
-## 프로젝트 구조
+## 📁 프로젝트 구조
 
 ```
-saas-template/
-├── app/                    # Next.js App Router
-│   ├── api/               # API Routes
-│   │   └── sync-user/    # Clerk → Supabase 사용자 동기화
-│   ├── auth-test/        # 인증 테스트 페이지
-│   ├── storage-test/     # 스토리지 테스트 페이지
-│   ├── layout.tsx        # Root Layout (Clerk Provider)
-│   ├── page.tsx          # 홈페이지
-│   └── globals.css       # 전역 스타일 (Tailwind v4 설정)
+our-play-main/
+├── app/                       # Next.js App Router
+│   ├── api/                  # API Routes
+│   │   └── og/              # OG 이미지 생성 API
+│   ├── search/              # 검색 페이지
+│   ├── test/[id]/           # 테스트 상세/진행/결과
+│   ├── layout.tsx           # Root Layout
+│   ├── page.tsx             # 홈 페이지
+│   ├── globals.css          # 전역 스타일
+│   ├── manifest.ts          # PWA Manifest
+│   ├── robots.ts            # robots.txt
+│   └── sitemap.ts           # sitemap.xml
 │
-├── components/            # React 컴포넌트
-│   ├── ui/               # shadcn/ui 컴포넌트 (자동 생성)
-│   ├── providers/        # Context Providers
-│   │   └── sync-user-provider.tsx
-│   └── Navbar.tsx        # 네비게이션 바
+├── components/               # React 컴포넌트
+│   ├── home/                # 홈 화면 컴포넌트
+│   │   ├── BannerSlider.tsx
+│   │   ├── SearchBar.tsx
+│   │   ├── TestCard.tsx
+│   │   └── TestSection.tsx
+│   ├── layout/              # 레이아웃 컴포넌트
+│   │   ├── Header.tsx
+│   │   └── MobileNav.tsx
+│   ├── test/                # 테스트 관련 컴포넌트
+│   │   ├── TestInfo.tsx
+│   │   ├── ActionButtons.tsx
+│   │   ├── ProgressBar.tsx
+│   │   ├── Question.tsx
+│   │   ├── OptionButton.tsx
+│   │   ├── ResultCard.tsx
+│   │   └── RelatedTests.tsx
+│   ├── shared/              # 공유 컴포넌트
+│   │   ├── ShareModal.tsx
+│   │   ├── LoadingSpinner.tsx
+│   │   ├── ScrollToTop.tsx
+│   │   ├── AdSense.tsx
+│   │   └── AdSenseModal.tsx
+│   ├── providers/           # Context Providers
+│   │   └── theme-provider.tsx
+│   └── ui/                  # shadcn/ui 컴포넌트 (자동 생성)
 │
-├── lib/                   # 유틸리티 및 설정
-│   ├── supabase/         # Supabase 클라이언트들
-│   │   ├── clerk-client.ts    # Client Component용
-│   │   ├── server.ts          # Server Component용
-│   │   ├── service-role.ts    # 관리자용
-│   │   └── client.ts          # 공개 데이터용
-│   └── utils.ts          # 공통 유틸리티 (cn 함수 등)
+├── data/                     # 테스트 데이터
+│   └── tests/               # 개별 테스트 JSON 파일
+│       ├── _template.json   # 새 테스트 템플릿
+│       ├── button-test.json
+│       ├── blood-type-test.json
+│       ├── mbti-simple-test.json
+│       ├── empathy-test.json
+│       ├── ghibli-character-test.json
+│       ├── black-white-test.json
+│       ├── dubai-cookie-test.json
+│       ├── fantasy-job-test.json
+│       ├── year-review-test.json
+│       └── index.ts         # 자동 병합 스크립트
 │
-├── hooks/                 # Custom React Hooks
-│   └── use-sync-user.ts  # 사용자 동기화 훅
+├── hooks/                    # Custom React Hooks
+│   ├── use-local-storage.ts
+│   ├── use-likes.ts
+│   └── use-bookmarks.ts
 │
-├── supabase/             # Supabase 관련 파일
-│   ├── migrations/       # 데이터베이스 마이그레이션
-│   │   └── schema.sql   # 초기 스키마
-│   └── config.toml       # Supabase 프로젝트 설정
+├── lib/                      # 유틸리티 함수
+│   ├── utils.ts             # 공통 유틸 (cn 등)
+│   ├── test-utils.ts        # 테스트 관련 유틸
+│   └── image-utils.ts       # 이미지 처리 유틸
 │
-├── .cursor/              # Cursor AI 규칙
-│   └── rules/           # 개발 컨벤션 및 가이드
+├── types/                    # TypeScript 타입
+│   ├── test.ts              # 테스트 타입 정의
+│   └── vercel-og.d.ts       # OG 이미지 타입
 │
-├── middleware.ts         # Next.js 미들웨어 (Clerk)
-├── .env.example         # 환경 변수 예시
-└── CLAUDE.md            # AI 에이전트용 프로젝트 가이드
+├── public/                   # 정적 파일
+│   ├── banner/              # 배너 이미지
+│   ├── icons/               # PWA 아이콘
+│   ├── images/              # 테스트 이미지
+│   │   └── tests/           # 테스트별 이미지 폴더
+│   ├── logo.png
+│   ├── og-image.png
+│   └── ads.txt              # AdSense 인증
+│
+├── docs/                     # 프로젝트 문서
+│   ├── PRD.md               # 제품 요구사항 문서
+│   ├── TODO.md              # 작업 목록
+│   ├── COLLABORATION.md     # 협업 가이드
+│   ├── CONVERSATION_SUMMARY.md
+│   └── DIR.md               # 디렉토리 구조
+│
+├── .cursor/                  # Cursor AI 규칙
+│   └── rules/               # 개발 컨벤션
+│
+├── AGENTS.md                 # AI 에이전트 가이드
+├── middleware.ts             # Next.js 미들웨어
+├── next.config.ts            # Next.js 설정
+├── tsconfig.json             # TypeScript 설정
+├── components.json           # shadcn/ui 설정
+└── package.json              # 의존성 관리
 ```
 
-### 주요 파일 설명
+---
 
-- **`middleware.ts`**: Clerk 인증 미들웨어 설정
-- **`app/layout.tsx`**: ClerkProvider와 SyncUserProvider 설정
-- **`lib/supabase/`**: 환경별 Supabase 클라이언트 (매우 중요!)
-- **`hooks/use-sync-user.ts`**: Clerk 사용자를 Supabase에 자동 동기화
-- **`components/providers/sync-user-provider.tsx`**: 앱 전역에서 사용자 동기화 실행
-- **`CLAUDE.md`**: Claude Code를 위한 프로젝트 가이드
+## 🎮 테스트 목록
 
-## 추가 리소스
+현재 **10개**의 심리테스트가 제공됩니다:
 
-- [Next.js 15 문서](https://nextjs.org/docs)
-- [Clerk 문서](https://clerk.com/docs)
-- [Supabase 문서](https://supabase.com/docs)
-- [shadcn/ui 문서](https://ui.shadcn.com/)
-- [Tailwind CSS v4 문서](https://tailwindcss.com/docs)
-#   o u r - p l a y  
- 
+| # | 제목 | 카테고리 | 질문 수 | 결과 수 | 파일명 |
+|---|------|----------|---------|---------|--------|
+| 1 | 발작버튼 테스트 | 성격 | 10 | 4 | `button-test.json` |
+| 2 | 혈액형 테스트 | 성격 | 12 | 4 | `blood-type-test.json` |
+| 3 | 간단 MBTI 테스트 | MBTI | 20 | 16 | `mbti-simple-test.json` |
+| 4 | 공감능력 테스트 | 성격 | 15 | 5 | `empathy-test.json` |
+| 5 | 에겐&테토 테스트 | 재미 | 8 | 3 | `ghibli-character-test.json` |
+| 6 | 흑백요리사 테스트 | 재미 | 10 | 2 | `black-white-test.json` |
+| 7 | 두바이 초콜릿 MBTI | MBTI | 12 | 16 | `dubai-cookie-test.json` |
+| 8 | 판타지 직업 테스트 | 재미 | 10 | 4 | `fantasy-job-test.json` |
+| 9 | 2024 올해의 리뷰 | 재미 | 10 | 4 | `year-review-test.json` |
+
+---
+
+## 👨‍💻 개발 가이드
+
+### 새 테스트 추가하기
+
+1. **템플릿 복사**
+
+   ```bash
+   cp data/tests/_template.json data/tests/your-test-name-test.json
+   ```
+
+2. **테스트 데이터 작성**
+
+   - 필수 필드: `id`, `title`, `description`, `questions`, `results`
+   - 점수 계산 로직 설정
+   - 이미지 경로 지정
+
+3. **인덱스 파일에 추가**
+
+   `data/tests/index.ts` 파일에 import 추가:
+
+   ```typescript
+   import yourTestName from "./your-test-name-test.json";
+   
+   const tests: Test[] = [
+     // ... 기존 테스트들
+     yourTestName as Test,
+   ];
+   ```
+
+4. **이미지 추가**
+
+   `public/images/tests/your-test-name-test/` 폴더 생성 및 이미지 추가
+
+5. **테스트 실행**
+
+   ```bash
+   pnpm dev
+   ```
+
+   브라우저에서 `/test/your-test-name-test` 접속하여 확인
+
+**자세한 가이드**: [`docs/COLLABORATION.md`](docs/COLLABORATION.md) 참조
+
+### shadcn/ui 컴포넌트 추가
+
+```bash
+pnpx shadcn@latest add [component-name]
+```
+
+예시:
+```bash
+pnpx shadcn@latest add dialog
+pnpx shadcn@latest add toast
+```
+
+### 코딩 컨벤션
+
+- **파일명**: kebab-case (예: `test-card.tsx`)
+- **컴포넌트**: PascalCase (예: `TestCard`)
+- **함수/변수**: camelCase
+- **타입/인터페이스**: PascalCase
+- **상수**: UPPER_SNAKE_CASE (선택)
+
+자세한 내용: [`.cursor/rules/`](.cursor/rules/) 참조
+
+---
+
+## 🚀 배포
+
+### Vercel 배포 (권장)
+
+1. **Vercel에 프로젝트 연결**
+
+   ```bash
+   pnpm i -g vercel
+   vercel
+   ```
+
+2. **환경 변수 설정**
+
+   Vercel Dashboard에서 환경 변수 추가:
+   - `NEXT_PUBLIC_KAKAO_APP_KEY`
+   - `NEXT_PUBLIC_GA_ID`
+   - `NEXT_PUBLIC_ADSENSE_ID`
+
+3. **자동 배포**
+
+   `main` 브랜치에 push하면 자동 배포됩니다.
+
+### 기타 플랫폼
+
+Next.js 15를 지원하는 모든 플랫폼에 배포 가능:
+- Netlify
+- AWS Amplify
+- Cloudflare Pages
+- 커스텀 Node.js 서버
+
+---
+
+## 📖 문서
+
+- **[PRD.md](docs/PRD.md)** - 제품 요구사항 문서 (기능 명세, 데이터 모델)
+- **[TODO.md](docs/TODO.md)** - 개발 작업 목록 (완료/진행/예정)
+- **[COLLABORATION.md](docs/COLLABORATION.md)** - 협업 가이드 (Git, 테스트 추가 방법)
+- **[AGENTS.md](AGENTS.md)** - AI 에이전트용 프로젝트 가이드
+
+---
+
+## 🤝 기여하기
+
+프로젝트에 기여하고 싶으신가요?
+
+1. 이 저장소를 Fork
+2. 새 브랜치 생성 (`git checkout -b feat/amazing-feature`)
+3. 변경사항 커밋 (`git commit -m 'feat: Add amazing feature'`)
+4. 브랜치에 Push (`git push origin feat/amazing-feature`)
+5. Pull Request 생성
+
+**커밋 메시지 형식**: [Conventional Commits](https://www.conventionalcommits.org/) 준수
+
+자세한 내용: [`docs/COLLABORATION.md`](docs/COLLABORATION.md)
+
+---
+
+## 📄 라이선스
+
+이 프로젝트는 MIT 라이선스 하에 배포됩니다.
+
+---
+
+## 📞 문의
+
+- **이슈**: [GitHub Issues](https://github.com/your-username/our-play/issues)
+- **이메일**: your-email@example.com
+
+---
+
+<div align="center">
+
+**Made with ❤️ using Next.js 15 & React 19**
+
+⭐ 이 프로젝트가 마음에 드셨다면 Star를 눌러주세요!
+
+</div>

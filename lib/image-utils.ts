@@ -39,15 +39,12 @@ export async function downloadResultImage(
 
 /**
  * OG 이미지 URL 생성
+ * 클라이언트 전용 함수 - 현재 브라우저의 origin을 사용
  */
 export function generateOgImageUrl(testId: string, resultId: string): string {
-  // 클라이언트에서는 window.location.origin 사용 (현재 도메인)
-  if (typeof window !== "undefined") {
-    return `${window.location.origin}/api/og/result?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`;
+  if (typeof window === "undefined") {
+    throw new Error("generateOgImageUrl can only be called on the client side");
   }
 
-  // 서버 사이드에서는 환경 변수 또는 기본값 사용
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
-  return `${baseUrl}/api/og/result?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`;
+  return `${window.location.origin}/api/og/result?testId=${encodeURIComponent(testId)}&resultId=${encodeURIComponent(resultId)}`;
 }

@@ -168,12 +168,8 @@ const ShareModal = ({
   // 카카오톡 공유 버튼용 URL (결과 페이지인 경우 테스트 페이지로)
   const buttonUrl = (() => {
     // 결과 페이지에서 카카오톡 공유 시 버튼은 테스트 페이지로
-    if (testId && resultId) {
-      const baseUrl =
-        typeof window !== "undefined"
-          ? window.location.origin
-          : process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
-      return `${baseUrl}/test/${testId}`;
+    if (testId && resultId && typeof window !== "undefined") {
+      return `${window.location.origin}/test/${testId}`;
     }
     // 그 외의 경우는 shareUrl 사용
     return shareUrl;
@@ -205,15 +201,11 @@ const ShareModal = ({
             : "null",
         );
       }
-      if (test?.coverImageUrl) {
+      if (test?.coverImageUrl && typeof window !== "undefined") {
         // 상대 경로를 절대 경로로 변환
-        const baseUrl =
-          typeof window !== "undefined"
-            ? window.location.origin
-            : process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
         const finalUrl = test.coverImageUrl.startsWith("http")
           ? test.coverImageUrl
-          : `${baseUrl}${test.coverImageUrl}`;
+          : `${window.location.origin}${test.coverImageUrl}`;
         if (process.env.NODE_ENV === "development") {
           console.log("[ShareModal] 테스트 페이지 OG 이미지 URL:", finalUrl);
         }
@@ -225,11 +217,11 @@ const ShareModal = ({
     if (process.env.NODE_ENV === "development") {
       console.log("[ShareModal] 기본 로고 이미지 사용");
     }
-    const baseUrl =
-      typeof window !== "undefined"
-        ? window.location.origin
-        : process.env.NEXT_PUBLIC_BASE_URL || "https://mo-ab.vercel.app/";
-    return `${baseUrl}/logo-1.png`;
+    if (typeof window !== "undefined") {
+      return `${window.location.origin}/logo-1.png`;
+    }
+    // SSR fallback (실제로는 클라이언트 컴포넌트이므로 도달하지 않음)
+    return "/logo-1.png";
   })();
 
   // 컴포넌트 마운트 상태 관리 및 cleanup

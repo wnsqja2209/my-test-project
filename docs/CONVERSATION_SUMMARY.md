@@ -193,6 +193,130 @@ data/
 
 ---
 
-**작성일**: 2025-01-27
+**작성일**: 2025-01-27 (초기 작성), 2026-01-14 (최근 업데이트 추가)
 **대화 참여자**: 사용자, AI Assistant (Auto)
+
+---
+
+## 🆕 최근 추가 사항 (2025-01-27 ~ 2026-01-14)
+
+### 1. 추가된 테스트 (5개 → 10개)
+
+프로젝트에 **5개의 새로운 테스트**가 추가되었습니다:
+
+| # | 제목 | 파일명 | 특징 |
+|---|------|--------|------|
+| 6 | 흑백요리사 테스트 | `black-white-test.json` | 요리 선호도 기반 성격 분석 |
+| 7 | 두바이 초콜릿 MBTI | `dubai-cookie-test.json` | 트렌디한 MBTI 테스트 |
+| 8 | 판타지 직업 테스트 | `fantasy-job-test.json` | 판타지 세계관 직업 추천 |
+| 9 | 2024 올해의 리뷰 | `year-review-test.json` | 연말 회고 테스트 |
+| 10 | 템플릿 | `_template.json` | 새 테스트 작성용 템플릿 |
+
+### 2. Google AdSense 통합
+
+**목적**: 수익화 기능 추가
+
+**구현 내용**:
+- `components/shared/AdSense.tsx`: AdSense 광고 컴포넌트
+- `components/shared/AdSenseModal.tsx`: 광고 모달
+- `public/ads.txt`: Google AdSense 인증 파일
+- 환경 변수: `NEXT_PUBLIC_ADSENSE_ID`
+
+**커밋 히스토리**:
+- `4ea4a7f`: Add ads.txt for Google AdSense
+- `a86b26e`: Add Google AdSense integration
+- `4af3086`: 광고 삽입2
+- `4eb89ce`: 광고 삽입
+
+### 3. OG 이미지 동적 생성
+
+**목적**: SNS 공유 시 매력적인 이미지 자동 생성
+
+**구현 내용**:
+- `app/api/og/result/route.tsx`: 결과 OG 이미지 생성 API
+- `app/api/og/download/route.tsx`: 이미지 다운로드 API
+- `@vercel/og` 패키지 사용
+- 동적으로 테스트 결과 이미지 생성
+
+**기능**:
+- 각 결과마다 고유한 OG 이미지 생성
+- 카카오톡, X(트위터), 페이스북 공유 시 사용
+
+### 4. 배너 슬라이더
+
+**목적**: 주요 테스트 홍보
+
+**구현 내용**:
+- `components/home/BannerSlider.tsx`: 배너 슬라이더 컴포넌트
+- `public/banner/`: 배너 이미지 폴더
+- 자동 슬라이드 기능 (Swiper 또는 자체 구현)
+
+**배너 이미지**:
+- `dubai_banner.png`
+- `empathy-test.png`
+- `fantasy-job-test.png`
+- `ghibli-character-test.png`
+- `mbti-simple-test.png`
+- `year-review-test.png`
+
+### 5. 테마 전환 기능
+
+**목적**: 사용자 경험 개선 (다크/라이트 모드)
+
+**구현 내용**:
+- `components/providers/theme-provider.tsx`: 테마 Provider
+- `next-themes` 패키지 통합
+- 다크/라이트 모드 자동 전환
+- 사용자 선호도 저장 (localStorage)
+
+### 6. 토스트 알림 (Sonner)
+
+**목적**: 사용자 피드백 개선
+
+**구현 내용**:
+- `sonner` 패키지 통합
+- `components/ui/sonner.tsx`: Sonner 컴포넌트
+- 공유, 복사, 북마크 등 액션 시 알림 표시
+
+### 7. 추가 UI 컴포넌트
+
+**새로 추가된 컴포넌트**:
+- `components/shared/ScrollToTop.tsx`: 맨 위로 버튼
+- `components/shared/LoadingSpinner.tsx`: 로딩 스피너 개선
+- 페이지별 로딩 UI (`app/loading.tsx`, `app/test/[id]/loading.tsx`)
+
+### 8. 카카오 공유 기능 수정
+
+**커밋**: `5da29ec` - Fix: 카카오 공유 URL 환경 변수 적용
+
+**내용**:
+- 카카오 공유 시 환경 변수 기반 URL 사용
+- 개발/프로덕션 환경 분리
+
+### 9. 조회수 관리
+
+**커밋**:
+- `6a42d86`: 조회수 수정
+- `a82ec54`: 조회수 조작
+
+**내용**:
+- 테스트 실행 시 조회수 증가 로직 개선
+
+### 10. 타입 오류 수정
+
+**커밋**: `51d5c29` - Fix: next-themes 타입 오류 수정 및 빌드 오류 해결
+
+**내용**:
+- `next-themes` 패키지 타입 오류 수정
+- 프로덕션 빌드 안정화
+
+### 11. 문서 업데이트 (2026-01-14)
+
+**업데이트된 문서**:
+- ✅ `README.md`: 완전히 새로 작성 (심리테스트 서비스에 맞게)
+- ✅ `docs/DIR.md`: 실제 프로젝트 구조 반영
+- ✅ `docs/TODO.md`: 10개 테스트 반영, Phase 5-6 추가
+- ✅ `docs/CONVERSATION_SUMMARY.md`: 이 문서 (최근 작업 내용 추가)
+
+---
 
