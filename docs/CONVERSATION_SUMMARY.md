@@ -319,4 +319,3 @@ data/
 - ✅ `docs/CONVERSATION_SUMMARY.md`: 이 문서 (최근 작업 내용 추가)
 
 ---
-
