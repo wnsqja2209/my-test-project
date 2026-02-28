@@ -48,8 +48,8 @@
 <br/>
 
 ## 🌐 서비스 아키텍처
-![아키텍처](./public/og-image.png)
-> 실제 아키텍처 다이어그램 이미지로 교체 필요
+![아키텍처](<img width="1280" height="832" alt="image" src="https://github.com/user-attachments/assets/b9392200-f542-4631-8cbe-7a7a3bceb0a0" />
+)
 
 <br/>
 
@@ -121,15 +121,3 @@ moab
 └── types
 ```
 
-<br/>
-
-## 🚀 시작하기
-```bash
-pnpm install
-pnpm dev
-```
-
-- 개발 서버: `http://localhost:3000`
-- 린트: `pnpm lint`
-- 빌드: `pnpm build`
-- 프로덕션 실행: `pnpm start`
