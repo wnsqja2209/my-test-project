@@ -1,5 +1,5 @@
 ![배너이미지](./public/logo-1.png)
-# 🧠 MOAB (모아브)
+# 🧠 MOAB (모압)
 > **MBTI·성격·재미 테스트를 빠르게 즐기고 공유하는 모바일 우선 심리테스트 서비스**
 > "가볍게 즐기고, 결과는 손쉽게 공유"
 
@@ -10,17 +10,17 @@
 테스트 상세 확인부터 진행, 결과 공유까지 한 흐름으로 구성되어 있으며, **검색/추천/공유/OG 이미지 생성** 기능을 포함합니다.
 
 ### 📅 프로젝트 기간
-작성 필요 (예: 2025.12.10 ~ 2026.01.15)
+2025.12.10 ~ 2026.01.15
 
 <br/>
 
 ## 😎 Members
 
-| **작성 필요** | **작성 필요** | **작성 필요** |
+| **이장환** | **천준범** | **손민** |
 | :---: | :---: | :---: |
-| <img src="https://via.placeholder.com/100" width="100px" /> | <img src="https://via.placeholder.com/100" width="100px" /> | <img src="https://via.placeholder.com/100" width="100px" /> |
-| **Role 작성 필요** | **Role 작성 필요** | **Role 작성 필요** |
-| email@example.com | email@example.com | email@example.com |
+| <img src="https://github.com/user-attachments/assets/1695a778-bed5-4b98-9865-bdc04fd1ac53" width="100px" /> | <img src="https://github.com/user-attachments/assets/650e3f9f-aed7-4733-8dad-c6a70f40a394" width="100px" /> | <img src="https://github.com/user-attachments/assets/a56a22d8-7abb-4f35-9832-c01d6f447b88" width="100px" /> |
+| **Full Stack** | **Full Stack** | **Full Stack** |
+| dlwkdghks0807@gmail.com | wnsqja2209@gmail.com | dkrhd200197@gmail.com |
 
 <br/>
 
