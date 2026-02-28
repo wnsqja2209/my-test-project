@@ -48,8 +48,7 @@
 <br/>
 
 ## 🌐 서비스 아키텍처
-![아키텍처](<img width="1280" height="832" alt="image" src="https://github.com/user-attachments/assets/b9392200-f542-4631-8cbe-7a7a3bceb0a0" />
-)
+![아키텍처](https://github.com/user-attachments/assets/b9392200-f542-4631-8cbe-7a7a3bceb0a0)
 
 <br/>
 
